@@ -35,6 +35,12 @@
         </style>
         <link href="https://fonts.googleapis.com" rel="preconnect"/>
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
+         <script>
+          // Check if the URL path matches "/vscode"
+          if (window.location.pathname === '/vscode') {
+            window.location.href = 'https://marketplace.visualstudio.com/items?itemName=AyushSinghal.Code-Mate'; // Redirect to VS Code extension
+          }
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
         <script type="text/javascript">
             WebFont.load({
@@ -53,6 +59,15 @@
                 n.className += t + "js",
                 ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
             }(window, document);
+        </script>
+
+        <!--Microsoft Clarity-->
+        <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "gnrapldslp");
         </script>
         <!-- Google tag (gtag.js) -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMFJTFF6F5"></script>
@@ -294,9 +309,10 @@ a,
                     CodeMate Visual Studio Extension is live now. Download <a href="https://codemate.ai/vscode" style="text-decoration: underline;">now!</a>
                 </p>
             </div>
-            <div class="cursor-wrapper pointer-events-off" > style="width:10px;" loading="lazy" alt="" class="cursor"/>
+            <div class="cursor-wrapper pointer-events-off">
+                <img src="https://assets.website-files.com/63f5d36e1bfb159570f6408c/6403d854fecdefd2fb045a8c_figma-cursor.svg" loading="lazy" alt="" class="cursor"/>
             </div>
-            <div  style="margin-top: 2rem;" data-collapse="small" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease-in-out" role="banner" class="navbar_component w-nav">
+            <div style="margin-top: 2rem;" data-collapse="small" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease-in-out" role="banner" class="navbar_component w-nav">
                 <div data-w-id="27ae86ec-8f99-97d7-a5f9-0198ea8dd1d9" class="top-navbar_container">
                     <img src="https://i.ibb.co/NypN4R2/Codemate-dark-2.png" loading="lazy" alt="" class="navbar_logo show-tablet"/>
                     <nav role="navigation" class="top-navbar_menu w-nav-menu">
@@ -366,16 +382,24 @@ a,
                                                 <p class="text-size-large">Code 10x faster as CodeMate autocorrects your errors, all without leaving your environment.</p>
                                                 <div class="margin-top margin-medium">
                                                     <div class="button-group is-center">
-                                                        <a href="https://app.codemate.ai" class="button is-icon w-inline-block">
-                                                            <!-- <div class="icon-embed-xsmall w-embed">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="#007ACC"/><path d="M35.5 222.5l-23-12.6V46.7L35.5 34.2l185 101.3v.2l-57.3 31.3-42.3-23.1 14.8-8.1 27.5 15-2.5 1.3-24.5 13.5-48.5-26.5 48.5-26.5 51.5 28.2v.1l21.5-11.8v104.2l-21.5 11.8-185-101.4v-.2l57.3-31.3 42.3 23.1-14.8 8.1-27.5-15 2.5-1.3 24.5-13.5L35.5 222.5z" fill="#FFF"/></svg>
+                                                        <a href="https://marketplace.visualstudio.com/items?itemName=AyushSinghal.Code-Mate" class="button is-icon w-inline-block">
+                                                            <div class="icon-embed-xsmall w-embed">
+                                                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="#007ACC"/><path d="M35.5 222.5l-23-12.6V46.7L35.5 34.2l185 101.3v.2l-57.3 31.3-42.3-23.1 14.8-8.1 27.5 15-2.5 1.3-24.5 13.5-48.5-26.5 48.5-26.5 51.5 28.2v.1l21.5-11.8v104.2l-21.5 11.8-185-101.4v-.2l57.3-31.3 42.3 23.1-14.8 8.1-27.5-15 2.5-1.3 24.5-13.5L35.5 222.5z" fill="#FFF"/></svg>
                                                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
                                                                         <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
                                                                         <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
                                                                     </g>
+                                                                </svg> -->
+
+
+
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="96" height="96"
+                                                                viewBox="0 0 48 48">
+                                                                <path fill="#29b6f6" d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z"></path><path fill="#0277bd" d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z"></path><path fill="#0288d1" d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z"></path>
                                                                 </svg>
-                                                            </div> -->
-                                                            <div>Try for free</div>
+                                                            </div>
+                                                            <div>Install our VS Code Extension</div>
                                                         </a>
                                                         <a href="#" class="button is-secondary is-icon w-inline-block w-lightbox">
                                                             <div class="icon-embed-xsmall w-embed">
@@ -413,11 +437,11 @@ a,
                                                 <img src="https://i.ibb.co/WckRZLG/image.png" alt="" style="height:auto; width: 1500px;"class="layout239_image">
                                             </div>
                                         </div> -->
-                                        <div style="position:relative;width:fit-content;height:fit-content;">
-                                            <div style="width: 100vw; max-width: 1000px; aspect-ratio: 16/9;">
-                                                <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://www.youtube.com/watch?v=OCIg0s_Jkmk">
+                                        <div style="width:100vw; max-width:1000px; aspect-ratio:16/9"
+                                            <div style="position:relative;width:fit-content;height:fit-content;">
+                                                <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://www.youtube.com/watch?v=UG224YYguhY">
                                                 </a>
-                                                <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" src="https://www.youtube.com/embed/OCIg0s_Jkmk?autoplay=1&mute=1&loop=1&rel=0&disablekb=1" width="100%" height="100%" autoplay muted loop></iframe>
+                                                <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" src="https://www.youtube.com/embed/UG224YYguhY?autoplay=1&mute=1&loop=1&rel=0&disablekb=1" width="100%" height="100%" autoplay muted loop></iframe>
                                             </div>
                                         </div>
               </header>
@@ -540,7 +564,7 @@ a,
                                     <div class="max-width-custom align-center">
                                         <div class="margin-bottom margin-small">
                                             <h2 class="heading-fade-2lines">
-                                                An AI debugging tool made for
+                                                An AI debugging tool made for 
                                                 <div id="text" class=" text-highlight-orange"></div><div id="cursor"></div>
                                                 <!-- An AI debugging tool made for <span class="target-audience typewriter text-highlight-orange is-descender type-text">developers</span> -->
                                                 <style>
@@ -693,9 +717,7 @@ a,
                                             <!-- <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://www.youtube.com/watch?v=aUxywiz0N0Q">
                                             </a> -->
                                             <div style="width: 100%; height: 100%;">
-                                                <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://www.youtube.com/watch?v=aUxywiz0N0Q">
-                                                </a>
-                                                <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" class="layout358_image is-feature1-before" src="https://www.youtube.com/embed/aUxywiz0N0Q?autoplay=1&mute=1&loop=1&rel=0&controls=0&disablekb=1" width="100%" height="400" autoplay muted loop></iframe>
+                                                <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" class="layout358_image is-feature1-before" src="https://www.youtube.com/embed/3w4LK4bXGK0?autoplay=1&mute=1&loop=1&rel=0&disablekb=1" width="100%" height="400" autoplay muted loop></iframe>
                                             </div>
                                         </div>
                                         <!-- <div style="position:relative;width:fit-content;height:fit-content;">
@@ -728,9 +750,7 @@ a,
                                         <img src="https://i.ibb.co/JFvtMDD/fix-errors.jpg" loading="lazy" alt="Image of page with Lorem Ipsum" class="layout358_image is-feature1-before"/>
                                     </div> -->
                                     <div style="width: 100%; height: 100%;">
-                                        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://www.youtube.com/watch?v=6tOv6DcazFI">
-                                        </a>
-                                        <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" class="layout358_image is-feature1-before" src="https://www.youtube.com/embed/6tOv6DcazFI?autoplay=1&mute=1&loop=1&rel=0&controls=0&disablekb=1" width="100%" height="400" autoplay muted loop></iframe>
+                                        <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" class="layout358_image is-feature1-before" src="https://www.youtube.com/embed/IEmSvlrK0E0?autoplay=1&mute=1&loop=1&rel=0&disablekb=1" width="100%" height="400" autoplay muted loop></iframe>
                                     </div>
                             
                                         <!-- <div style="position:relative;width:fit-content;height:fit-content;">
@@ -751,7 +771,7 @@ a,
                                         <div class="layout358_card-content">
                                             <div class="layout358_card-content-top">
                                                 <div class="margin-bottom margin-medium">
-                                                    <img src="./icons8-scorecard-56.png" loading="lazy" width="56" alt="Component Icon" class="layout358_icon"/>
+                                                    <img src="https://i.ibb.co/3MgFCH8/icons8-scorecard-56.png" loading="lazy" width="56" alt="Component Icon" class="layout358_icon"/>
                                                 </div>
                                                 <div class="margin-bottom margin-small">
                                                     <h3 class="heading-style-h4 is-larger">Self-evaluate with a programming score</h3>
@@ -762,10 +782,10 @@ a,
                                             </div>
                                         </div>
                                     <div class="layout358_image-wrapper">
-                                        <!-- <img src="https://i.ibb.co/FXPYdkv/programming-score.jpg" loading="lazy" alt="Image of page with Lorem Ipsum" class="layout358_image is-feature1-before"/> -->
-                                        <div style="width: 100%; height: 100%;">
+                                        <img src="https://i.ibb.co/FXPYdkv/programming-score.jpg" loading="lazy" alt="Image of page with Lorem Ipsum" class="layout358_image is-feature1-before"/>
+                                        <!-- <div style="width: 100%; height: 100%;">
                                             <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" class="layout358_image is-feature1-before" src="https://www.youtube.com/embed/6tOv6DcazFI?autoplay=1&mute=1&loop=1&rel=0&controls=0&disablekb=1" width="100%" height="400" autoplay muted loop></iframe>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     
                                     <div class="layout358_card-overlay"></div>
@@ -790,7 +810,7 @@ a,
                                         </div>
                                     <div class="layout358_image-wrapper">
                                         <div style="width: 100%; height: 100%;">
-                                            <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" class="layout358_image is-feature1-before" src="https://www.youtube.com/embed/6tOv6DcazFI?autoplay=1&mute=1&loop=1&rel=0&controls=0&disablekb=1" width="100%" height="400" autoplay muted loop></iframe>
+                                            <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" class="layout358_image is-feature1-before" src="https://www.youtube.com/embed/x_QvwfXtz9U?autoplay=1&mute=1&loop=1&rel=0&disablekb=1" width="100%" height="400" autoplay muted loop></iframe>
                                         </div>
                                         <!-- <img src="https://i.ibb.co/kJ4HJv0/code-review.jpg" loading="lazy" alt="Image of page with Lorem Ipsum" class="layout358_image is-feature1-before"/> -->
                                     </div>
@@ -820,7 +840,7 @@ a,
                                         </div>
                                     <div class="layout358_image-wrapper">
                                         <div style="width: 100%; height: 100%;">
-                                            <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" class="layout358_image is-feature1-before" src="https://www.youtube.com/embed/6tOv6DcazFI?autoplay=1&mute=1&loop=1&rel=0&controls=0&disablekb=1" width="100%" height="400" autoplay muted loop></iframe>
+                                            <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" class="layout358_image is-feature1-before" src="https://www.youtube.com/embed/jehXhjL5--E?autoplay=1&mute=1&loop=1&rel=0&disablekb=1" width="100%" height="400" autoplay muted loop></iframe>
                                         </div>
                                         <!-- <img src="https://i.ibb.co/G2CD858/optimise-code.jpg" height="100%" width="100%" loading="lazy" alt="Image of page with Lorem Ipsum" class="layout358_image is-feature1-before"/> -->
                                     </div>
@@ -1450,18 +1470,30 @@ a,
                     class="relative w-full mx-auto flex flex-col h-64 justify-center items-center"
                     style="position: relative; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"
                     >
-                  
+                    <!-- <div class="slide relative">
+                      <img class="object-contain" 
+                        src="./assets/images/logo/Google startup badge.jpg">
+                    </div>
                     
                     <div class="slide relative">
+                        <img class=" h-[300px] object-cover"
+                            src="./assets/images/logo/EWC.jpeg">
+                    </div>
+            
+                    <div class="slide relative">
+                        <img class="w-full h-[300px] object-cover"
+                            src="./assets/images/logo/SISFS.jpg">
+                    </div> -->
+        
+                    <div class="slide relative">
                       <img
-                          style="width: 100%; height: 100px; object-fit: cover;" 
+                          style="width: 100%; height: 200px; object-fit: cover;" 
                           src="https://i.ibb.co/whqrw8q/ACIR.png">
                     </div>
-
                     <div class="slide relative">
                       <img class="w-full h-[300px] object-cover" 
                       style="width: 100%; height: 200px; object-fit: cover;"
-                          src="https://i.ibb.co/Bc4Kxbh/American-Center-2-removebg-preview.png">
+                          src="https://i.ibb.co/C69ZXmg/Startup-India-removebg-preview.png">
                     </div>
         
                     <div class="slide relative">
@@ -1469,58 +1501,73 @@ a,
                             style="width: 100%; height: 200px; object-fit: cover;"
                           src="https://i.ibb.co/DkBdjHB/EWC.jpg">
                     </div>
-
+                    <!-- <div class="slide relative">
+                    <img
+                    style="width: 100%; height: 200px; object-fit: cover;" 
+                    src="https://i.ibb.co/C7Zg0h2/Google-startup-badge.jpg">
+                    </div> -->
                     <div class="slide relative">
-                        <img
-                        style="width: 100%; height: 100px; object-fit: cover;" 
-                        src="https://i.ibb.co/whqrw8q/ACIR.png">
+                        <div style="width:auto; max-width: 300px; height: 200px; display: inline-block; position: relative">
+                            <img class="w-full h-[300px] object-cover" 
+                            style="width:100%; object-fit: cover; display: absolute; top:50%; transform: translateY(50%); "
+                                src="https://i.ibb.co/C7Zg0h2/Google-startup-badge.jpg">
+                        </div>
                     </div>
 
-                    <div class="slide relative">
+
+                    <!-- <div class="slide relative">
                         <img class="w-full h-[300px] object-cover" 
                         style="width: 100%; height: 200px; object-fit: cover;"
-                            src="https://i.ibb.co/Bc4Kxbh/American-Center-2-removebg-preview.png">
+                            src="https://i.ibb.co/LSBJ81z/gsea-removebg-preview.png">
+                    </div> -->
+
+                    <div class="slide relative">
+                        <div style="width:auto; max-width: 300px; height: 200px; display: inline-block; position: relative">
+                            <img class="w-full h-[300px] object-cover" 
+                            style="width:100%; object-fit: cover; display: absolute; top:50%; transform: translateY(50%); "
+                                src="https://i.ibb.co/LSBJ81z/gsea-removebg-preview.png">
+                        </div>
                     </div>
+
         
                     <div class="slide relative">
                         <img class="w-full h-[300px] object-cover"
                             style="width: 100%; height: 200px; object-fit: cover;"
-                            src="https://i.ibb.co/DkBdjHB/EWC.jpg">
+                            src="https://i.ibb.co/bgsmDhS/microsoft.png">
                     </div>
-
                     <div class="slide relative">
                     <img
-                    style="width: 100%; height: 100px; object-fit: cover;" 
-                    src="https://i.ibb.co/whqrw8q/ACIR.png">
+                    style="width: 100%; height: 200px; object-fit: cover;" 
+                    src="https://i.ibb.co/ThvG8Jt/Nexus-Logo-3.png">
+                    </div>
+                    <div class="slide relative">
+                        <div style="width:auto; max-width: 300px; height: 200px; display: inline-block; position: relative">
+                            <img class="w-full h-[300px] object-cover" 
+                            style="width:100%; object-fit: cover; display: absolute; top:50%; transform: translateY(50%); "
+                                src="https://i.ibb.co/58RJKRM/postman.png">
+                        </div>
                     </div>
 
                     <div class="slide relative">
-                        <img class="w-full h-[300px] object-cover" 
-                        style="width: 100%; height: 200px; object-fit: cover;"
-                            src="https://i.ibb.co/Bc4Kxbh/American-Center-2-removebg-preview.png">
+                    <img class="w-full h-[300px] object-cover"
+                            style="width: 100%; height: 200px; object-fit: cover;"
+                        src="https://i.ibb.co/xqsPBvv/SISFS-removebg-preview.png">
                     </div>
-
-                    <div class="slide relative">
-                        <img class="w-full h-[300px] object-cover"
-                                style="width: 100%; height: 200px; object-fit: cover;"
-                        src="https://i.ibb.co/DkBdjHB/EWC.jpg">
-                    </div>
-
                     <div class="slide relative">
                         <img class="w-full h-[300px] object-cover"
                             style="width: 100%; height: 200px; object-fit: cover;"
-                            src="https://i.ibb.co/DkBdjHB/EWC.jpg">
+                            src="https://i.ibb.co/Bc4Kxbh/American-Center-2-removebg-preview.png">
                     </div>
 
                     <!-- The previous button -->
                     <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-black hover:text-amber-500 cursor-pointer"
                         style="position: absolute; left: 0; top:50%; padding: 1rem; transform: translateY(-50%); cursor: pointer;"
-                        onclick="moveSlide(-1)">❮</a>
+                        onclick="moveByArrow(-1)">❮</a>
             
                     <!-- The next button -->
                     <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-black hover:text-amber-500 cursor-pointer"
                          style="position: absolute; right: 0; top:50%; padding: 1rem; transform: translateY(-50%); cursor: pointer;"
-                        onclick="moveSlide(1)">❯</a>
+                        onclick="moveByArrow(1)">❯</a>
             
                 </div>
                 <br>
@@ -1536,6 +1583,7 @@ a,
                     <div class="dot w-2 h-2 rounded-full cursor-pointer" onclick="currentSlide(7)"></div>
                     <div class="dot w-2 h-2 rounded-full cursor-pointer" onclick="currentSlide(8)"></div>
                     <div class="dot w-2 h-2 rounded-full cursor-pointer" onclick="currentSlide(9)"></div>
+                    <div class="dot w-2 h-2 rounded-full cursor-pointer" onclick="currentSlide(10)"></div>
                 </div>
         
                 </div>
@@ -1798,6 +1846,8 @@ a,
                                 <a href="mailto:contact@codemate.ai" class="footer3_link">Feedback</a>
                                 <a href="mailto:contact@codemate.ai" class="footer3_link">Contact</a>
                                 <a href="https://discord.com/invite/WM55rRufNP" target="_blank" class="footer3_link">Discord</a>
+                                <a href="./vscode.html" class="footer3_link">VS Code</a>
+
                                 <!-- <a href="https://relume.getrewardful.com/signup?campaign=relume-ipsum" target="_blank" class="footer3_link">Become an Affiliate</a> -->
                             </div>
                         </div>
@@ -1832,6 +1882,7 @@ a,
 
 <script>
     // set the default active slide to the first one
+    let shouldMove = true;
     let slideIndex = 1;
     showSlide(slideIndex);
   
@@ -1843,6 +1894,11 @@ a,
     // change slide with the dots
     function currentSlide(n) {
         showSlide(slideIndex = n);
+    }
+
+    function moveByArrow(moveStep){
+        shouldMove = false;
+        showSlide(slideIndex += moveStep);
     }
   
     function showSlide(n) {
@@ -1871,10 +1927,11 @@ a,
         // highlight the active dot
         dots[slideIndex - 1].classList.remove('bg-green-600');
         dots[slideIndex - 1].classList.add('bg-yellow-500');
-        setTimeout(()=>{
-          moveSlide(1)
-        },2000)
-  
+        if(shouldMove){
+            setTimeout(()=>{
+                moveSlide(1)
+            },2000)    
+        }
     }
   </script>
 </body>
