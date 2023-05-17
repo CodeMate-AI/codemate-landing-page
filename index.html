@@ -481,7 +481,7 @@ a,
                                     <div style="text-align: center;">
                                         <p class="text-size-large" style="margin-top: 1rem;"><span
                                                 style="padding:.5rem; border-radius: 10px; margin-right: .5rem; background-color: rgb(230, 70, 69, 15%); color:red;"
-                                                id="totalLines">120000+</span>lines have been processed so far</p>
+                                                id="totalLines">120000+</span>lines of code reviewed so far</p>
                                     </div>
                                 </div>
 
@@ -2197,17 +2197,10 @@ a,
     </script>
 
     <script>
-        // async function func(){
-        //     c
-        //     const lines =await fetch("http://localhost:3005/getLines");
-        //     lines =  await lines.json()
-        //     console.log("lines",lines)
-        //     
-        // }
-        // func()
+
         async function logJSONData() {
             const lineHolder = document.getElementById("totalLines");
-            const response = await fetch("http://localhost:3005/getLines");
+            const response = await fetch("https://api-codemate-v3.onrender.com/getLines");
             const jsonData = await response.json();
             lineHolder.innerText = jsonData.value
         }
