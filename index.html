@@ -460,8 +460,6 @@
               </radialGradient>
             </defs>
           </svg>
-
-
         </div>
 
         <div
@@ -516,6 +514,38 @@
           /* z-index: 1000; */
         }
 
+        @media (max-width: 419px) {
+          .popup {
+            width: 90%;
+            display: block;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+          }
+
+          .popup-container {
+            display: block;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            width: 100%;
+            height: auto;
+          }
+
+          .popup-image {
+            width: 16px;
+            height: 136px;
+            position: absolute;
+            margin-top: -70px;
+            margin-left: -30px;
+          }
+
+        }
+
         .popup-image {
           width: 16px;
           height: 136px;
@@ -523,23 +553,6 @@
           margin-top: -70px;
           margin-left: -30px;
         }
-
-        /* .popup-header {
-          position: fixed;
-          height: 321px;
-          width: 84px;
-          top: -10px;
-          right: 10px;
-          cursor: pointer;
-          color: #FFF;
-          text-align: center;
-          font-family: Roboto;
-          font-size: 36px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          z-index: 300;
-        } */
 
         .close-popup {
           position: fixed;
@@ -597,6 +610,7 @@
           .pricing25_tabs-menu {
             flex-direction: column;
           }
+
           .save-label {
             text-align: center;
             margin-top: auto;
