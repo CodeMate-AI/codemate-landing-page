@@ -21,22 +21,19 @@
   <link href="https://assets.website-files.com/63f5d36e1bfb159570f6408c/css/relume-ipsum.webflow.b50aaba2a.min.css"
     rel="stylesheet" type="text/css" />
   <style>
-    @media (min-width: 992px) {
-      html.w-mod-js:not(.w-mod-ix) [data-w-id="c41575eb-ef0a-f39e-2a7d-4f5e8a81ca55"] {
-        -webkit-transform: translate3d(-64px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(45deg) skew(0, 0);
-        -moz-transform: translate3d(-64px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(45deg) skew(0, 0);
-        -ms-transform: translate3d(-64px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(45deg) skew(0, 0);
-        transform: translate3d(-64px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(45deg) skew(0, 0);
-      }
+        @media screen and (max-width: 991px) {
 
-      html.w-mod-js:not(.w-mod-ix) [data-w-id="27ae86ec-8f99-97d7-a5f9-0198ea8dd1d9"] {
-        width: 18.25rem;
-      }
-
-      html.w-mod-js:not(.w-mod-ix) [data-w-id="1b87565d-005b-b34d-0495-100a1e723a14"] {
-        opacity: 0;
-      }
-    }
+          .arrowhead{
+            transform: translate(30px,25px) rotate(10deg-)!important;
+          }
+        }
+        @media screen and (max-width: 479px) {
+          .arrowhead{
+            position:absolute;
+            top:16%;
+            transform: translateX(-35px) rotate(90deg)!important;
+          }
+        }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -96,6 +93,7 @@
       display: none;
     }
   </style>
+
 </head>
 
 
@@ -1954,6 +1952,8 @@ a,
                   </div>
                 </div>
               </div>
+              <!-- <img src="./public/pinpng.com-curly-arrow-png-5940252.png" alt="arrow" style="position: absolute; width: 55px; height: 50px; color: white; right:44%; transform: translateY(36px); z-index: 2;"></img> -->
+              <img src="./public/swirly-arrow-pointing-upwards-svgrepo-com.svg" class="arrowhead" alt="arrow" style="position: absolute; right:42%; transform: translateY(27px)rotate(14deg); z-index: 2; width: 65px; height: 65px;" >
               <div data-current="Tab 1" data-easing="ease" data-duration-in="0" data-duration-out="0"
                 class="pricing25_component w-tabs">
                 <div class="pricing25_tabs-menu w-tab-menu">
@@ -1971,7 +1971,21 @@ a,
                     </div>
 
                   </a>
-
+                  <span style="padding: 10px 0px 10px 10px; text-align: center;" class="countdown ">ends in -></span>
+                  <div data-w-tab="Tab 4" class="pricing25_tab-link w-inline-block countdown" style="width: auto; display:flex; justify-content: center; align-items: center; background-image: linear-gradient(to right, #ffffff00, #7a38cb8e); margin-left: 3px; padding-left: 0px;">
+                  <div class="timer" style="margin: 0 10px;">
+                      <span id="hours">48</span>
+                      <span class="label" style="font-size: xx-small;">Hours</span>                    
+                  </div>
+                  <div class="timer"  style="margin: 0 10px;">
+                      <span id="minutes">00</span>  
+                      <span class="label" style="font-size: xx-small;">Minutes</span>                  
+                  </div>
+                  <div class="timer"  style="margin: 0 10px;">
+                      <span id="seconds">00</span>
+                      <span class="label"style="font-size: xx-small;">Seconds</span>
+                  </div>
+                  </div>
                 </div>
 
 
@@ -2937,6 +2951,42 @@ a,
       lineHolder.innerText = jsonData.value
     }
     logJSONData()
+  </script>
+
+  <script>
+//for $8 hours timer
+
+// Set the target date (48 hours from now)
+const targetDate = new Date();
+targetDate.setHours(targetDate.getHours() + 48);
+
+// Update the countdown every second
+const countdown = setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const timeRemaining = targetDate - now;
+
+    if (timeRemaining <= 0) {
+        clearInterval(countdown);
+        document.querySelectorAll('.countdown').style.display = 'hidden';
+    } else {
+        
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 48)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        document.getElementById('hours').innerHTML = `${padZero(hours)}`;
+        document.getElementById('minutes').innerHTML = `${padZero(minutes)}`;
+        document.getElementById('seconds').innerHTML = `${padZero(seconds)}`;
+    }
+}
+
+function padZero(num) {
+    return num < 10 ? '0' + num : num;
+}
+
+
   </script>
 </body>
 
