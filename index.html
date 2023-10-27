@@ -21,6 +21,24 @@
   <link href="https://assets.website-files.com/63f5d36e1bfb159570f6408c/css/relume-ipsum.webflow.b50aaba2a.min.css"
     rel="stylesheet" type="text/css" />
   <style>
+    @media (min-width: 992px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="c41575eb-ef0a-f39e-2a7d-4f5e8a81ca55"] {
+        -webkit-transform: translate3d(-64px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(45deg) skew(0, 0);
+        -moz-transform: translate3d(-64px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(45deg) skew(0, 0);
+        -ms-transform: translate3d(-64px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(45deg) skew(0, 0);
+        transform: translate3d(-64px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(45deg) skew(0, 0);
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="27ae86ec-8f99-97d7-a5f9-0198ea8dd1d9"] {
+        width: 18.25rem;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="1b87565d-005b-b34d-0495-100a1e723a14"] {
+        opacity: 0;
+      }
+    }
+  </style>
+    <!-- <style>
         @media screen and (max-width: 991px) {
 
           .arrowhead{
@@ -34,7 +52,7 @@
             transform: translateX(-35px) rotate(90deg)!important;
           }
         }
-  </style>
+  </style> -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
   <script>
@@ -93,7 +111,6 @@
       display: none;
     }
   </style>
-
 </head>
 
 
@@ -752,17 +769,69 @@ a,
           .hide-tablet {
             display: none !important;
           }
+
+          .text-highlight-orange{
+            font-size: 35px!important;
+          }
+          #cursor{
+            height: 35px!important;
+          }
+          .highlightedpricing{
+            font-size: 44px!important;
+          }
+          .hero{
+            font-size: 64px!important;
+          }
+          .arrowhead{
+            transform: translate(35px,26px)!important;
+          }
         }
 
         @media screen and (max-width: 767px) {
           .hide-mobile-landscape {
             display: none !important;
           }
+            .text-highlight-orange{
+            font-size: 25px!important
+          }
+          #cursor{
+            height: 25px!important;
+          }
+          .highlightedpricing{
+            font-size: 36px!important;
+          }
+          .hero{
+            font-size: 48px!important;
+          }
         }
 
         @media screen and (max-width: 479px) {
           .hide-mobile {
             display: none !important;
+          }
+            .text-highlight-orange{
+            font-size: 25px!important
+          }
+          #cursor{
+            height: 25px!important;
+          }
+          .highlightedpricing{
+            font-size: 36px!important;
+          }
+          .hero{
+            font-size: 44px!important;
+          }
+          #vscodelink{
+            font-size: 16px;
+            padding-left: 2px;
+            padding-right: 2px;
+            margin: auto;
+            width:280px;
+            display: flex;
+            align-items: center;
+          }
+          .arrowhead{
+            transform: translate(-60px,125px)rotate(90deg)!important;
           }
         }
 
@@ -927,7 +996,7 @@ a,
                       <div class="margin-bottom margin-small">
                         <h1 class="heading-fade-2lines">
                           The <span class="text-highlight-purple">fastest</span>
-                          way to write error-free <span class="text-highlight-orange">code</span>
+                          way to write error-free <span class="text-highlight-orange hero" style="font-size: 88px;">code</span>
                         </h1>
                       </div>
                       <p class="text-size-large">Code 10x faster as CodeMate autocorrects your
@@ -935,7 +1004,7 @@ a,
                       <div class="margin-top margin-medium">
                         <div class="button-group is-center">
                           <a href="https://marketplace.visualstudio.com/items?itemName=AyushSinghal.Code-Mate"
-                            class="button is-icon w-inline-block">
+                            class="button is-icon w-inline-block" id="vscodelink">
                             <div class="icon-embed-xsmall w-embed">
                               <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="#007ACC"/><path d="M35.5 222.5l-23-12.6V46.7L35.5 34.2l185 101.3v.2l-57.3 31.3-42.3-23.1 14.8-8.1 27.5 15-2.5 1.3-24.5 13.5-48.5-26.5 48.5-26.5 51.5 28.2v.1l21.5-11.8v104.2l-21.5 11.8-185-101.4v-.2l57.3-31.3 42.3 23.1-14.8 8.1-27.5-15 2.5-1.3 24.5-13.5L35.5 222.5z" fill="#FFF"/></svg>
                                                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -1215,7 +1284,9 @@ a,
                           #container {
                             text-align: center;
                           }
-
+                          .text-highlight-orange {
+                            font-size: 50px;
+                          }
                           #text {
                             display: inline-block;
                             vertical-align: middle;
@@ -1941,7 +2012,7 @@ a,
                   <div class="max-width-xxlarge align-center">
                     <div class="margin-bottom margin-small">
                       <h2 class="heading-fade-1line">
-                        Choose a <span class="text-highlight-orange is-descender">pricing</span>
+                        Choose a <span class="text-highlight-orange is-descender highlightedpricing" style="font-size: 64px;">pricing</span>
                         plan
                       </h2>
                     </div>
@@ -1952,8 +2023,8 @@ a,
                   </div>
                 </div>
               </div>
-              <!-- <img src="./public/pinpng.com-curly-arrow-png-5940252.png" alt="arrow" style="position: absolute; width: 55px; height: 50px; color: white; right:44%; transform: translateY(36px); z-index: 2;"></img> -->
-              <img src="./public/swirly-arrow-pointing-upwards-svgrepo-com.svg" class="arrowhead" alt="arrow" style="position: absolute; right:42%; transform: translateY(27px)rotate(14deg); z-index: 2; width: 65px; height: 65px;" >
+                            <!-- <img src="./public/pinpng.com-curly-arrow-png-5940252.png" alt="arrow" style="position: absolute; width: 55px; height: 50px; color: white; right:44%; transform: translateY(36px); z-index: 2;"></img> -->
+              <img src="./public/swirly-arrow-pointing-upwards-svgrepo-com.svg" class="arrowhead" alt="arrow" style="position: absolute; right:42%; transform: translate(35px,27px)rotate(14deg); z-index: 2; width: 65px; height: 65px;" >
               <div data-current="Tab 1" data-easing="ease" data-duration-in="0" data-duration-out="0"
                 class="pricing25_component w-tabs">
                 <div class="pricing25_tabs-menu w-tab-menu">
@@ -1972,7 +2043,7 @@ a,
 
                   </a>
                   <span style="padding: 10px 0px 10px 10px; text-align: center;" class="countdown ">ends in -></span>
-                  <div data-w-tab="Tab 4" class="pricing25_tab-link w-inline-block countdown" style="width: auto; display:flex; justify-content: center; align-items: center; background-image: linear-gradient(to right, #ffffff00, #7a38cb8e); margin-left: 3px; padding-left: 0px;">
+                  <div data-w-tab="Tab 4" class="pricing25_tab-link w-inline-block countdown" style="width: 239px; display:flex; justify-content: center; align-items: center; background-image: linear-gradient(to right, #ffffff00, #7a38cb8e); margin-left: 3px; padding-left: 0px;">
                   <div class="timer" style="margin: 0 10px;">
                       <span id="hours">48</span>
                       <span class="label" style="font-size: xx-small;">Hours</span>                    
@@ -1986,6 +2057,7 @@ a,
                       <span class="label"style="font-size: xx-small;">Seconds</span>
                   </div>
                   </div>
+                </div>
                 </div>
 
 
@@ -2048,17 +2120,17 @@ a,
                             <div class="text-color-gray">☑️ Train on GitHub repository</div>
                             <div class="text-color-gray">☑️ Dedicated knowledge base storage (upto 5 projects)</div>
 
-                            <!-- <div class="text-color-gray">☑️ 30+ programming languages support </div><br><br> --><br>
+                            <!-- <div class="text-color-gray">☑️ 30+ programming languages support </div><br><br> --><br><br><br>
 
-                            <script async src="https://js.stripe.com/v3/buy-button.js">
+                            <script async
+                            src="https://js.stripe.com/v3/buy-button.js">
                             </script>
-                            <!-- <div class="margin-top margin-medium" style="background-color: #005f9f;">
-                                                        <a href="https://api-codemate-v3.onrender.com/create-checkout-session?plan=month" class="button is-secondary max-width-full w-button">Subscribe Now</a>
-                                                        </div> -->
-
-                            <stripe-buy-button buy-button-id="buy_btn_1N7agoSHqHx5o73SgYzBqWI3"
-                              publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L">
-                            </stripe-buy-button>
+                          
+                          <stripe-buy-button
+                            buy-button-id="buy_btn_1O2rzVSHqHx5o73SGkFmOUVB"
+                            publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L"
+                          >
+                          </stripe-buy-button>
                           </div>
                         </div>
                       </div>
@@ -2074,27 +2146,29 @@ a,
                             </div>
                           </div>
                           <div class="text-color-gray">Everything in Premium plan + </div><br>
-                          <div class="text-color-gray">☑️ Unlimited requests/min</div>
+                          <div class="text-color-gray">☑️ 10 requests/min</div>
                           <div class="text-color-gray">☑️ Greater knowledge base storage (upto 10 projects)</div>
+                          <div class="text-color-gray">☑️ Add content from any Web URL to your Knowledge base</div>
+                          <div class="text-color-gray">☑️ Train on Private Github repository</div>
                           <div class="text-color-gray">☑️ Chat with any web URL</div>
                           <div class="text-color-gray">☑️ 2X faster response</div>
                           <div class="text-color-gray">☑️ Unlimited internet searches</div>
                           <div class="text-color-gray">☑️ Priority Live support via Whatsapp and dedicated Discord
                             channel </div>
                           <div class="text-color-gray">☑️ Beta features Access with early updates</div>
-                          <br><br><br>
+                          <br>
 
 
 
-                          <script async src="https://js.stripe.com/v3/buy-button.js">
+                          <script async
+                          src="https://js.stripe.com/v3/buy-button.js">
                           </script>
-                          <!-- <div class="margin-top margin-medium" style="background-color: #005f9f;">
-                                                    <a href="https://api-codemate-v3.onrender.com/create-checkout-session?plan=month" class="button is-secondary max-width-full w-button">Subscribe Now</a>
-                                                    </div> -->
-
-                          <stripe-buy-button buy-button-id="buy_btn_1NXqnqSHqHx5o73SqXY289rM"
-                            publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L">
-                          </stripe-buy-button>
+                        
+                        <stripe-buy-button
+                          buy-button-id="buy_btn_1O2s0WSHqHx5o73Sx6Vh6cPr"
+                          publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L"
+                        >
+                        </stripe-buy-button>
                         </div>
                       </div>
                     </div>
@@ -2155,15 +2229,17 @@ a,
                             <div class="text-color-gray">☑️ 250 internet searches/month</div>
                             <div class="text-color-gray">☑️ Train on GitHub repository</div>
                             <div class="text-color-gray">☑️ Dedicated knowledge base storage (upto 5 projects)</div>
-                            <br>
+                            <br><br><br>
 
-                            <script async src="https://js.stripe.com/v3/buy-button.js">
-                            </script>
-
-
-                            <stripe-buy-button buy-button-id="buy_btn_1N7aWQSHqHx5o73SRz85i65U"
-                              publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L">
-                            </stripe-buy-button>
+                            <script async
+                            src="https://js.stripe.com/v3/buy-button.js">
+                          </script>
+                          
+                          <stripe-buy-button
+                            buy-button-id="buy_btn_1O2s1ASHqHx5o73Sv0QRbfUI"
+                            publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L"
+                          >
+                          </stripe-buy-button>
                             <div class="save-label">
                               <div>33% off</div>
                             </div>
@@ -2184,24 +2260,27 @@ a,
                               </div>
                             </div>
                             <div class="text-color-gray">Everything in Premium plan + </div><br>
-                            <div class="text-color-gray">☑️ Unlimited requests/min</div>
+                            <div class="text-color-gray">☑️ 10 requests/min</div>
                             <div class="text-color-gray">☑️ Greater knowledge base storage (upto 10 projects)</div>
+                            <div class="text-color-gray">☑️ Add content from any Web URL to your Knowledge base</div>
+                            <div class="text-color-gray">☑️ Train on Private Github repository</div>
                             <div class="text-color-gray">☑️ Chat with any web URL</div>
                             <div class="text-color-gray">☑️ 2X faster response</div>
                             <div class="text-color-gray">☑️ Unlimited internet searches</div>
                             <div class="text-color-gray">☑️ Priority Live support via Whatsapp and dedicated Discord
                               channel </div>
                             <div class="text-color-gray">☑️ Beta features Access with early updates</div>
-                            <br><br>
                             <br>
 
-                            <script async src="https://js.stripe.com/v3/buy-button.js">
+                            <script async
+                            src="https://js.stripe.com/v3/buy-button.js">
                             </script>
-
-
-                            <stripe-buy-button buy-button-id="buy_btn_1NXqsoSHqHx5o73SY016a0RP"
-                              publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L">
-                            </stripe-buy-button>
+                          
+                          <stripe-buy-button
+                            buy-button-id="buy_btn_1O2s1hSHqHx5o73SB3XKGbEV"
+                            publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L"
+                          >
+                          </stripe-buy-button>
                             <div class="save-label">
                               <div>45% off</div>
                             </div>
@@ -2268,14 +2347,17 @@ a,
                             <div class="text-color-gray">☑️ Dedicated knowledge base storage (upto 5 projects)</div>
                             <div class="text-color-gray">☑️ All future updates in Premium plan</div>
 
-                            <br>
+                            <br><br><br>
 
-                            <script async src="https://js.stripe.com/v3/buy-button.js">
+                            <script async
+                            src="https://js.stripe.com/v3/buy-button.js">
                             </script>
-
-                            <stripe-buy-button buy-button-id="buy_btn_1NmtzqSHqHx5o73SpAGYpCy3"
-                              publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L">
-                            </stripe-buy-button>
+                          
+                          <stripe-buy-button
+                            buy-button-id="buy_btn_1O2s3rSHqHx5o73SVQ9LKLx4"
+                            publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L"
+                          >
+                          </stripe-buy-button>
                             <div class="save-label">
 
                               <div>89% off</div>
@@ -2297,8 +2379,10 @@ a,
                               </div>
                             </div>
                             <div class="text-color-gray">Everything in Premium plan + </div><br>
-                            <div class="text-color-gray">☑️ Unlimited requests/min</div>
+                            <div class="text-color-gray">☑️ 10 requests/min</div>
                             <div class="text-color-gray">☑️ Greater knowledge base storage (upto 10 projects)</div>
+                            <div class="text-color-gray">☑️ Add content from any Web URL to your Knowledge base</div>
+                            <div class="text-color-gray">☑️ Train on Private Github repository</div>
                             <div class="text-color-gray">☑️ Chat with any web URL</div>
                             <div class="text-color-gray">☑️ 2X faster response</div>
                             <div class="text-color-gray">☑️ Unlimited internet searches</div>
@@ -2307,15 +2391,17 @@ a,
                             <div class="text-color-gray">☑️ Beta features Access with early updates</div>
                             <div class="text-color-gray">☑️ All future updates in Pro plan</div>
 
-                            <br><br>
                             <br>
 
-                            <script async src="https://js.stripe.com/v3/buy-button.js">
+                            <script async
+                            src="https://js.stripe.com/v3/buy-button.js">
                             </script>
-
-                            <stripe-buy-button buy-button-id="buy_btn_1Nmu1BSHqHx5o73SFp7Cn1cY"
-                              publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L">
-                            </stripe-buy-button>
+                          
+                          <stripe-buy-button
+                            buy-button-id="buy_btn_1O2s4SSHqHx5o73SvIkaG8XK"
+                            publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L"
+                          >
+                          </stripe-buy-button>
                             <div class="save-label">
                               <div>85% off</div>
                             </div>
@@ -2388,7 +2474,7 @@ a,
 
 
         <div class="relative w-full mx-auto flex flex-col h-64 justify-center items-center"
-          style="position: relative; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          style="position: relative; width: 100%; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center;object-fit: contain; overflow: hidden;">
           <!-- <div class="slide relative">
                       <img class="object-contain" 
                         src="./assets/images/logo/Google startup badge.jpg">
@@ -2404,10 +2490,10 @@ a,
                             src="./assets/images/logo/SISFS.jpg">
                     </div> -->
           <div class="slide relative">
-            <img style="width: 100%; height: 120px; object-fit: cover;" src="https://i.ibb.co/JQ5VKhJ/kurativz.jpg">
+            <img style="width: 100%; height: 120px; object-fit: contain;" src="https://i.ibb.co/JQ5VKhJ/kurativz.jpg">
           </div>
           <div class="slide relative">
-            <img style="width: 100%; height: 150px; object-fit: cover;" src="https://i.ibb.co/d5HqmKT/yourstory.png">
+            <img style="width: 100%; height: 150px; object-fit: contain;" src="https://i.ibb.co/d5HqmKT/yourstory.png">
           </div>
           <div class="slide relative">
             <img style="width: 90%; height: 200px; object-fit: cover;" src="https://i.ibb.co/6wkHHjS/IIITL.png">
@@ -2952,8 +3038,7 @@ a,
     }
     logJSONData()
   </script>
-
-  <script>
+   <script>
 //for $8 hours timer
 
 // Set the target date (48 hours from now)
