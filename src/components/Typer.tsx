@@ -20,7 +20,7 @@ const Typer = (props: Props) => {
     };
   }, []);
   return (
-    <span ref={el} className='mt-5 max-w-prose text-zinc-400 sm:text-lg' />
+    <span ref={el} className='mt-5 h-[50] max-w-prose text-zinc-400 sm:text-lg' />
   )
 }
 

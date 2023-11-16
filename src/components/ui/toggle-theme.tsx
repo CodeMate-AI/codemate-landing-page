@@ -12,10 +12,10 @@ function ModeToggle() {
     <Tabs className="">
       <TabsList className="rounded-xl border">
         <TabsTrigger value="light" onClick={() => setTheme("light")}>
-          <SunIcon className="h-[1.2rem] w-[1.2rem]" />
+          <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 dark:rotate-180" />
         </TabsTrigger>
         <TabsTrigger value="dark" onClick={() => setTheme("dark")}>
-          <MoonIcon className="h-[1.2rem] w-[1.2rem] rotate-90 transition-all dark:rotate-0" />
+          <MoonIcon className="h-[1.2rem] w-[1.2rem] rotate-0 transition-all dark:rotate-180" />
         </TabsTrigger>
         <TabsTrigger value="system" onClick={() => setTheme("system")}>
           <Laptop className="h-[1.2rem] w-[1.2rem]" />

@@ -17,7 +17,7 @@ const Navbar = () => {
 
       <div className='flex items-center justify-start'>
         <Link href='/' className='flex z-40'>
-          <Image src={"/logo.png"} height={100} width={224} alt='CodeMate' />
+          <Image src={"/logo.png"} height={100} width={224} alt='CodeMate' className='' />
         </Link>
       </div>
 
@@ -25,8 +25,9 @@ const Navbar = () => {
         <>
           {HEADER_LINKS.map((link) => (
             <Link
+              key={link.title}
               className={cn(
-                "rounded px-3 py-2 text-md font-medium transition-colors duration-150",
+                "rounded px-3 py-2 text-md font-medium space-y-2 transition-colors duration-150",
                 {
                   ["text-muted-foreground hover:text-foreground"]:
                     link.path !== pathname,

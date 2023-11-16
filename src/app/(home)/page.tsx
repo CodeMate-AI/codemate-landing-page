@@ -1,7 +1,12 @@
+import BookDemo from "@/components/BookDemo";
+import KeyFeatures from "@/components/KeyFeatures";
 import PriorStartup from "@/components/PriorStartup";
 import Typer from "@/components/Typer";
 import UsedByDevelopers from "@/components/UsedByDevelopers";
+import Footer from "@/components/footer/Footer";
 import { buttonVariants } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -16,18 +21,18 @@ export default function Home() {
             CodeMate is now used by 25,000+ users globally!🥳
           </p>
         </div>
-        <h1 className='max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl'>
+        <h1 className='max-w-4xl animate text-5xl font-bold md:text-6xl lg:text-7xl'>
           The fastest way to write error-free code
           <span className='text-blue-600'>  in seconds.</span>{' '}
         </h1>
 
         <Typer />
         <Link
-          className={buttonVariants({
+          className={cn(buttonVariants({
             size: 'lg',
-            className: 'mt-5',
+            className: 'mt-5 ',
 
-          })}
+          }),)}
           href='/dashboard'
           target='_blank'>
           Get started{' '}
@@ -46,14 +51,19 @@ export default function Home() {
 
       {/* prior used organizations */}
       <PriorStartup />
+      {/* need some image fixing */}
       <UsedByDevelopers />
-      {/*todo: Say goodbye to Overloading Tabs */}
-
-      {/* Features */}
-      {/* pricing */}
-
+      {/* Key FEature */}
+      <KeyFeatures />
+      {/* Features page */}
+      {/* pricing page */}
+      {/* contact page + faq */}
       {/* book a demo */}
-      {/* slider  */}
+      <BookDemo />
+      {/*TODO: slider  */}
+      {/* footer */}
+      <Separator />
+      <Footer />
     </>
 
   )
