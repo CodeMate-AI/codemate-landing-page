@@ -47,6 +47,13 @@ export default function Home() {
       {/* prior used organizations */}
       <PriorStartup />
       <UsedByDevelopers />
+      {/*todo: Say goodbye to Overloading Tabs */}
+
+      {/* Features */}
+      {/* pricing */}
+
+      {/* book a demo */}
+      {/* slider  */}
     </>
 
   )
