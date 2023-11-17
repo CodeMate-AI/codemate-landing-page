@@ -35,7 +35,7 @@ function Slider() {
   return (
     <div className='max-w-[1400px] h-[400px] w-full m-auto py-16 px-4 relative group mb-20'>
       <div
-        className='rounded-2xl bg-center bg-cover duration-500 w-full h-full'
+        className='rounded-2xl flex justify-center duration-500 w-full h-full'
       >
         <Image src={slides[currentIndex].url} height={500} width={500} alt='' />
       </div>

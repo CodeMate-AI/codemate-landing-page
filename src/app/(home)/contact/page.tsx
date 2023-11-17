@@ -5,7 +5,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='mt-32 mb-16'>
+    <div className='mt-32 mb-16 mx-6'>
       <h1 className='text-4xl text-center font-bold'>Frequently asked questions(FAQs)</h1>
       <FAQ />
       <div className='text-center mt-14'>

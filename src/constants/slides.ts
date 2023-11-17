@@ -1,30 +1,30 @@
 export const slides = [
   {
-    url: "/logo/google-startup-badge.jpg",
+    url: "/images/slides/google-startup.svg",
   },
   {
-    url: "/logo/EWC.jpeg",
+    url: "/images/slides/ews.svg",
   },
   {
-    url: "/logo/SISFS.jpg",
+    url: "/images/slides/sifs.svg",
   },
 
   {
-    url: "/logo/postman.png",
+    url: "/images/slides/postman.svg",
   },
   {
-    url: "/logo/microsoft.png",
+    url: "/images/slides/microsoft.svg",
   },
   {
-    url: "/logo/gsea.png",
+    url: "/images/slides/gsea.svg",
   },
   {
-    url: "/logo/Nexus-Logo-3.png",
+    url: "/images/slides/nexus.svg",
   },
   {
-    url: "/logo/ACIR.png",
+    url: "/images/slides/acir.svg",
   },
   {
-    url: "/logo/American-Center-2.png",
+    url: "/images/slides/american.svg",
   },
 ];
