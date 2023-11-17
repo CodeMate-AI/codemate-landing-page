@@ -67,7 +67,7 @@ export default function Home() {
       <UsedByDevelopers />
       {/* Key FEature */}
       <KeyFeatures />
-      <Pinned buttonTitle="Book a Demo" title={"For Teams and Enterprises"} description="Make your teams 10x more productive while programming by automating debugging and code review process in your organisation." link={""} />
+      <Pinned buttonTitle="Book a Demo" title={"For Teams and Enterprises"} description="Make your teams 10x more productive while programming by automating debugging and code review process in your organisation." link={"https://cal.com/AyushSinghal/30min"} />
       <h1 className="text-2xl md:text-6xl font-semibold text-center">Proud to be recognized by</h1>
       {/* slider  */}
 

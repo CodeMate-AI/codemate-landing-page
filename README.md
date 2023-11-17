@@ -4,6 +4,7 @@
 - Minor style fixes
 - Award and recognition page
 - dark shaded logo for light mode
+- Codemate chat
 
 ## Future Feature
 

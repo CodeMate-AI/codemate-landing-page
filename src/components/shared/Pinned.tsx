@@ -1,17 +1,17 @@
 "use client"
-import Image from 'next/image'
+
 import React from 'react'
-import { Button } from '../ui/button'
+import Link from 'next/link'
+import { buttonVariants } from '../ui/button'
 
 type Props = {
   buttonTitle: string
   description: string
   title?: string
-  link?: string
+  link: string
 }
 
-
-const Pinned = ({ buttonTitle, description, title }: Props) => {
+const Pinned = ({ buttonTitle, description, title, link }: Props) => {
   return (
     <div className='relative mb-12 overflow-hidden rounded-lg border px-4 py-6 flex flex-col md:flex-row items-center'>
       <div className='flex-grow mb-3 md:mb-0 md:mr-3'>
@@ -22,9 +22,9 @@ const Pinned = ({ buttonTitle, description, title }: Props) => {
         </div>
       </div>
       <div className='flex-none'>
-        <Button onClick={() => { }}>
+        <Link href={link} className={buttonVariants()}>
           {buttonTitle}
-        </Button>
+        </Link>
       </div>
     </div>
 
