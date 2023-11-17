@@ -1,4 +1,5 @@
 
+import CodePage from "@/components/CodePage/CodePage";
 import KeyFeatures from "@/components/KeyFeatures";
 import PriorStartup from "@/components/PriorStartup";
 import Typer from "@/components/Typer";
@@ -10,6 +11,7 @@ import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import "simplebar-react/dist/simplebar.min.css";
 
 
 export default function Home() {
@@ -40,6 +42,12 @@ export default function Home() {
           <ArrowRight className='ml-2 h-5 w-5' />
         </Link>
       </div>
+
+
+      <div className="min-h-screen mx-auto">
+        <CodePage />
+      </div>
+
       {/* youtube  */}
       <div className="aspect-w-16 aspect-h-9">
         <iframe
