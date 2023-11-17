@@ -9,6 +9,7 @@ import { HEADER_LINKS } from '@/constants/header-links'
 import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
 import ModeToggle from '../ui/toggle-theme'
+import ThemeSwitch from './MobileToggleTheme'
 
 const Navbar = () => {
   const pathname = usePathname()
@@ -48,11 +49,16 @@ const Navbar = () => {
         </>
       </div>
 
-      <div className='flex justify-end mr-2'>
+
+      <div className='md:flex justify-end mr-2 hidden '>
         <Link href={"https://app.codemate.ai/"} className='rounded px-4 py-2 mr-2 text-md font-medium transition-colors duration-150'>
           Get Started
         </Link>
         <ModeToggle />
+      </div>
+      <div className='md:hidden justify-end mr-2 flex '>
+        <ThemeSwitch />
+        <MobileNav />
       </div>
 
     </nav>
@@ -60,6 +66,6 @@ const Navbar = () => {
 
   )
 }
-{/* <MobileNav isAuth={true} /> */ }
+
 
 export default Navbar

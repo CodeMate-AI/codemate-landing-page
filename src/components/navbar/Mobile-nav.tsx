@@ -1,99 +1,52 @@
 'use client'
 
-import { ArrowRight, Menu } from 'lucide-react'
+import { MenuIcon } from 'lucide-react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import React from 'react'
 
-const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
-  const [isOpen, setOpen] = useState<boolean>(false)
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
+import { Button } from '../ui/button'
+import { HEADER_LINKS } from '@/constants/header-links'
+import { Separator } from '../ui/separator'
+import ThemeSwitch from './MobileToggleTheme'
 
-  const toggleOpen = () => setOpen((prev) => !prev)
-
-  const pathname = usePathname()
-
-  useEffect(() => {
-    if (isOpen) toggleOpen()
-  }, [pathname])
-
-  const closeOnCurrent = (href: string) => {
-    if (pathname === href) {
-      toggleOpen()
-    }
-  }
-
+const MobileNav = () => {
   return (
-    <div className='sm:hidden'>
-      <Menu
-        onClick={toggleOpen}
-        className='relative z-50 h-5 w-5 text-zinc-700'
-      />
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button
+          className='flex h-9 w-9 items-center justify-center p-0 md:hidden'
+          type='button'
+          aria-label='Toggle menu'
+          variant='ghost'
+        >
+          <MenuIcon size={20} />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align='end' className='min-w-[10rem]'>
+        {HEADER_LINKS.map((link) => (
+          <>
+            <DropdownMenuItem key={link.title} asChild>
+              <Link href={link.path} className='flex items-center gap-4 text-xl'>
+                <div className='text-xl'>{link.title}</div>
+              </Link>
+            </DropdownMenuItem>
+            <Separator />
+          </>
+        ))}
+        <DropdownMenuItem asChild>
+          <Link href={"https://app.codemate.ai"} className='flex items-center gap-4 text-xl'>
+            <div className='text-xl'>Get Started</div>
+          </Link>
+        </DropdownMenuItem>
 
-      {isOpen ? (
-        <div className='fixed animate-in slide-in-from-top-5 fade-in-20 inset-0 z-0 w-full'>
-          <ul className='absolute bg-white border-b border-zinc-200 shadow-xl grid w-full gap-3 px-10 pt-20 pb-8'>
-            {!isAuth ? (
-              <>
-                <li>
-                  <Link
-                    onClick={() =>
-                      closeOnCurrent('/sign-up')
-                    }
-                    className='flex items-center w-full font-semibold text-green-600'
-                    href='/sign-up'>
-                    Get started
-                    <ArrowRight className='ml-2 h-5 w-5' />
-                  </Link>
-                </li>
-                <li className='my-3 h-px w-full bg-gray-300' />
-                <li>
-                  <Link
-                    onClick={() =>
-                      closeOnCurrent('/sign-in')
-                    }
-                    className='flex items-center w-full font-semibold'
-                    href='/sign-in'>
-                    Sign in
-                  </Link>
-                </li>
-                <li className='my-3 h-px w-full bg-gray-300' />
-                <li>
-                  <Link
-                    onClick={() =>
-                      closeOnCurrent('/pricing')
-                    }
-                    className='flex items-center w-full font-semibold'
-                    href='/pricing'>
-                    Pricing
-                  </Link>
-                </li>
-              </>
-            ) : (
-              <>
-                <li>
-                  <Link
-                    onClick={() =>
-                      closeOnCurrent('/dashboard')
-                    }
-                    className='flex items-center w-full font-semibold'
-                    href='/dashboard'>
-                    Dashboard
-                  </Link>
-                </li>
-                <li className='my-3 h-px w-full bg-gray-300' />
-                <li>
-                  <Link
-                    className='flex items-center w-full font-semibold'
-                    href='/sign-out'>
-                    Sign out
-                  </Link>
-                </li>
-              </>
-            )}
-          </ul>
-        </div>
-      ) : null}
-    </div>
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }
 
