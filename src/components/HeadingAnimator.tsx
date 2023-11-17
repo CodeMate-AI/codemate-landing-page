@@ -41,7 +41,7 @@ const HeadingAnimator = ({ title, animatedTitle }: Props) => {
 
   return (
     <div>
-      <h1 className='text-5xl font-semibold text-center'>{title}  <span className='text-blue-600'>{animatedTitle[index].substring(0, subIndex)}</span></h1>
+      <h1 className='text-2xl md:text-5xl font-semibold text-center'>{title}  <span className='text-blue-600'>{animatedTitle[index].substring(0, subIndex)}</span></h1>
       <p className='text-center mt-7 text-zinc-400'>Focus on solving problems, not debugging.</p>
 
     </div>

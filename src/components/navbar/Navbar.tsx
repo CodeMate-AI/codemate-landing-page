@@ -14,8 +14,7 @@ import ThemeSwitch from './MobileToggleTheme'
 const Navbar = () => {
   const pathname = usePathname()
   return (
-    <nav className='fixed inset-x-0 top-4 z-40 mx-auto flex h-[60px] max-w-full sm:max-w-5xl items-center justify-between rounded-2xl bg-gray-700/30  shadow-sm saturate-100  duration-500   w-full border-b  backdrop-blur-lg transition-all sm:w-auto'>
-
+    <nav className='sticky inset-x-0 top-4 z-40 mx-auto flex h-[60px] max-w-full sm:max-w-5xl items-center justify-between rounded-2xl bg-gray-700/30  shadow-sm saturate-100  duration-500   w-full border-b  backdrop-blur-lg transition-all sm:w-auto'>
       <div className='flex items-center justify-start'>
         <Link href='/' className='flex z-40'>
           <Image src={"/logo.png"} height={100} width={224} alt='CodeMate' className='' />

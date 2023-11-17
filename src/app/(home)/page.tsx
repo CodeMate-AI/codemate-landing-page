@@ -20,8 +20,8 @@ export default function Home() {
     <>
       {/* main page */}
       <div className='flex flex-col items-center justify-center min-h-screen text-center mt-10'>
-        <div className='mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-300 hover:bg-white/50'>
-          <p className='text-sm font-semibold  text-gray-700'>
+        <div className='mx-auto mb-4 flex  items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-300 hover:bg-white/50'>
+          <p className='md:text-sm text-xs font-semibold  text-gray-700'>
             CodeMate is now used by 25,000+ users globally!🥳
           </p>
         </div>
@@ -45,12 +45,16 @@ export default function Home() {
       </div>
 
 
-      <div className="md:min-h-screen mt-6 md:mt-4   mx-auto">
-        <CodePage />
+      <div className="md:min-h-screen mt-6 md:mt-4  md:mb-2  mb-8  mx-auto">
+        <h1 className='text-xl md:text-3xl text-center font-bold'>Write Code faster than ever</h1>
+        <p className='text-lg md:text-xl dark:text-gray-600 text-center'>Join us on our Journey </p>
+        <div className="mt-14">
+          <CodePage />
+        </div>
       </div>
 
       {/* youtube  */}
-      <div className="aspect-w-8 aspect-h-5  "> {/*8 is normal */}
+      <div className="aspect-w-8 aspect-h-5  ">
         <iframe
           src="https://www.youtube.com/embed/wiIgqWa7_0M?si=I1-FdVTVm1C8rp1Q"
 
@@ -65,14 +69,10 @@ export default function Home() {
       <UsedByDevelopers />
       {/* Key FEature */}
       <KeyFeatures />
-      {/* Features page */}
-      {/* pricing page */}
-      {/* contact page + faq */}
-      {/* book a demo */}
       <Pinned buttonTitle="Book a Demo" title={"For Teams and Enterprises"} description="Make your teams 10x more productive while programming by automating debugging and code review process in your organisation." link={""} />
-      {/* slider  */}
       <h1 className="text-2xl md:text-6xl font-semibold text-center">Proud to be recognized by</h1>
-      {/* TODO: add a canva collage in each picture and replace picture with existing one */}
+      {/* slider  */}
+
       <Slider />
 
     </>
