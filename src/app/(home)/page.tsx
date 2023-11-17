@@ -4,11 +4,9 @@ import KeyFeatures from "@/components/KeyFeatures";
 import PriorStartup from "@/components/PriorStartup";
 import Typer from "@/components/Typer";
 import UsedByDevelopers from "@/components/UsedByDevelopers";
-import Footer from "@/components/footer/Footer";
 import Pinned from "@/components/shared/Pinned";
 import Slider from "@/components/shared/Slider";
 import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -45,9 +43,9 @@ export default function Home() {
       </div>
 
 
-      <div className="md:min-h-screen mt-6 md:mt-4  md:mb-2  mb-8  mx-auto">
-        <h1 className='text-xl md:text-3xl text-center font-bold'>Write Code faster than ever</h1>
-        <p className='text-lg md:text-xl dark:text-gray-600 text-center'>Join us on our Journey </p>
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <h1 className="text-xl md:text-3xl text-center font-bold">Write Code faster than ever</h1>
+        <p className="text-lg md:text-xl dark:text-gray-600 text-center">Join us on our Journey</p>
         <div className="mt-14">
           <CodePage />
         </div>

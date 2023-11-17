@@ -1,14 +1,13 @@
 ## TODO
 
-- Mobile responsive
-- Features page
-- slider -> add a canva collage in each picture and replace picture with existing one with ratio of height: 1780 px width: 2671 px
+- vs code extension and product hunt and 1954354 lines of code reviewed so far
 - Minor style fixes
 - Award and recognition page
+- dark shaded logo for light mode
 
-### Some Fixes
+## Future Feature
 
-- Need to change Youtube Video id of codemate to play it properly for SEO support
+- Blog page
 
 ## Usage - To run in development
 
