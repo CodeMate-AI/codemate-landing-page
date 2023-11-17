@@ -9,7 +9,7 @@
 
 ### Some Fixes
 
-- Need Youtube Video id to play it properly for SEO support
+- Need to change Youtube Video id of codemate to play it properly for SEO support
 
 ## Usage - To run in development
 

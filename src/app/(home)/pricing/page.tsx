@@ -1,241 +1,152 @@
+"use client"
 
-import UpgradeButton from '@/components/upgrade-button'
-import { buttonVariants } from '@/components/ui/button'
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip'
-// import { PLANS } from '@/config/stripe'
-import { cn } from '@/lib/utils'
-import {
-  ArrowRight,
-  Check,
-  HelpCircle,
-  Minus,
-} from 'lucide-react'
-import Link from 'next/link'
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { CheckCircle2 } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import React, { useState } from "react"
+import { cn } from "@/lib/utils"
 
-const Page = () => {
-  const user = true
-
-  // content is random will be adding real content later
-  const pricingItems = [
-    {
-      plan: 'Free',
-      tagline: 'For small side projects.',
-      quota: 10,
-      features: [
-        {
-          text: '5 pages per PDF',
-          footnote:
-            'The maximum amount of pages per PDF-file.',
-        },
-        {
-          text: '4MB file size limit',
-          footnote:
-            'The maximum file size of a single PDF file.',
-        },
-        {
-          text: 'Mobile-friendly interface',
-        },
-        {
-          text: 'Higher-quality responses',
-          footnote:
-            'Better algorithmic responses for enhanced content quality',
-          negative: true,
-        },
-        {
-          text: 'Priority support',
-          negative: true,
-        },
-      ],
-    },
-    {
-      plan: 'Pro',
-      tagline: 'For larger projects with higher needs.',
-      quota: 50,
-      features: [
-        {
-          text: '25 pages per PDF',
-          footnote:
-            'The maximum amount of pages per PDF-file.',
-        },
-        {
-          text: '16MB file size limit',
-          footnote:
-            'The maximum file size of a single PDF file.',
-        },
-        {
-          text: 'Mobile-friendly interface',
-        },
-        {
-          text: 'Higher-quality responses',
-          footnote:
-            'Better algorithmic responses for enhanced content quality',
-        },
-        {
-          text: 'Priority support',
-        },
-      ],
-    },
-  ]
-
-  return (
-    <>
-      <div className='mx-auto mb-10 sm:max-w-lg mt-36'>
-        <h1 className='text-6xl font-bold sm:text-7xl'>
-          Pricing
-        </h1>
-        <p className='mt-5 text-gray-600 sm:text-lg'>
-          Whether you&apos;re just trying out our service
-          or need more, we&apos;ve got you covered.
-        </p>
-      </div>
-
-      <div className='pt-12 grid grid-cols-1 gap-10 lg:grid-cols-2'>
-        <TooltipProvider>
-          {pricingItems.map(
-            ({ plan, tagline, quota, features }) => {
-              const price = 0 // for stripe PLANS.find((p) => p.slug === plan.toLowerCase())?.price.amount || 0
-
-              return (
-                <div
-                  key={plan}
-                  className={cn(
-                    'relative rounded-2xl bg-white shadow-lg',
-                    {
-                      'border-2 border-blue-600 shadow-blue-200':
-                        plan === 'Pro',
-                      'border border-gray-200':
-                        plan !== 'Pro',
-                    }
-                  )}>
-                  {plan === 'Pro' && (
-                    <div className='absolute -top-5 left-0 right-0 mx-auto w-32 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 px-3 py-2 text-sm font-medium text-white'>
-                      Upgrade now
-                    </div>
-                  )}
-
-                  <div className='p-5'>
-                    <h3 className='my-3 text-center font-display text-3xl font-bold'>
-                      {plan}
-                    </h3>
-                    <p className='text-gray-500'>
-                      {tagline}
-                    </p>
-                    <p className='my-5 font-display text-6xl font-semibold'>
-                      ${price}
-                    </p>
-                    <p className='text-gray-500'>
-                      per month
-                    </p>
-                  </div>
-
-                  <div className='flex h-20 items-center justify-center border-b border-t border-gray-200 bg-gray-50'>
-                    <div className='flex items-center space-x-1'>
-                      <p>
-                        {quota.toLocaleString()} PDFs/mo
-                        included
-                      </p>
-
-                      <Tooltip delayDuration={300}>
-                        <TooltipTrigger className='cursor-default ml-1.5'>
-                          <HelpCircle className='h-4 w-4 text-zinc-500' />
-                        </TooltipTrigger>
-                        <TooltipContent className='w-80 p-2'>
-                          How many PDFs you can upload per
-                          month.
-                        </TooltipContent>
-                      </Tooltip>
-                    </div>
-                  </div>
-
-                  <ul className='my-10 space-y-5 px-8'>
-                    {features.map(
-                      ({ text, footnote, negative }) => (
-                        <li
-                          key={text}
-                          className='flex space-x-5'>
-                          <div className='flex-shrink-0'>
-                            {negative ? (
-                              <Minus className='h-6 w-6 text-gray-300' />
-                            ) : (
-                              <Check className='h-6 w-6 text-blue-500' />
-                            )}
-                          </div>
-                          {footnote ? (
-                            <div className='flex items-center space-x-1'>
-                              <p
-                                className={cn(
-                                  'text-gray-600',
-                                  {
-                                    'text-gray-400':
-                                      negative,
-                                  }
-                                )}>
-                                {text}
-                              </p>
-                              <Tooltip
-                                delayDuration={300}>
-                                <TooltipTrigger className='cursor-default ml-1.5'>
-                                  <HelpCircle className='h-4 w-4 text-zinc-500' />
-                                </TooltipTrigger>
-                                <TooltipContent className='w-80 p-2'>
-                                  {footnote}
-                                </TooltipContent>
-                              </Tooltip>
-                            </div>
-                          ) : (
-                            <p
-                              className={cn(
-                                'text-gray-600',
-                                {
-                                  'text-gray-400':
-                                    negative,
-                                }
-                              )}>
-                              {text}
-                            </p>
-                          )}
-                        </li>
-                      )
-                    )}
-                  </ul>
-                  <div className='border-t border-gray-200' />
-                  <div className='p-5'>
-                    {plan === 'Free' ? (
-                      <Link
-                        href={"/"}
-                        className={buttonVariants({
-                          className: 'w-full',
-                          variant: 'secondary',
-                        })}>
-                        {user ? 'Upgrade now' : 'Sign up'}
-                        <ArrowRight className='h-5 w-5 ml-1.5' />
-                      </Link>
-                    ) : user ? (
-                      <UpgradeButton />
-                    ) : (
-                      <Link
-                        href='/'
-                        className={buttonVariants({
-                          className: 'w-full',
-                        })}>
-                        Upgrade now'
-                        <ArrowRight className='h-5 w-5 ml-1.5' />
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              )
-            }
-          )}
-        </TooltipProvider>
-      </div>
-    </>
-  )
+type PricingSwitchProps = {
+  onSwitch: (value: string) => void
 }
 
-export default Page
+type PricingCardProps = {
+  isYearly?: boolean
+  isLTD?: boolean
+  title: string
+  monthlyPrice?: number
+  yearlyPrice?: number
+  LTDPrice?: number
+  description?: string | undefined
+  features: string[]
+  actionLabel: string
+  popular?: boolean
+  exclusive?: boolean
+}
+
+const PricingHeader = ({ title, subtitle }: { title: string; subtitle: string }) => (
+  <section className="text-center">
+    <h2 className="text-3xl font-bold">{title}</h2>
+    <p className="text-xl pt-1">{subtitle}</p>
+    <br />
+  </section>
+)
+
+const PricingSwitch = ({ onSwitch }: PricingSwitchProps) => (
+  <Tabs defaultValue="0" className="w-40 mx-auto" onValueChange={onSwitch}>
+    <TabsList className="py-6 px-2">
+      <TabsTrigger value="0" className="text-base">
+        Monthly
+      </TabsTrigger>
+      <TabsTrigger value="1" className="text-base">
+        Yearly
+      </TabsTrigger>
+      <TabsTrigger value="2" className="text-base">
+        LTD
+      </TabsTrigger>
+    </TabsList>
+  </Tabs>
+)
+
+const PricingCard = ({ isYearly, title, LTDPrice, isLTD, monthlyPrice, yearlyPrice, description, features, actionLabel, popular, exclusive }: PricingCardProps) => (
+  <Card
+    className={cn(`w-72 flex flex-col justify-between py-1 ${popular ? "border-rose-400" : "border-zinc-700"} mx-auto sm:mx-0`, {
+      "animate-background-shine bg-white dark:bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] transition-colors":
+        exclusive,
+    })}>
+    <div>
+      <CardHeader className="pb-8 pt-4">
+        {isYearly && yearlyPrice && monthlyPrice && LTDPrice ? (
+          <div className="flex justify-between">
+            <CardTitle className="text-zinc-700 dark:text-zinc-300 text-lg">{title}</CardTitle>
+            <div
+              className={cn("px-2.5 rounded-xl h-fit text-sm py-1 bg-zinc-200 text-black dark:bg-zinc-800 dark:text-white", {
+                "bg-gradient-to-r from-orange-400 to-rose-400 dark:text-black ": popular,
+              })}>
+              Save ${monthlyPrice * 12 - yearlyPrice}
+            </div>
+          </div>
+        ) : (
+          <CardTitle className="text-zinc-700 dark:text-zinc-300 text-lg">{title}</CardTitle>
+        )}
+        <div className="flex gap-0.5">
+          <h3 className="text-3xl font-bold">
+            {
+              isLTD && LTDPrice ? `$${LTDPrice}/lifetime` :
+                isYearly && yearlyPrice ? `$${yearlyPrice}/year` :
+                  monthlyPrice ? `$${monthlyPrice}/month` :
+                    "Custom"
+            }
+          </h3>
+
+        </div>
+        <CardDescription className="pt-1.5 h-6">{description}</CardDescription>
+      </CardHeader>
+      <CardContent className="flex flex-col gap-2">
+        {features.map((feature: string) => (
+          <CheckItem key={feature} text={feature} />
+        ))}
+      </CardContent>
+    </div>
+    <CardFooter className="mt-2">
+      <Button className="relative inline-flex w-full items-center justify-center rounded-md bg-black text-white dark:bg-white px-6 font-medium  dark:text-black transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+        <div className="absolute -inset-0.5 -z-10 rounded-lg bg-gradient-to-b from-[#c7d2fe] to-[#8678f9] opacity-75 blur" />
+        {actionLabel}
+      </Button>
+    </CardFooter>
+  </Card>
+)
+
+const CheckItem = ({ text }: { text: string }) => (
+  <div className="flex gap-2">
+    <div className="w-5 h-5 flex items-center justify-center">
+      <CheckCircle2 size={18} className="text-green-400" />
+    </div>
+    <p className="pt-0.5 text-zinc-700 dark:text-zinc-300 text-sm">{text}</p>
+  </div>
+)
+
+
+export default function page() {
+  const [isYearly, setIsYearly] = useState(false)
+  const [isLTD, setIsLTD] = useState(false)
+  const togglePricingPeriod = (value: string) => {
+    setIsYearly(parseInt(value) === 1)
+    setIsLTD(parseInt(value) === 2);
+  }
+
+
+  const plans = [
+    {
+      title: "Premium",
+      monthlyPrice: 15,
+      yearlyPrice: 120,
+      LTDPrice: 59,
+      features: ["Debug and Optimise code", "Access to CodeMate chat", "Advanced ML models with browsing capabilities and faster response", "Review code with detailed PDF report and score", "Unlimited access to CodeMate-GPT", "6 requests/min limit", "250 internet searches/month", "Train on GitHub repository", "Dedicated knowledge base storage (upto 5 projects)"],
+      actionLabel: "Subscribe",
+    },
+    {
+      title: "Pro",
+      monthlyPrice: 30,
+      yearlyPrice: 199,
+      LTDPrice: 169,
+      description: "Everything in Premium plan +",
+      features: ["10 requests/min", "Greater knowledge base storage (upto 10 projects)", "Add content from any Web URL to your Knowledge base", "Train on Private Github repository", "Chat with any web URL", "2X faster response", "Unlimited internet searches", "Priority Live support via Whatsapp and dedicated Discord channel", "Beta features Access with early updates"],
+      actionLabel: "Subscribe",
+      popular: true,
+    },
+
+  ]
+  return (
+    <div className="py-8 mt-24">
+      <PricingHeader title="Pricing Plans" subtitle="Choose the plan that's right for you" />
+      <PricingSwitch onSwitch={togglePricingPeriod} />
+      <section className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-8 mt-6">
+        {plans.map((plan) => {
+          return <PricingCard key={plan.title} {...plan} isYearly={isYearly} isLTD={isLTD} />;
+        })}
+      </section>
+    </div>
+  )
+}
