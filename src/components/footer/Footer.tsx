@@ -17,7 +17,7 @@ const Footer = (props: Props) => {
               <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
                 Made by <span className='underline'>Team Codemate</span>
               </h5>
-              <p className='text-sm text-gray-700'>CodeMate is still in early Beta, so please keep in mind that there may be some imperfections as we continue to work on improving it.</p>
+              <p className='text-sm text-gray-700 dark:text-zinc-400'>CodeMate is still in early Beta, so please keep in mind that there may be some imperfections as we continue to work on improving it.</p>
               <div className=" flex mt-6 lg:mb-0 mb-6">
                 <InstagramIcon size={15} className=' text-blueGray-800 shadow-lg font-normal h-8 w-8 items-center justify-center align-center  outline-none focus:outline-none mr-2' />
                 <TwitterIcon size={15} className=' text-blueGray-800 shadow-lg font-normal h-8 w-8 items-center justify-center align-center  outline-none focus:outline-none mr-2' />

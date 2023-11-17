@@ -38,7 +38,7 @@ const Code = ({ code, language, show, animated, animationDelay }: Props) => {
   const theme = applicationTheme !== "dark" ? lightTheme : darkTheme
 
   return (
-    <Highlight {...defaultProps} code={text} theme={theme} language={language}>
+    <Highlight {...defaultProps} code={text} language={language} theme={theme}>
       {({ className, tokens, getLineProps, getTokenProps }) => (
         <pre
           className={
