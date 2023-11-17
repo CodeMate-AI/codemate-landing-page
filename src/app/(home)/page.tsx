@@ -52,7 +52,7 @@ export default function Home() {
       {/* youtube  */}
       <div className="aspect-w-16 aspect-h-9">
         <iframe
-          src="https://www.youtube.com/embed/-LpeuutSpTw?si=HBwzULSlJJnJI_li"
+          src="https://www.youtube.com/embed/wiIgqWa7_0M?si=I1-FdVTVm1C8rp1Q"
 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         >

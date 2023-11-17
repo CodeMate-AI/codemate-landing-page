@@ -28,7 +28,7 @@ export const FeaturesContent = [
       "Get a detailed report on your code performance and quality along with a programming score, helping you to improve your coding skills to write industry level code.    ",
     link: "https://www.loom.com/share/e0a088559fca4604969244cf2a3ea04d",
     imgSrc:
-      "https://cdn.loom.com/sessions/thumbnails/e0a088559…a4604969244cf2a3ea04d-1683147357289-with-play.gif",
+      "https://cdn.loom.com/sessions/thumbnails/e0a088559fca4604969244cf2a3ea04d-1683147357289-with-play.gif",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ export const FeaturesContent = [
       "Ask any kind of questions and get answers tailored as per your own codebase. Use our AI powered chat functionality right inside your editor and end to end encrypted.     ",
     link: "https://www.loom.com/share/4419a9a28a5c4ec4808330300f565b6d",
     imgSrc:
-      "https://cdn.loom.com/sessions/thumbnails/4419a9a28…c4ec4808330300f565b6d-1683151365725-with-play.gif",
+      "https://cdn.loom.com/sessions/thumbnails/4419a9a28a5c4ec4808330300f565b6d-1683151365725-with-play.gif",
   },
   {
     id: 5,
