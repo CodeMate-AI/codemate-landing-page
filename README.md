@@ -2,8 +2,7 @@
 
 - Mobile responsive
 - Features page
-- pricing page
-- slider component
+- slider -> add a canva collage in each picture and replace picture with existing one with ratio of height: 1780 px width: 2671 px
 - Minor style fixes
 - Award and recognition page
 

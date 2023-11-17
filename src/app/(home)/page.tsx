@@ -6,6 +6,7 @@ import Typer from "@/components/Typer";
 import UsedByDevelopers from "@/components/UsedByDevelopers";
 import Footer from "@/components/footer/Footer";
 import Pinned from "@/components/shared/Pinned";
+import Slider from "@/components/shared/Slider";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
@@ -69,9 +70,12 @@ export default function Home() {
       {/* contact page + faq */}
       {/* book a demo */}
       <Pinned buttonTitle="Book a Demo" title={"For Teams and Enterprises"} description="Make your teams 10x more productive while programming by automating debugging and code review process in your organisation." link={""} />
-      {/*TODO: slider  */}
-      {/* footer */}
+      {/* slider  */}
+      <h1 className="text-6xl font-semibold text-center">Proud to be recognized by</h1>
+      {/* TODO: add a canva collage in each picture and replace picture with existing one */}
+      <Slider />
       <Separator />
+      {/* footer */}
       <Footer />
     </>
 
