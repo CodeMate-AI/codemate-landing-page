@@ -1,9 +1,10 @@
-import BookDemo from "@/components/BookDemo";
+
 import KeyFeatures from "@/components/KeyFeatures";
 import PriorStartup from "@/components/PriorStartup";
 import Typer from "@/components/Typer";
 import UsedByDevelopers from "@/components/UsedByDevelopers";
 import Footer from "@/components/footer/Footer";
+import Pinned from "@/components/shared/Pinned";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
@@ -42,7 +43,7 @@ export default function Home() {
       {/* youtube  */}
       <div className="aspect-w-16 aspect-h-9">
         <iframe
-          src="https://www.youtube.com/watch?v=wiIgqWa7_0M&t=132s"
+          src="https://www.youtube.com/embed/-LpeuutSpTw?si=HBwzULSlJJnJI_li"
 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         >
@@ -59,7 +60,7 @@ export default function Home() {
       {/* pricing page */}
       {/* contact page + faq */}
       {/* book a demo */}
-      <BookDemo />
+      <Pinned buttonTitle="Book a Demo" title={"For Teams and Enterprises"} description="Make your teams 10x more productive while programming by automating debugging and code review process in your organisation." link={""} />
       {/*TODO: slider  */}
       {/* footer */}
       <Separator />

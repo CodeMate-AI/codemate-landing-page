@@ -5,6 +5,7 @@
 - pricing page
 - slider component
 - Minor style fixes
+- Award and recognition page
 
 ### Some Fixes
 
