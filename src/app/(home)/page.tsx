@@ -74,9 +74,7 @@ export default function Home() {
       <h1 className="text-6xl font-semibold text-center">Proud to be recognized by</h1>
       {/* TODO: add a canva collage in each picture and replace picture with existing one */}
       <Slider />
-      <Separator />
-      {/* footer */}
-      <Footer />
+
     </>
 
   )

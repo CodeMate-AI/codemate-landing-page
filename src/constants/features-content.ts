@@ -3,7 +3,7 @@ export const FeaturesContent = [
     id: 1,
     title:
       "CodeMateGPT: Make your code production ready with a click of button",
-    icon: "",
+    icon: "/images/features/feature1.png",
     description:
       "Get the best version of your written code in the matter of seconds by automating all the required tasks like debugging code, fixing errors, reviewing and optimising.    ",
     link: "https://www.loom.com/share/c527d3a6c0ac4901badfcc303cb61d0c",
@@ -13,7 +13,7 @@ export const FeaturesContent = [
   {
     id: 2,
     title: "Instantly debug code to get the required output",
-    icon: "",
+    icon: "/images/features/features2.png",
     description:
       "The Debug code feature analyse your code on multiple test cases based on your approach and generate detailed fixes along with description of the error that you may have otherwise missed to achieve the desired output.    ",
     link: "https://www.youtube.com/watch?v=3w4LK4bXGK0&t=9s",
@@ -23,7 +23,7 @@ export const FeaturesContent = [
   {
     id: 3,
     title: "Self-evaluate with CodeMate- Report",
-    icon: "",
+    icon: "/images/features/features3.png",
     description:
       "Get a detailed report on your code performance and quality along with a programming score, helping you to improve your coding skills to write industry level code.    ",
     link: "https://www.loom.com/share/e0a088559fca4604969244cf2a3ea04d",
@@ -33,7 +33,7 @@ export const FeaturesContent = [
   {
     id: 4,
     title: "CodeMate Chat: ChatGPT trained on your codebase",
-    icon: "",
+    icon: "/images/features/features4.png",
     description:
       "Ask any kind of questions and get answers tailored as per your own codebase. Use our AI powered chat functionality right inside your editor and end to end encrypted.     ",
     link: "https://www.loom.com/share/4419a9a28a5c4ec4808330300f565b6d",
@@ -43,7 +43,7 @@ export const FeaturesContent = [
   {
     id: 5,
     title: "Get detailed code review",
-    icon: "",
+    icon: "/images/features/features5.png",
     description:
       "Review your code as per best practices to be followed in software development through AI as if an experienced developer is sitting beside you    ",
     link: "https://www.youtube.com/watch?v=x_QvwfXtz9U&t=3s",

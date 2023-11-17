@@ -5,6 +5,8 @@ import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/lib/providers/theme-provider'
 import Navbar from '@/components/navbar/Navbar'
 import Image from 'next/image'
+import { Separator } from '@/components/ui/separator'
+import Footer from '@/components/footer/Footer'
 
 const roboto = Roboto({ weight: ["100", "300", "400", "500", "700"], subsets: ['latin'] })
 
@@ -31,7 +33,8 @@ export default function RootLayout({
           <main className="max-w-[90rem] mx-auto px-2 font-sans antialiased">
             <Navbar />
             {children}
-
+            <Separator />
+            <Footer />
           </main>
           <Image
             width={1512}
