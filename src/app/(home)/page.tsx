@@ -41,10 +41,10 @@ export default function Home() {
       </div>
 
 
-      <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className="items-center justify-center min-h-screen w-full">
         <h1 className="text-xl md:text-3xl text-center font-bold">Write Code faster than ever</h1>
         <p className="text-lg md:text-xl dark:text-gray-600 text-center">Join us on our Journey</p>
-        <div className="mt-14">
+        <div className="mt-14 ">
           <CodePage />
         </div>
       </div>

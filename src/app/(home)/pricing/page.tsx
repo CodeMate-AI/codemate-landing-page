@@ -4,7 +4,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import React, { useState } from "react"
+import { useState } from "react"
 import { cn } from "@/lib/utils"
 
 type PricingSwitchProps = {
