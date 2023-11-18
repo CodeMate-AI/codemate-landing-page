@@ -1,4 +1,4 @@
-
+/* eslint-disable @next/next/no-img-element */
 import CodePage from "@/components/CodePage/CodePage";
 import KeyFeatures from "@/components/KeyFeatures";
 import PriorStartup from "@/components/PriorStartup";
@@ -28,6 +28,7 @@ export default function Home() {
           <Link style={{ width: '250px', height: '54px' }} href={"https://marketplace.visualstudio.com/items?itemName=AyushSinghal.Code-Mate"} className={buttonVariants({
             size: "lg"
           })}>
+            {/* eslint-disable-next-line no-unused-vars */}
             <img src={"/logo/vs-code.svg"} alt="" className="w-10 h-10 mr-3" />
             Install our VS Code Extension
           </Link>
@@ -41,7 +42,7 @@ export default function Home() {
       </div>
 
 
-      <div className="items-center justify-center min-h-screen w-full">
+      <div className="items-center justify-center min-h-screen w-full ">
         <h1 className="text-xl md:text-3xl text-center font-bold">Write Code faster than ever</h1>
         <p className="text-lg md:text-xl dark:text-gray-600 text-center">Join us on our Journey</p>
         <div className="mt-14 ">

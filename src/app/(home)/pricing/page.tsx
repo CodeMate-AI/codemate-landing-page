@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @next/next/no-img-element */
+
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle2 } from "lucide-react"
@@ -108,7 +110,7 @@ const CheckItem = ({ text }: { text: string }) => (
 )
 
 
-export default function page() {
+export default function PricingPage() {
   const [isYearly, setIsYearly] = useState(false)
   const [isLTD, setIsLTD] = useState(false)
   const togglePricingPeriod = (value: string) => {

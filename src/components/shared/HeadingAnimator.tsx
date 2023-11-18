@@ -41,7 +41,7 @@ const HeadingAnimatorMain = ({ title, animatedTitle, description }: Props) => {
 
   return (
     <div>
-      <h1 className='text-lg dark:text-white'>{title}  <span className='text-gray-600'>{animatedTitle[index].substring(0, subIndex)}</span></h1>
+      <h1 className='text-lg dark:text-white'>{title}  <span className='text-gray-600 dark:text-gray-200'>{animatedTitle[index].substring(0, subIndex)}</span></h1>
     </div>
   );
 };

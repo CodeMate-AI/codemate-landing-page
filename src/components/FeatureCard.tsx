@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import { FeaturesContent } from '@/constants/features-content'
 import React from 'react'
 
@@ -36,7 +38,7 @@ const Features = ({ description, icon, id, imgSrc, link, title }: Props) => {
         </div>
         <div className="md:w-1/2 p-4">
           <a href={link}>
-            <img style={{ width: "100%" }} src={imgSrc} />
+            <img style={{ width: "100%" }} src={imgSrc} alt='' />
           </a>
         </div>
       </div>

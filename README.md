@@ -1,5 +1,6 @@
 ## TODO
 
+- codepage fix for desktoip
 - Minor style fixes
 - Award and recognition page - content left
 - More sections

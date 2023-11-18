@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
-
 type Props = {
   title: string
   description: string
@@ -20,7 +20,7 @@ const Card = ({ description, imgSrc, title }: Props) => {
       </div>
       <div className="md:w-1/2 p-4">
 
-        <img style={{ width: "100%" }} src={imgSrc} />
+        <img style={{ width: "100%" }} src={imgSrc} alt='' />
 
       </div>
     </div>
