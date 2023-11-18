@@ -1,11 +1,10 @@
 ## TODO
 
-- vs code extension and product hunt and 1954354 lines of code reviewed so far
 - Minor style fixes
-- Award and recognition page
+- Award and recognition page - content left
 - dark shaded logo for light mode
 - Codemate chat
-- privacy
+- Refund Policy
 
 ## Future Feature
 

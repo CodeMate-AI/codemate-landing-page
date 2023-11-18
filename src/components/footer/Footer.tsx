@@ -63,7 +63,7 @@ const Footer = (props: Props) => {
                       <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-muted-foreground transition-colors duration-150 hover:text-foreground" href="mailto:contact@codemate.ai">Feedback</a>
                     </li>
                     <li>
-                      <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-muted-foreground transition-colors duration-150 hover:text-foreground" href="/refund-policy">Refund Policy</a>
+                      <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-muted-foreground transition-colors duration-150 hover:text-foreground" href="/resources/refund-policy">Refund Policy</Link>
                     </li>
                     <li>
                       <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-muted-foreground transition-colors duration-150 hover:text-foreground" href="https://discord.com/invite/WM55rRufNP">Discord</a>
