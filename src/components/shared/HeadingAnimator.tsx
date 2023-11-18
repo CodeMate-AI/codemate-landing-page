@@ -2,7 +2,6 @@
 
 
 import React, { useState, useEffect } from 'react';
-import FeatureCard from './FeatureCard';
 
 type Props = {
   title?: string;
@@ -10,7 +9,7 @@ type Props = {
   description?: string;
 }
 
-const HeadingAnimator = ({ title, animatedTitle, description }: Props) => {
+const HeadingAnimatorMain = ({ title, animatedTitle, description }: Props) => {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
@@ -35,18 +34,16 @@ const HeadingAnimator = ({ title, animatedTitle, description }: Props) => {
 
     const timeout = setTimeout(() => {
       setSubIndex((prevSubIndex) => prevSubIndex + (reverse ? -1 : 1));
-    }, 150);
+    }, 50);
 
     return () => clearTimeout(timeout);
   }, [subIndex, index, reverse]);
 
   return (
     <div>
-      <h1 className='text-2xl md:text-5xl font-semibold text-center'>{title}  <span className='text-blue-600'>{animatedTitle[index].substring(0, subIndex)}</span></h1>
-      <p className='text-center mt-7 text-zinc-400'>{description} </p>
-
+      <h1 className='text-lg dark:text-white'>{title}  <span className='text-gray-600'>{animatedTitle[index].substring(0, subIndex)}</span></h1>
     </div>
   );
 };
 
-export default HeadingAnimator;
+export default HeadingAnimatorMain

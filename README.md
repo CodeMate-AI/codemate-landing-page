@@ -5,6 +5,7 @@
 - Award and recognition page
 - dark shaded logo for light mode
 - Codemate chat
+- privacy
 
 ## Future Feature
 

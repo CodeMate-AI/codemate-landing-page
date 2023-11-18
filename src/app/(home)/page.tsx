@@ -2,13 +2,12 @@
 import CodePage from "@/components/CodePage/CodePage";
 import KeyFeatures from "@/components/KeyFeatures";
 import PriorStartup from "@/components/PriorStartup";
-import Typer from "@/components/Typer";
 import UsedByDevelopers from "@/components/UsedByDevelopers";
+import HeadingAnimatorMain from "@/components/shared/HeadingAnimator";
 import Pinned from "@/components/shared/Pinned";
 import Slider from "@/components/shared/Slider";
+import CelebrationDailog from "@/components/ui/CelebrationDailog";
 import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import "simplebar-react/dist/simplebar.min.css";
 
@@ -17,29 +16,28 @@ export default function Home() {
   return (
     <>
       {/* main page */}
-      <div className='flex flex-col items-center justify-center min-h-screen text-center mt-10'>
-        <div className='mx-auto mb-4 flex  items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-300 hover:bg-white/50'>
-          <p className='md:text-sm text-xs font-semibold  text-gray-700'>
-            CodeMate is now used by 25,000+ users globally!🥳
-          </p>
-        </div>
+      <div className='flex flex-col items-center justify-center min-h-screen text-center mt-2'>
+        <CelebrationDailog />
         <h1 className='max-w-4xl animate text-3xl font-bold md:text-6xl lg:text-7xl animate-in fade-in zoom-in duration-400'>
           The fastest way to write error-free code
           <span className='text-blue-600'>  in seconds.</span>{' '}
         </h1>
 
-        <Typer />
-        <Link
-          className={cn(buttonVariants({
-            size: 'lg',
-            className: 'mt-5 ',
+        <HeadingAnimatorMain animatedTitle={["Code 10x faster as CodeMate autocorrects your errors, all without leaving your environment."]} />
+        <div className="flex md:flex-row flex-col gap-5 mt-3">
+          <Link style={{ width: '250px', height: '54px' }} href={"https://marketplace.visualstudio.com/items?itemName=AyushSinghal.Code-Mate"} className={buttonVariants({
+            size: "lg"
+          })}>
+            <img src={"/logo/vs-code.svg"} alt="" className="w-10 h-10 mr-3" />
+            Install our VS Code Extension
+          </Link>
 
-          }),)}
-          href='/dashboard'
-          target='_blank'>
-          Get started{' '}
-          <ArrowRight className='ml-2 h-5 w-5' />
-        </Link>
+          <Link href="https://www.producthunt.com/posts/codemate-ai?utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-codemate-ai" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=392150&amp;theme=light" alt="CodeMate AI - Grammarly for Programmers: Auto-GPT for fixing errors | Product Hunt" style={{ width: '250px', height: '54px' }} width="250" height="54" /></Link>
+
+        </div>
+
+        <p className="text-center mt-5 text-lg text-zinc-900 dark:text-zinc-400"><span className="mr-1 bg-red-200 bg-opacity-25 text-red-600 border border-red-400 rounded-md px-2 py-1">1954354</span>
+          lines of code reviewed so far</p>
       </div>
 
 
