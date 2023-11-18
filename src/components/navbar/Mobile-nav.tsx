@@ -30,14 +30,14 @@ const MobileNav = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end' className='min-w-[10rem]'>
         {HEADER_LINKS.map((link) => (
-          <>
-            <DropdownMenuItem key={link.title} asChild>
+          <div key={link.title}>
+            <DropdownMenuItem asChild>
               <Link href={link.path} className='flex items-center gap-4 text-xl'>
                 <div className='text-xl'>{link.title}</div>
               </Link>
             </DropdownMenuItem>
             <Separator />
-          </>
+          </div>
         ))}
         <DropdownMenuItem asChild>
           <Link href={"https://app.codemate.ai"} className='flex items-center gap-4 text-xl'>

@@ -29,7 +29,7 @@ const CelebrationDailog = (props: Props) => {
             <p className='md:text-lg text-sm font-semibold  text-gray-700'>
               CodeMate is now used by 25,000+ users globally!🥳
             </p>
-            <p className='text-zinc-800 dark:text-zinc-300 md:text-lg text-sm'>To celebrate this, we are offering FLAT 25% off on our Monthly and Annual plans. Click below to get the coupen code </p>
+            <p className='text-zinc-800 dark:text-zinc-300 md:text-lg text-sm'>To celebrate this, we are offering <span className='text-blue-700 font-semibold'>FLAT 25%</span>  off on our Monthly and Annual plans. Click below to get the coupen code </p>
             <Link href={"/pricing"} className={buttonVariants({
               size: "lg"
             })}>
