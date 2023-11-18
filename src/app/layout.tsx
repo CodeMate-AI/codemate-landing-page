@@ -47,7 +47,7 @@ export default function RootLayout({
           <Image
             width={1512}
             height={447}
-            className="absolute bottom-0 left-[60%] -z-10 -translate-x-1/2"
+            className="absolute bottom-0 md:left-[60%] -z-10 -translate-x-1/2 left-[40%]"
             src="/images/gradient-background-bottom.png"
             alt="Gradient background"
             priority

@@ -2,13 +2,12 @@
 
 - Minor style fixes
 - Award and recognition page - content left
-- dark shaded logo for light mode
-- Codemate chat
-- Refund Policy
+- More sections
 
 ## Future Feature
 
 - Blog page
+- Codemate chat
 
 ## Usage - To run in development
 
