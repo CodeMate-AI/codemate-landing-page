@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { Separator } from '@/components/ui/separator'
 import Footer from '@/components/footer/Footer'
 import ChatIcon from '@/components/ChatIcon'
+import ComingSoonToCLi from '@/components/shared/ComingSoonToCLi'
 
 const roboto = Roboto({ weight: ["100", "300", "400", "500", "700"], subsets: ['latin'] })
 
@@ -35,6 +36,7 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Separator />
+
             <Footer />
           </main>
           <Image
@@ -53,7 +55,7 @@ export default function RootLayout({
             alt="Gradient background"
             priority
           />
-          <ChatIcon />
+
         </ThemeProvider>
       </body>
     </html>

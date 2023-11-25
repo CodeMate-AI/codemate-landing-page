@@ -66,7 +66,7 @@ const Navbar = () => {
         })} >
           Get Started
         </Link>
-        <ModeToggle />
+        <ThemeSwitch />
       </div>
       <div className='md:hidden justify-end mr-2 flex '>
         <ThemeSwitch />

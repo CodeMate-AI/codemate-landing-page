@@ -8,6 +8,7 @@ import { CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
+import TimeWorthPage from "@/components/shared/TimeWorthPage"
 
 type PricingSwitchProps = {
   onSwitch: (value: string) => void
@@ -149,6 +150,7 @@ export default function PricingPage() {
           return <PricingCard key={plan.title} {...plan} isYearly={isYearly} isLTD={isLTD} />;
         })}
       </section>
+      <TimeWorthPage />
     </div>
   )
 }

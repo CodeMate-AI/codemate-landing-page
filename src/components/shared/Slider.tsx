@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 import { slides } from '@/constants/slides';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,11 +34,13 @@ function Slider() {
   };
 
   return (
-    <div className='max-w-[1400px] h-[400px] w-full m-auto py-16 px-4 relative group mb-20'>
+    <div className='max-w-[1400px] h-[200px]  md:h-[400px] w-full m-auto py-2 md:py-16 px-4 relative group mb-20'>
       <div
         className='rounded-2xl flex justify-center duration-500 w-full h-full'
       >
-        <Image src={slides[currentIndex].url} height={500} width={500} alt='' />
+        <Link href={slides[currentIndex].href}>
+          <Image src={slides[currentIndex].url} height={500} width={500} alt='' />
+        </Link>
       </div>
       {/* Left Arrow */}
       <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
@@ -54,7 +57,6 @@ function Slider() {
             onClick={() => goToSlide(slideIndex)}
             className='text-2xl cursor-pointer'
           >
-
           </div>
         ))}
       </div>
