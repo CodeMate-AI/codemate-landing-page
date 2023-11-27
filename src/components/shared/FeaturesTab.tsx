@@ -10,21 +10,21 @@ const tabsData = [
     icon: '/logo/calendar.svg',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras sed felis eget velit aliquet sagittis id consectetur purus. Habitant morbi tristique senectus et netus. Sed risus ultricies tristique nulla aliquet enim tortor at auctor. Amet purus gravida quis blandit. Nisi est sit amet facilisis magna etiam.',
-    imgContent: "https://github.com/images/modules/site/copilot/react/features-river-1.webp"
+    imgContent: "/images/dummy1.webp"
   },
   {
     title: 'Code with Confidence',
     icon: '/logo/checkmark.svg',
     content:
       'Faucibus purus in massa tempor nec feugiat nisl. Sodales ut etiam sit amet nisl purus. Sit amet porttitor eget dolor morbi non. Risus in hendrerit gravida rutrum quisque non tellus. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Vehicula ipsum a arcu cursus.',
-    imgContent: "https://github.com/images/modules/site/copilot/react/features-river-2.webp"
+    imgContent: "/images/dummy1.webp"
   },
   {
     title: 'Streamline Your Workflow with 10x productivity',
     icon: '/logo/workflow.svg',
     content:
       'Faucibus purus in massa tempor nec feugiat nisl. Sodales ut etiam sit amet nisl purus. Sit amet porttitor eget dolor morbi non. Risus in hendrerit gravida rutrum quisque non tellus. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Vehicula ipsum a arcu cursus.',
-    imgContent: "https://github.com/images/modules/site/copilot/react/features-river-2.webp"
+    imgContent: "/images/dummy1.webp"
   },
   // Add more tab data as needed
 ];
@@ -54,7 +54,7 @@ const FeaturesTab = () => {
 
   return (
     <div ref={ref1} className={`transition-opacity ease-in duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-      <h1 className='text-3xl md:text-5xl font-bold mt-10 mb-4 text-center'><span className='bg-gradient-to-r from-red-500 to-purple-500 bg-clip-text text-transparent'>Features</span> Codemate Provides</h1>
+      <h1 className='text-2xl uppercase md:text-5xl font-bold mt-10 mb-4 text-center'><span className='bg-gradient-to-r from-red-500 to-purple-500 bg-clip-text text-transparent'>Features</span> Codemate Provides</h1>
       <p className='text-xl md:text-2xl text-gray-700 dark:text-gray-300  text-center'>The AI coding assistant</p>
       <main className="relative mx-auto mt-10 mb-20 bg-white py-8 px-10 rounded-md shadow-md">
         {isMobile ? (

@@ -12,7 +12,7 @@ const IndustrialStandard = () => {
     <div ref={ref1} className={`mt-1 mb-56 transition-opacity ease-in duration-1000 ${isVisible1 ? "opacity-100" : "opacity-0"}`}>
       <div className=" bg-image w-full min-h-screen flex flex-wrap justify-center items-center gap-3 py-5">
         <div>
-          <h1 className='text-3xl md:text-6xl font-bold bg-gradient-to-r from-blue-500 to-gray-500 bg-clip-text text-transparent'>  The industry standard.</h1>
+          <h1 className='text-2xl mb-5 md:mb-3 md:text-6xl font-bold bg-gradient-to-r from-blue-500 to-gray-500 bg-clip-text text-transparent uppercase'>  The industry standard.</h1>
         </div>
         <div className="flex flex-wrap justify-center items-center gap-9">
           <div className="z-10 backdrop backdrop-blur-sm w-10/12 md:w-[32%] bg-white bg-opacity-10 rounded-2xl p-3 text-gray-800 shadow-xl">

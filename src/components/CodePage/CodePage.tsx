@@ -10,10 +10,10 @@ import { useIsVisible } from '@/lib/useIsVisible'
 type Props = {}
 
 const CodePage = (props: Props) => {
-  const ref1 = React.useRef()
+  const ref1 = React.useRef(null)
   const isVisible1 = useIsVisible(ref1)
   return (
-    <div ref={ref1} className={`transition-opacity ease-in duration-1000 ${isVisible1 ? "opacity-100" : "opacity-0"}`}>
+    <div ref={ref1} >
       <Tabs defaultValue='nodejs'>
         <TabsList>
           <TabsTrigger value='nodejs' >NodeJS</TabsTrigger>
@@ -21,12 +21,12 @@ const CodePage = (props: Props) => {
         </TabsList>
         <TabsContent value='nodejs'>
           <SimpleBar forceVisible='y'>
-            <Code animated code={nodejs} language='javascript' show />
+            <Code animated={isVisible1} code={nodejs} language='javascript' show />
           </SimpleBar>
         </TabsContent>
         <TabsContent value='python'>
           <SimpleBar forceVisible='y'>
-            <Code animated code={python} language='python' show />
+            <Code  animated={isVisible1} code={python} language='python' show />
           </SimpleBar>
         </TabsContent>
       </Tabs>

@@ -32,7 +32,7 @@ export default function Home() {
 
           <button className="vs-code-btn px-2 py-2 md:px-6 md:py-3 ">
             <img src="/logo/vs-code.svg" alt="vs code" className="mr-1" />
-            <Link href={"https://marketplace.visualstudio.com/items?itemName=AyushSinghal.Code-Mate"} className="vs-code-span">
+            <Link href={"https://marketplace.visualstudio.com/items?itemName=AyushSinghal.Code-Mate"} className="vs-code-span text-xs font-bold md:text-lg">
               Install our VS Code Extension
             </Link>
           </button>
@@ -49,16 +49,16 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <Link href={"/pricing"} className="pricing-text">Compare Plans</Link>
+            <Link href={"/pricing"} className="pricing-text ">Compare Plans</Link>
           </button>
         </div>
       </div>
       <DemoVideoSection />
       <TrustedBySection />
-      <h1 className="text-xl md:text-5xl text-center font-bold mt-12 bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent ">Write Code faster than ever</h1>
+      <h1 className="text-xl md:text-5xl text-center font-bold mt-12 bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent uppercase">Write Code faster than ever</h1>
       <p className="text-lg md:text-2xl dark:text-gray-600 text-center">Join us on our Journey</p>
       <div className="items-center justify-center  w-full mt-12  ">
-        <div className="mt-14 my-9 ">
+        <div className="mt-14 my-9 min-h-[600px] overflow-hidden">
           <CodePage />
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function Home() {
       <TimeLine />
       <Pinned buttonTitle="Book a Demo" title={"For Teams and Enterprises"} description="Make your teams 10x more productive while programming by automating debugging and code review process in your organisation." link={"https://cal.com/AyushSinghal/30min"} />
       <MediaFeatures />
-      <h1 className="text-2xl md:text-6xl font-semibold text-center mt-7">Proud to be <span className="bg-gradient-to-r from-teal-500 to-gray-500 bg-clip-text text-transparent">
+      <h1 className="text-2xl uppercase md:text-6xl font-semibold text-center mt-7">Proud to be <span className="bg-gradient-to-r from-teal-500 to-gray-500 bg-clip-text text-transparent">
         recognized by </span></h1>
       <Slider />
       <CodemateFigures />

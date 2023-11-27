@@ -13,7 +13,7 @@ const ComingSoonToCLi = () => {
         <div className="relative p-6 bg-white    flex-grow">
           <div className="flex  justify-center items-center mt-16">
             <span className='text-4xl'>😎</span>
-            <h3 className="my-2 ml-3 text-4xl font-bold text-gray-800">Coming Soon to CLI</h3>
+            <h3 className="my-2 ml-3 text-2xl uppercase md:text-4xl font-bold text-gray-800">Coming Soon to CLI</h3>
           </div>
           <p className="text-gray-600 text-center">
             We are working on bringing CodeMate to CLI. Stay tuned!
