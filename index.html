@@ -37,6 +37,20 @@
         opacity: 0;
       }
     }
+
+    .img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .img-responsive {
+        width: 80%;
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -2428,7 +2442,7 @@ a,
                             src="./assets/images/logo/SISFS.jpg">
                     </div> -->
           <div class="slide relative">
-            <img style="width: 100%; height: 120px; object-fit: cover;" src="https://i.ibb.co/JQ5VKhJ/kurativz.jpg">
+            <img class="image-responsive" src="https://i.ibb.co/JQ5VKhJ/kurativz.jpg">
           </div>
           <div class="slide relative">
             <img style="width: 100%; height: 150px; object-fit: cover;" src="https://i.ibb.co/d5HqmKT/yourstory.png">
@@ -2445,19 +2459,19 @@ a,
           </div>
 
           <div class="slide relative">
-            <img class="w-full h-[300px] object-cover" style="width: 100%; height: 200px; object-fit: cover;"
+            <img class="image-responsive w-full h-[300px] object-cover"
               src="https://i.ibb.co/wKNVt4J/iit-kanpur.png">
           </div>
           <div class="slide relative">
-            <img class="w-full h-[300px] object-cover" style="width: 100%; height: 200px; object-fit: cover;"
+            <img class="w-full image-responsive h-[300px] object-cover" 
               src="https://i.ibb.co/nR427qK/IITR-Logo.png">
           </div>
           <div class="slide relative">
-            <img class="w-full h-[300px] object-cover" style="width: 100%; height: 200px; object-fit: cover;"
+            <img class="w-full image-responsive h-[300px] object-cover"
               src="https://i.ibb.co/mtYr1bg/meity.png">
           </div>
           <div class="slide relative">
-            <img class="w-full h-[300px] object-cover" style="width: 100%; height: 200px; object-fit: cover;"
+            <img class="w-full image-responsive h-[300px] object-cover"
               src="https://i.ibb.co/PhNtVmd/dst.png">
           </div>
 
