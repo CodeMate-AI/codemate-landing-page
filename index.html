@@ -1021,7 +1021,7 @@ a,
                   <div style="text-align: center;">
                     <p class="text-size-large" style="margin-top: 1rem;"><span
                         style="padding:.5rem; border-radius: 10px; margin-right: .5rem; background-color: rgb(230, 70, 69, 15%); color:red;"
-                        id="totalLines">120000+</span>lines of code reviewed so far</p>
+                        id="totalLines"></span>lines of code reviewed so far</p>
                   </div>
                 </div>
 
@@ -2977,35 +2977,59 @@ a,
   </script>
 
   <script>
-
     // document.addEventListener("DOMContentLoaded", function () {
-    const closePopupButton = document.getElementById('close-popup');
-    const popup = document.getElementById('popup');
+    //   const closePopupButton = document.getElementById('close-popup');
+    //   const popup = document.getElementById('popup');
 
-    popup.style.display = 'block';
+    //   popup.style.display = 'block';
 
-    closePopupButton.addEventListener('click', () => {
-      console.log('clicked')
-      popup.style.display = 'none';
-    });
+    //   closePopupButton.addEventListener('click', () => {
+    //     console.log('clicked')
+    //     popup.style.display = 'none';
+    //   });
 
-    // JavaScript for redirecting to a different URL
-    const redirectButton = document.getElementById('redirect-button');
+    //   const redirectButton = document.getElementById('redirect-button');
 
-    redirectButton.addEventListener('click', () => {
-      // window.location.href = '#Pricing';
-      popup.style.display = 'none';
+    //   redirectButton.addEventListener('click', () => {
+    //     popup.style.display = 'none';
 
-    });
+    //   });
     // });
 
-    async function logJSONData() {
-      const lineHolder = document.getElementById("totalLines");
-      const response = await fetch("https://api.codemate.ai/getLines");
-      const jsonData = await response.json();
-      lineHolder.innerText = jsonData.value
+    const lineHolder = document.getElementById("totalLines");
+    lineHolder.innerText = localStorage.getItem("totalLines") || 1988980;
+
+    let oldValue = localStorage.getItem("totalLines") || 1988980;
+    function logJSONData() {
+      fetch("https://api.codemate.ai/getLines")
+      .then((res) => res.json())
+      .then((data) => {
+        let newValue = data.value;
+        localStorage.setItem("totalLines", newValue);
+        if (newValue > oldValue) {
+          let counter = oldValue;
+          let interval = setInterval(() => {
+            if (counter < newValue) {
+              counter++;
+              lineHolder.innerText = counter;
+            } else {
+              clearInterval(interval);
+            }
+          }, 1);
+        } else {
+          lineHolder.innerText = newValue;
+        }
+        oldValue = newValue;
+      }).catch((err) => {
+        console.log("fetch error:", err);
+      })
     }
+
     logJSONData()
+
+    setInterval(() => {
+      logJSONData()
+    }, 10000);
   </script>
 </body>
 
