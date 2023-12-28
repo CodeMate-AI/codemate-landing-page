@@ -114,6 +114,23 @@
 
 
 <body>
+
+  <div id="popup"
+    style="display: block; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; border: 1px solid #ccc; padding: 20px; max-width: 400px; text-align: center; z-index: 99999;">
+    <div onclick="togglePopup()" style="position: absolute; top: 10px; right: 10px; cursor: pointer;">
+      <!-- SVG close icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M18.37 5.63c-.32-.32-.85-.32-1.17 0L12 10.83 6.8 5.63c-.32-.32-.85-.32-1.17 0-.32.32-.32.85 0 1.17l5.2 5.2-5.2 5.2c-.32.32-.32.85 0 1.17.16.16.36.24.58.24s.42-.08.58-.24L12 13.17l5.2 5.2c.16.16.36.24.58.24s.42-.08.58-.24c.32-.32.32-.85 0-1.17l-5.2-5.2 5.2-5.2c.32-.32.32-.85 0-1.17z" />
+      </svg>
+    </div>
+    <img src="https://i.ibb.co/L1P4GSJ/coupen.png" alt="Sample Image" style="max-width: 100%; margin-bottom: 20px;">
+    
+    <a onclick="togglePopup()" href="#Pricing" style="background-color: #48AEF3; padding: 10px 20px;">Get Now</a>
+  </div>
+
+
   <div class="page-wrapper">
 
     <!-- <div class="popup" id="popup">
@@ -865,8 +882,8 @@ a,
     <div class="hide-tablet" style="padding: .5rem; background-color: rgb(72, 174, 243); width: 100vw;">
       <p style="text-align: center; color: black;">
         <img src="https://img.icons8.com/emoji/48/null/party-popper.png" style="width: 24px;" />
-        CodeMate Visual Studio Code Extension is now available. Download <a href="https://codemate.ai/vscode"
-          style="text-decoration: underline;">here!</a>
+        End of year sale - 50% on your plans.  <a href="#Pricing"
+          style="text-decoration: underline;">Get Now</a>
       </p>
     </div>
     <div class="cursor-wrapper pointer-events-off">
@@ -2010,6 +2027,16 @@ a,
 
                 </div>
 
+              <div>
+                <p style="text-align: center; font-size: 1.125rem; margin-top: 1rem; color: white; margin-bottom: 3rem;">
+                  🎉 Coupon code:
+                  <span
+                    style="display: inline-flex; align-items: center; border-radius: 9999px; padding: 0.125rem 0.625rem; font-size: 0.75rem; font-weight: 600; background-color: rgba(16, 185, 129, 0.1); color: rgb(5, 150, 105);">
+                    GOODBYE23
+                  </span>
+                  <span style="font-size: 0.875rem; color: rgb(185, 28, 28);">valid till 31st Dec 11:59PM IST</span>
+                </p>
+              </div>
 
                 <div class="pricing25_tab-content w-tab-content">
                   <div data-w-tab="Tab 1" class="pricing25_tab-pane w-tab-pane">
@@ -3026,6 +3053,13 @@ a,
     setInterval(() => {
       logJSONData()
     }, 10000);
+  </script>
+
+  <script>
+    function togglePopup() {
+      var popup = document.getElementById("popup");
+      popup.style.display = (popup.style.display === "none" || popup.style.display === '') ? "block" : "none";
+    }
   </script>
 </body>
 
