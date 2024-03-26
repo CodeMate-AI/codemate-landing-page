@@ -3034,29 +3034,21 @@ a,
     // });
 
     const lineHolder = document.getElementById("totalLines");
-    lineHolder.innerText = localStorage.getItem("totalLines") || 1988980;
 
-    let oldValue = localStorage.getItem("totalLines") || 1988980;
     function logJSONData() {
       fetch("https://api.codemate.ai/getLines")
       .then((res) => res.json())
       .then((data) => {
-        let newValue = data.value;
-        localStorage.setItem("totalLines", newValue);
-        if (newValue > oldValue) {
-          let counter = oldValue;
-          let interval = setInterval(() => {
-            if (counter < newValue) {
-              counter++;
-              lineHolder.innerText = counter;
-            } else {
-              clearInterval(interval);
-            }
-          }, 50);
-        } else {
-          lineHolder.innerText = newValue;
-        }
-        oldValue = newValue;
+        let startValue = parseInt(data.value) - 100;
+        let finishValue = data.value;
+
+        let interval = setInterval(() => {
+          if (startValue >= finishValue) {
+            clearInterval(interval);
+          }
+          startValue++;
+          lineHolder.innerText = startValue;
+        }, 50);
       }).catch((err) => {
         console.log("fetch error:", err);
       })
