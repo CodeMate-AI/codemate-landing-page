@@ -40,18 +40,17 @@
     }
 
     .img-responsive {
-    width: 100%;
-    height: auto;
-}
+      width: 100%;
+      height: auto;
+    }
 
-@media screen and (max-width: 600px) {
-    .img-responsive {
+    @media screen and (max-width: 600px) {
+      .img-responsive {
         width: 80%;
         height: 150px;
         object-fit: cover;
+      }
     }
-}
-
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -82,25 +81,27 @@
   </script>
 
 
-<!--Meta Pixel code-->
+  <!--Meta Pixel code-->
   <!-- Meta Pixel Code -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '398656829254932');
     fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=398656829254932&ev=PageView&noscript=1"
-  /></noscript>
-<!-- End Meta Pixel Code -->
-  
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=398656829254932&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <!--Microsoft Clarity-->
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
@@ -550,7 +551,7 @@
     </div> -->
 
 
-    <div class="global-styles w-embed">
+    <div class="global-styles w-embed" style="position: sticky;">
 
 
       <style>
@@ -913,13 +914,96 @@ a,
           padding-right: 0rem !important;
           padding-left: 0rem !important;
         }
+
+        .hero {
+          align-items: center;
+          display: flex;
+          flex: none;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          gap: 20px;
+          height: min-content;
+          justify-content: center;
+          overflow: hidden;
+          padding: 0;
+          position: relative;
+          width: 100%;
+          margin-top: 15px;
+        }
+
+        .award {
+          aspect-ratio: 8.426229508196721 / 1;
+          flex: none;
+          /* height: var(--framer-aspect-ratio-supported, 46px); */
+          max-width: 390px;
+          opacity: .6;
+          position: relative;
+          width: 390px;
+          margin-top: 50px;
+        }
+
+
+
+
+        .ticker {
+          display: flex;
+
+        }
+
+        .ml-4 {
+          margin-left: 80px;
+          width: 150px;
+        }
+
+
+        @keyframes ticker-kf {
+          0% {
+            transform: translate3d(0, 0, 0);
+          }
+
+          100% {
+            transform: translate3d(-108rem, 0, 0);
+          }
+        }
+
+        .img-ticker {
+          animation: ticker-kf 45s linear infinite;
+        }
+
+        @media screen and (max-width:809px) {
+          .award {
+            aspect-ratio: 8.450704225352112 / 1;
+            /* height: var(--framer-aspect-ratio-supported, 36px); */
+            max-width: 300px;
+            width: 300px;
+            padding-top: 10px;
+          }
+        }
+
+        @media screen and (max-width:809px) {
+          #slide {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .header26_component {
+            padding-top: 2rem;
+          }
+        }
       </style>
-      
+
     </div>
-    <div class="hide-tablet" style="padding: .5rem; background-color: rgb(72, 174, 243); width: 100vw;">
+    <div class="hide-tablet"
+      style="padding: .5rem; background-color: rgb(72, 174, 243); width: 100vw; position:sticky;">
       <p style="text-align: center; color: black;">
         <img src="https://img.icons8.com/emoji/48/null/party-popper.png" style="width: 24px;" />
-        Now get 30 days free trial of CodeMate Pro  <a href="https://app.codemate.ai"
+        Now get 30 days free trial of CodeMate Pro <a href="https://app.codemate.ai"
           style="text-decoration: underline;">Activate Now</a>
       </p>
     </div>
@@ -932,10 +1016,11 @@ a,
       <div data-w-id="27ae86ec-8f99-97d7-a5f9-0198ea8dd1d9" class="top-navbar_container">
         <img src="https://i.ibb.co/prH1Wn0/codemateai.png" loading="lazy" alt="" class="navbar_logo show-tablet" />
         <nav role="navigation" class="top-navbar_menu w-nav-menu">
-          <div class="top-navbar_menu-link-wrapper">
+          <div class="top-navbar_menu-link-wrapper" style="width:27.5 rem;">
             <a href="#features" class="top-navbar_link w-nav-link">Features</a>
             <a href="#Pricing" class="top-navbar_link w-nav-link">Pricing</a>
             <a href="#contactus" target="_blank" class="top-navbar_link w-nav-link">Contact</a>
+
 
             <a href="https://app.codemate.ai" data-w-id="1b87565d-005b-b34d-0495-100a1e723a14"
               class="top-navbar_link is-primary w-inline-block">
@@ -967,13 +1052,13 @@ a,
       </div>
     </div>
     <main class="main-wrapper">
-      <div class="section_topbar">
-        <a href="#" class="topbar_logo-link w-nav-brand">
-          <img src="https://i.ibb.co/prH1Wn0/codemateai.png" loading="lazy" alt="" class="navbar_logo"
-            style="height: auto; width: 250px;" />
-        </a>
-        <a href="https://codemate.ai/edu" target="_blank" class="button is-secondary is-small is-icon w-inline-block">
-          <!-- <div class="icon-embed-xsmall w-embed">
+
+      <a href="#" class="topbar_logo-link w-nav-brand">
+        <img src="https://i.ibb.co/prH1Wn0/codemateai.png" loading="lazy" alt="" class="navbar_logo"
+          style="height: auto; width: 250px;" />
+      </a>
+      <a href="https://codemate.ai/edu" target="_blank" class="button is-secondary is-small is-icon w-inline-block">
+        <!-- <div class="icon-embed-xsmall w-embed">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--iconoir" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
                                     <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
@@ -981,8 +1066,13 @@ a,
                                 </g>
                             </svg>
                         </div> -->
-          <div>For Education</div>
-        </a>
+
+      </a>
+
+      <div class="hero">
+        <div class="award">
+          <img src="/assets/awards.svg" />
+        </div>
       </div>
       <header data-w-id="b9fe15d6-f8c1-87f2-e9aa-9450eac2c926" class="section_header26">
         <div class="padding-global">
@@ -998,7 +1088,8 @@ a,
                           way to write error-free <span class="text-highlight-orange">code</span>
                         </h1>
                       </div>
-                      <p class="text-size-large">Code 10x faster as CodeMate search, navigate and understand complex codebases for you.</p>
+                      <p class="text-size-large">Code 10x faster as CodeMate search, navigate and understand complex
+                        codebases for you.</p>
                       <div class="margin-top margin-medium">
                         <div class="button-group is-center">
                           <a href="https://marketplace.visualstudio.com/items?itemName=AyushSinghal.Code-Mate"
@@ -1065,26 +1156,26 @@ a,
                               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=392150&theme=light"
                               alt="CodeMate&#0032;AI - Grammarly&#0032;for&#0032;Programmers&#0058;&#0032;Auto&#0045;GPT&#0032;for&#0032;fixing&#0032;errors | Product Hunt"
                               style="width: 250px; height: 54px;" width="250" height="54" /></a> -->
-                          <a
-                            id="cli-btn"
-                            class="button is-icon w-inline-block"
+                          <a id="cli-btn" class="button is-icon w-inline-block"
                             style="display: flex; gap: 50px; cursor: pointer; width: 325px; justify-content: space-between;"
-                            onclick="navigator.clipboard.writeText('npm i -g codemate-cli')"
-                          >
+                            onclick="navigator.clipboard.writeText('npm i -g codemate-cli')">
                             <div style="display: flex; gap: 20px;">
                               <div class="icon-embed-xsmall w-embed">
-                                <svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="800px" height="800px" viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg">
                                   <g>
                                     <path fill="none" d="M0 0h24v24H0z" />
-                                    <path d="M11 12l-7.071 7.071-1.414-1.414L8.172 12 2.515 6.343 3.929 4.93 11 12zm0 7h10v2H11v-2z" />
+                                    <path
+                                      d="M11 12l-7.071 7.071-1.414-1.414L8.172 12 2.515 6.343 3.929 4.93 11 12zm0 7h10v2H11v-2z" />
                                   </g>
                                 </svg>
                               </div>
                               npm i -g codemate-cli
                             </div>
-                            <div class="cli-btn-cpy-icon icon-embed-xsmall w-embed" style="border: 2px solid #d8d5d1; border-radius: 5px;">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                class="w-3 h-3" style="margin: 2px;">
+                            <div class="cli-btn-cpy-icon icon-embed-xsmall w-embed"
+                              style="border: 2px solid #d8d5d1; border-radius: 5px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-3 h-3" style="margin: 2px;">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                   d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
                               </svg>
@@ -1143,11 +1234,10 @@ a,
                       <img src="https://i.ibb.co/C7Zg0h2/Google-startup-badge.jpg" loading="lazy"
                         style="width:400px; color:grey" /></a>
                   </div> -->
-                  <div class="layout239_item"> <a
-                    href="https://issuu.com/inc42/docs/gen_ai_report_v4" target="#">
-                    <img src="https://i.ibb.co/5RSPnjJ/inc42.png" loading="lazy"
-                      style="width:400px; color:grey" /></a>
-                </div>
+                  <div class="layout239_item"> <a href="https://issuu.com/inc42/docs/gen_ai_report_v4" target="#">
+                      <img src="https://i.ibb.co/5RSPnjJ/inc42.png" loading="lazy"
+                        style="width:400px; color:grey" /></a>
+                  </div>
                   <div class="layout239_item"><a
                       href="https://yourstory.com/2023/09/pitch-fest-2023-techsparks-tech30-startups-technology-ai"
                       target="#">
@@ -1158,14 +1248,18 @@ a,
                       <img src="https://i.ibb.co/Bc4Kxbh/American-Center-2-removebg-preview.png" loading="lazy"
                         style="width:400px; color:grey" /></a>
                   </div> -->
-                  <div class="layout239_item"><a href="https://www.moneycontrol.com/news/trends/features/9-interesting-generative-ai-startups-in-india-11616981.html" target="#">
-                    <img src="https://i.ibb.co/qJPSx2G/moneycontrol-logo-freelogovectors-net.webp" loading="lazy"
-                      style="width:400px; color:grey" /></a>
-                </div>
+                  <div class="layout239_item"><a
+                      href="https://www.moneycontrol.com/news/trends/features/9-interesting-generative-ai-startups-in-india-11616981.html"
+                      target="#">
+                      <img src="https://i.ibb.co/qJPSx2G/moneycontrol-logo-freelogovectors-net.webp" loading="lazy"
+                        style="width:400px; color:grey" /></a>
+                  </div>
 
-                  <div class="layout239_item"><a href="https://nasscom.in/knowledge-center/publications/generative-ai-startup-landscape-india-2023-perspective" target="#">
-                                        <img src="https://i.ibb.co/NFfgZJb/Nasscom-logo-svg-svg.png" loading="lazy"
-                                            style="width:400px; color:grey" /></a>
+                  <div class="layout239_item"><a
+                      href="https://nasscom.in/knowledge-center/publications/generative-ai-startup-landscape-india-2023-perspective"
+                      target="#">
+                      <img src="https://i.ibb.co/NFfgZJb/Nasscom-logo-svg-svg.png" loading="lazy"
+                        style="width:400px; color:grey" /></a>
                   </div>
                   <!-- <div class="layout239_item">
                       <img src="https://i.ibb.co/b1zKj0v/nasscom-removebg-preview.png" loading="lazy"
@@ -1196,37 +1290,28 @@ a,
                     </div>
                   </div>
                 </div>
-                <div class="w-layout-grid layout239_list"
-                  style="margin-bottom: 2rem; display: flex; align-items: center;">
-                  <div class="layout239_item">
-                    <img src="https://i.ibb.co/JdC5Jf9/Adobe.png" loading="lazy" style="width:200px; color:grey"
-                      alt="Illustration of timeline" />
-                  </div>
-                  <div class="layout239_item">
-                    <img src="https://i.ibb.co/jT6GYf5/amazon.png" loading="lazy" alt="Illustration of web design"
-                      style="width:100px; color:grey" />
-                  </div>
-                  <div class="layout239_item">
-                    <img src="https://i.ibb.co/9s5sQ3X/cred.png" loading="lazy" alt="Illustration of services"
-                      style="width:100px; color:grey" />
-                  </div>
-                  <div class="layout239_item">
-                    <img src="https://i.ibb.co/wSQ6yy1/fampay.png" loading="lazy" style="width:200px; color:grey"
-                      alt="Illustration of timeline" />
-                  </div>
-                  <div class="layout239_item">
-                    <img src="https://i.ibb.co/zRQ2zsN/google.png" loading="lazy" alt="Illustration of web design"
-                      style="width:100px; color:grey" />
-                  </div>
-                  <div class="layout239_item">
-                    <img src="https://i.ibb.co/jZTfPpH/microsoft.png" loading="lazy" alt="Illustration of services"
-                      style="width:250px; color:grey" />
-                  </div>
 
+                <div class="overflow-hidden">
+
+                  <!-- The slider itself is a flex grid -->
+                  <div class=" ticker flex -mx-4 img-ticker">
+
+                    <!-- Original set of images -->
+                    <!-- Each image is a grid column with width 16rem (w-64) and horiztonal margin 1rem (mx-4) -->
+                    <img class="img-mov ml-4 w-1.4 mx-4 self-start" src="https://i.ibb.co/wSQ6yy1/fampay.png">
+                    <img class="img-mov ml-4 w-1.4 mx-4 self-start" src="/assets/images/amazon.png">
+                    <img class="img-mov ml-4 w-1.4 mx-4 self-start" src="https://i.ibb.co/9s5sQ3X/cred.png">
+                    <img class="img-mov ml-4 w-1.4 mx-4 self-start" src="https://i.ibb.co/zRQ2zsN/google.png">
+                    <img class="img-mov ml-4 w-1.4 mx-4 self-start" src="https://i.ibb.co/jZTfPpH/microsoft.png">
+                    <img class="img-mov ml-4 w-1.4 mx-4 self-start" src="https://i.ibb.co/JdC5Jf9/Adobe.png">
+                    <img class="img-mov ml-4 w-1.4 mx-4 self-start" src="https://w7.pngwing.com/pngs/899/831/png-transparent-palo-alto-hd-logo.png">
+                    <img class="img-mov ml-4 w-1.4 mx-4 self-start" src="https://seeklogo.com/images/B/blinkit-logo-568D32C8EC-seeklogo.com.png">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </section>
 
 
@@ -1463,7 +1548,8 @@ a,
                           <h3 class="heading-style-h4 is-larger">AI Assistant: Your co-developer while programming</h3>
                         </div>
                         <div class="max-width-small">
-                          <p>Make changes in your codebase like CRUD operations, add documentations or perform any task on your behalf with just a command.  </p>
+                          <p>Make changes in your codebase like CRUD operations, add documentations or perform any task
+                            on your behalf with just a command. </p>
                         </div>
                       </div>
                     </div>
@@ -1472,8 +1558,7 @@ a,
                       <!-- <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://www.youtube.com/watch?v=aUxywiz0N0Q">
                                             </a> -->
                       <a href="#">
-                        <img style="width:100%;"
-                          src="https://s9.gifyu.com/images/SF3Hr.gif">
+                        <img style="width:100%;" src="https://s9.gifyu.com/images/SF3Hr.gif">
                       </a>
                     </div>
                     <!-- <div style="position:relative;width:fit-content;height:fit-content;">
@@ -1515,10 +1600,9 @@ a,
                       <!-- <div class="layout358_image-wrapper">
                                         <img src="https://i.ibb.co/JFvtMDD/fix-errors.jpg" loading="lazy" alt="Image of page with Lorem Ipsum" class="layout358_image is-feature1-before"/>
                                     </div> -->
-                                    <a href="#">
-                                      <img style="width:100%;"
-                                        src="https://s5.gifyu.com/images/SRDer.gif">
-                                    </a>
+                      <a href="#">
+                        <img style="width:100%;" src="https://s5.gifyu.com/images/SRDer.gif">
+                      </a>
                       <!-- <div style="width: 100%; height: 100%;">
                         <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none"
                           class="layout358_image is-feature1-before"
@@ -1551,15 +1635,15 @@ a,
                               <h3 class="heading-style-h4 is-larger">Optimise bad quality code within seconds</h3>
                             </div>
                             <div class="max-width-small">
-                              <p>Refactor your codebase to remove redundant and error-prone code to make it production ready.
+                              <p>Refactor your codebase to remove redundant and error-prone code to make it production
+                                ready.
                               </p>
                             </div>
                           </div>
                         </div>
                         <div class="layout358_image-wrapper">
                           <a href="#">
-                            <img style="width:100%;"
-                              src="https://s9.gifyu.com/images/SF3Ht.gif">
+                            <img style="width:100%;" src="https://s9.gifyu.com/images/SF3Ht.gif">
                           </a>
                           <!-- <div style="width: 100%; height: 100%;">
                                             <iframe allow="autoplay; encrypted-media" allowfullscreen style="border:none" class="layout358_image is-feature1-before" src="https://www.youtube.com/embed/6tOv6DcazFI?autoplay=1&mute=1&loop=1&rel=0&controls=0&disablekb=1" width="100%" height="400" autoplay muted loop></iframe>
@@ -1584,7 +1668,8 @@ a,
                                   ChatGPT with context-awareness </h3>
                               </div>
                               <div class="max-width-small">
-                                <p>Connect your codebase, documentations and Git repositories and start interacting with them without any data leaving your existing environment.</p>
+                                <p>Connect your codebase, documentations and Git repositories and start interacting with
+                                  them without any data leaving your existing environment.</p>
                               </div>
                             </div>
                           </div>
@@ -1593,10 +1678,9 @@ a,
                               class="layout358_image is-feature1-before"
                               src="https://www.youtube.com/embed/x_QvwfXtz9U?autoplay=1&mute=1&loop=1&rel=0&disablekb=1"
                               width="100%" height="400" autoplay muted loop></iframe> -->
-                              <a href="#">
-                                <img style="width:100%;"
-                                  src="https://s5.gifyu.com/images/SRDet.gif">
-                              </a>
+                            <a href="#">
+                              <img style="width:100%;" src="https://s5.gifyu.com/images/SRDet.gif">
+                            </a>
                           </div>
                           <!-- <div class="layout358_image-wrapper">
                                         <iframe class="layout358_image is-feature1-before" allow="autoplay; encrypted-media" allowfullscreen style="border:none" src="https://www.youtube.com/embed/x_QvwfXtz9U?autoplay=1&mute=1&loop=1&rel=0&controls=0&disablekb=1" width="640" height="360" autoplay muted loop></iframe>
@@ -1635,10 +1719,9 @@ a,
                                   class="layout358_image is-feature1-before"
                                   src="https://www.youtube.com/embed/x_QvwfXtz9U?autoplay=1&mute=1&loop=1&rel=0&disablekb=1"
                                   width="100%" height="400" autoplay muted loop></iframe> -->
-                                  <a href="#">
-                                    <img style="width:100%;"
-                                      src="https://s5.gifyu.com/images/SRDeY.gif">
-                                  </a>
+                                <a href="#">
+                                  <img style="width:100%;" src="https://s5.gifyu.com/images/SRDeY.gif">
+                                </a>
                               </div>
                               <!-- <img src="https://i.ibb.co/G2CD858/optimise-code.jpg" height="100%" width="100%" loading="lazy" alt="Image of page with Lorem Ipsum" class="layout358_image is-feature1-before"/> -->
                             </div>
@@ -2053,7 +2136,8 @@ a,
                       </h2>
                     </div>
                     <p class="text-size-medium"> As a launch offer, we
-                      are offering FLAT 25% off on our Monthly and Annual plans. Use code <span style="color: aqua;">SAVE25 </span>
+                      are offering FLAT 25% off on our Monthly and Annual plans. Use code <span
+                        style="color: aqua;">SAVE25 </span>
                       during checkout to avail additional 25% discount on the quoted price below!!
                     </p>
                   </div>
@@ -2065,7 +2149,8 @@ a,
                   <a data-w-tab="Tab 1" style="margin-right: 4px;" class="pricing25_tab-link w-inline-block w-tab-link">
                     <div>Monthly</div>
                   </a>
-                  <a data-w-tab="Tab 2" class="pricing25_tab-link w-inthline-block w-tab-link w--current" style="width: 200px;">
+                  <a data-w-tab="Tab 2" class="pricing25_tab-link w-inthline-block w-tab-link w--current"
+                    style="width: 200px;">
                     <div>Yearly<span class='save-label' style="margin-top: 4px; margin-right: 2px;">Upto 45% off</span>
                     </div>
 
@@ -2079,7 +2164,7 @@ a,
 
                 </div>
 
-              <!-- <div>
+                <!-- <div>
                 <p style="text-align: center; font-size: 1.125rem; margin-top: 1rem; color: white; margin-bottom: 3rem;">
                   🎉 Coupon code:
                   <span
@@ -2094,37 +2179,37 @@ a,
                   <div data-w-tab="Tab 1" class="pricing25_tab-pane w-tab-pane">
                     <div class="w-layout-grid pricing25_plans">
 
-                      <div id="w-node-_80397889-a2f4-c4a2-15e5-ee2099e898e2-a5739249"
-                                                class="pricing25">
-                                                <div class="pricing25_plan">
-                                                    <div class="pricing25_free-plan-content">
-                                                        <div class="margin-bottom margin-tiny">
-                                                            <div class="heading-style-h4">Free Forever</div>
-                                                        </div>
-                                                        <div class="pricing25_divider"></div>
-                                                        <div class="margin-bottom margin-medium">
-                                                            <div class="heading-style-h2">
-                                                                $0<span class="heading-style-h4">/mo</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="text-color-gray">☑️ Basic ML Model</div>
-                                                        <div class="text-color-gray">☑️ 2 requests/min limit</div>
-                                                        <div class="text-color-gray">☑️ Inline chat </div>
-                                                        <div class="text-color-gray">☑️ Single file reference </div>
-                                                        <div class="text-color-gray">☑️ Access to CodeMate chat</div>
-                                                        <div class="text-color-gray">☑️ Standard support via mail and community </div>
-                                                        <div class="text-color-gray">☑️ <s>Context aware suggestions and fixes</s></div>
-                                                        <div class="text-color-gray">☑️ <s>Import Github repositories</s></div>
-                                                        <div class="text-color-gray">☑️ <s>Chat with any Web URL</s></div><br>
+                      <div id="w-node-_80397889-a2f4-c4a2-15e5-ee2099e898e2-a5739249" class="pricing25">
+                        <div class="pricing25_plan">
+                          <div class="pricing25_free-plan-content">
+                            <div class="margin-bottom margin-tiny">
+                              <div class="heading-style-h4">Free Forever</div>
+                            </div>
+                            <div class="pricing25_divider"></div>
+                            <div class="margin-bottom margin-medium">
+                              <div class="heading-style-h2">
+                                $0<span class="heading-style-h4">/mo</span>
+                              </div>
+                            </div>
+                            <div class="text-color-gray">☑️ Basic ML Model</div>
+                            <div class="text-color-gray">☑️ 2 requests/min limit</div>
+                            <div class="text-color-gray">☑️ Inline chat </div>
+                            <div class="text-color-gray">☑️ Single file reference </div>
+                            <div class="text-color-gray">☑️ Access to CodeMate chat</div>
+                            <div class="text-color-gray">☑️ Standard support via mail and community </div>
+                            <div class="text-color-gray">☑️ <s>Context aware suggestions and fixes</s></div>
+                            <div class="text-color-gray">☑️ <s>Import Github repositories</s></div>
+                            <div class="text-color-gray">☑️ <s>Chat with any Web URL</s></div><br>
 
-                                                        <br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br>
 
-                                                        <div class="margin-top margin-medium">
-                                                            <a href="https://codemate.ai/vscode" target="_blank" class="button is-secondary max-width-full w-button">Get Started</a>
-                                                        </div>
-                                                    </div>
-                                                </div> 
-                                            </div> 
+                            <div class="margin-top margin-medium">
+                              <a href="https://codemate.ai/vscode" target="_blank"
+                                class="button is-secondary max-width-full w-button">Get Started</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <div id="w-node-_80397889-a2f4-c4a2-15e5-ee2099e898e2-a5739249" class="pricing25_popular-wrapper">
                         <div class="pricing25_plan most-popular">
                           <div class="pricing25_free-plan-content">
@@ -2138,18 +2223,20 @@ a,
                               </div>
                             </div>
                             <div class="text-color-gray">Everything in Free plan + </div><br>
-                            <div class="text-color-gray">☑️ Advanced ML models with browsing capabilities and faster response</div>
+                            <div class="text-color-gray">☑️ Advanced ML models with browsing capabilities and faster
+                              response</div>
                             <div class="text-color-gray">☑️ Dedicated knowledge base storage (upto 10 projects)</div>
                             <div class="text-color-gray">☑️ Debug, and Refactor code</div>
                             <div class="text-color-gray">☑️ Context Aware Suggestions </div>
-                            <div class="text-color-gray">☑️ Add content from Github repositories and Web URLs to Knowledge Base</div>
+                            <div class="text-color-gray">☑️ Add content from Github repositories and Web URLs to
+                              Knowledge Base</div>
                             <div class="text-color-gray">☑️ CodeMate Assistant access</div>
                             <div class="text-color-gray">☑️ Chat with any web URL</div>
                             <div class="text-color-gray">☑️ Priority Live support via dedicated Discord channel</div>
                             <div class="text-color-gray">☑️ Beta features Access with early updates</div>
 
 
-                              <br><br><br><br><br>
+                            <br><br><br><br><br>
                             <!-- <script async
                             src="https://js.stripe.com/v3/buy-button.js">
                             </script>
@@ -2159,14 +2246,15 @@ a,
                           publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L"
                           > 
                           </stripe-buy-button> -->
-                          <div class="margin-top margin-medium">
-                            <a href="https://app.codemate.ai/app/pricing" target="_blank" class="sub-btn button is-secondary max-width-full w-button">
-                              Subscribe
-                            </a>
-                          </div>
+                            <div class="margin-top margin-medium">
+                              <a href="https://app.codemate.ai/app/pricing" target="_blank"
+                                class="sub-btn button is-secondary max-width-full w-button">
+                                Subscribe
+                              </a>
+                            </div>
                           </div>
                         </div>
-                      </div> 
+                      </div>
                       <div class="pricing25_plan">
                         <div class="pricing25_free-plan-content">
                           <div class="margin-bottom margin-tiny">
@@ -2183,8 +2271,9 @@ a,
                           <div class="text-color-gray">☑️ Review code with detailed PDF report and score</div>
                           <div class="text-color-gray">☑️ Unlimited internet searches</div>
                           <div class="text-color-gray">☑️ Seat management</div>
-                          <div class="text-color-gray">☑️ Priority Live support via Whatsapp, Email, Dedicated Discord channel</div>
-                          
+                          <div class="text-color-gray">☑️ Priority Live support via Whatsapp, Email, Dedicated Discord
+                            channel</div>
+
                           <br><br><br><br><br><br><br><br><br><br><br>
 
 
@@ -2198,12 +2287,12 @@ a,
                           publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L"
                         >
                         </stripe-buy-button> -->
-                        <div class="margin-top margin-medium">
-                          <a href="https://app.codemate.ai/app/pricing" target="_blank"
-                            class="sub-btn button is-secondary max-width-full w-button">
-                            Subscribe
-                          </a>
-                        </div>
+                          <div class="margin-top margin-medium">
+                            <a href="https://app.codemate.ai/app/pricing" target="_blank"
+                              class="sub-btn button is-secondary max-width-full w-button">
+                              Subscribe
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2211,37 +2300,37 @@ a,
                   <div data-w-tab="Tab 2" class="pricing25_tab-pane w-tab-pane w--tab-active">
                     <div class="w-layout-grid pricing25_plans">
 
-                      <div id="w-node-_80397889-a2f4-c4a2-15e5-ee2099e898e2-a5739249"
-                                                class="pricing25">
-                                                <div class="pricing25_plan">
-                                                    <div class="pricing25_free-plan-content">
-                                                        <div class="margin-bottom margin-tiny">
-                                                            <div class="heading-style-h4">Free Forever</div>
-                                                        </div>
-                                                        <div class="pricing25_divider"></div>
-                                                        <div class="margin-bottom margin-medium">
-                                                            <div class="heading-style-h2">
-                                                                $0<span class="heading-style-h4">/yr</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="text-color-gray">☑️ Basic ML Model</div>
-                                                        <div class="text-color-gray">☑️ 2 requests/min limit</div>
-                                                        <div class="text-color-gray">☑️ Inline chat </div>
-                                                        <div class="text-color-gray">☑️ Single file reference </div>
-                                                        <div class="text-color-gray">☑️ Access to CodeMate chat</div>
-                                                        <div class="text-color-gray">☑️ Standard support via mail and community </div>
-                                                        <div class="text-color-gray">☑️ <s>Context aware suggestions and fixes</s></div>
-                                                        <div class="text-color-gray">☑️ <s>Import Github repositories</s></div>
-                                                        <div class="text-color-gray">☑️ <s>Chat with any Web URL</s></div><br>
+                      <div id="w-node-_80397889-a2f4-c4a2-15e5-ee2099e898e2-a5739249" class="pricing25">
+                        <div class="pricing25_plan">
+                          <div class="pricing25_free-plan-content">
+                            <div class="margin-bottom margin-tiny">
+                              <div class="heading-style-h4">Free Forever</div>
+                            </div>
+                            <div class="pricing25_divider"></div>
+                            <div class="margin-bottom margin-medium">
+                              <div class="heading-style-h2">
+                                $0<span class="heading-style-h4">/yr</span>
+                              </div>
+                            </div>
+                            <div class="text-color-gray">☑️ Basic ML Model</div>
+                            <div class="text-color-gray">☑️ 2 requests/min limit</div>
+                            <div class="text-color-gray">☑️ Inline chat </div>
+                            <div class="text-color-gray">☑️ Single file reference </div>
+                            <div class="text-color-gray">☑️ Access to CodeMate chat</div>
+                            <div class="text-color-gray">☑️ Standard support via mail and community </div>
+                            <div class="text-color-gray">☑️ <s>Context aware suggestions and fixes</s></div>
+                            <div class="text-color-gray">☑️ <s>Import Github repositories</s></div>
+                            <div class="text-color-gray">☑️ <s>Chat with any Web URL</s></div><br>
 
-                                                        <br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br>
 
-                                                        <div class="margin-top margin-medium">
-                                                            <a href="https://codemate.ai/vscode" target="_blank" class="button is-secondary max-width-full w-button">Get Started</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="margin-top margin-medium">
+                              <a href="https://codemate.ai/vscode" target="_blank"
+                                class="button is-secondary max-width-full w-button">Get Started</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <div id="w-node-_80397889-a2f4-c4a2-15e5-ee2099e898e2-a5739249" class="pricing25_popular-wrapper">
                         <div class="pricing25_plan most-popular">
                           <div class="pricing25_free-plan-content">
@@ -2256,18 +2345,20 @@ a,
                               </div>
                             </div>
                             <div class="text-color-gray">Everything in Free plan + </div><br>
-                            <div class="text-color-gray">☑️ Advanced ML models with browsing capabilities and faster response</div>
+                            <div class="text-color-gray">☑️ Advanced ML models with browsing capabilities and faster
+                              response</div>
                             <div class="text-color-gray">☑️ Dedicated knowledge base storage (upto 10 projects)</div>
                             <div class="text-color-gray">☑️ Debug, and Refactor code</div>
                             <div class="text-color-gray">☑️ Context Aware Suggestions </div>
-                            <div class="text-color-gray">☑️ Add content from Github repositories and Web URLs to Knowledge Base</div>
+                            <div class="text-color-gray">☑️ Add content from Github repositories and Web URLs to
+                              Knowledge Base</div>
                             <div class="text-color-gray">☑️ CodeMate Assistant access</div>
                             <div class="text-color-gray">☑️ Chat with any web URL</div>
                             <div class="text-color-gray">☑️ Priority Live support via dedicated Discord channel</div>
                             <div class="text-color-gray">☑️ Beta features Access with early updates</div>
 
 
-                              <br><br><br><br><br>
+                            <br><br><br><br><br>
 
                             <!-- <script async
                             src="https://js.stripe.com/v3/buy-button.js">
@@ -2278,12 +2369,12 @@ a,
                             publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L"
                           >
                           </stripe-buy-button> -->
-                          <div class="margin-top margin-medium">
-                            <a href="https://app.codemate.ai/app/pricing" target="_blank"
-                              class="sub-btn button is-secondary max-width-full w-button">
-                              Subscribe
-                            </a>
-                          </div>
+                            <div class="margin-top margin-medium">
+                              <a href="https://app.codemate.ai/app/pricing" target="_blank"
+                                class="sub-btn button is-secondary max-width-full w-button">
+                                Subscribe
+                              </a>
+                            </div>
                             <div class="save-label">
                               <div>17% off</div>
                             </div>
@@ -2304,13 +2395,14 @@ a,
                               </div>
                             </div>
                             <div class="text-color-gray">Everything in Pro plan + </div><br>
-                          <div class="text-color-gray">☑️ Collaborative Knowledge Base sharing</div>
-                          <div class="text-color-gray">☑️ Review code with detailed PDF report and score</div>
-                          <div class="text-color-gray">☑️ Unlimited internet searches</div>
-                          <div class="text-color-gray">☑️ Seat management</div>
-                          <div class="text-color-gray">☑️ Priority Live support via Whatsapp, Email, Dedicated Discord channel</div>
-                          
-                          <br><br><br><br><br><br><br><br><br><br><br>
+                            <div class="text-color-gray">☑️ Collaborative Knowledge Base sharing</div>
+                            <div class="text-color-gray">☑️ Review code with detailed PDF report and score</div>
+                            <div class="text-color-gray">☑️ Unlimited internet searches</div>
+                            <div class="text-color-gray">☑️ Seat management</div>
+                            <div class="text-color-gray">☑️ Priority Live support via Whatsapp, Email, Dedicated Discord
+                              channel</div>
+
+                            <br><br><br><br><br><br><br><br><br><br><br>
                             <!-- <script async
                             src="https://js.stripe.com/v3/buy-button.js">
                             </script>
@@ -2320,12 +2412,12 @@ a,
                             publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L"
                           >
                           </stripe-buy-button> -->
-                          <div class="margin-top margin-medium">
-                            <a href="https://app.codemate.ai/app/pricing" target="_blank"
-                              class="sub-btn button is-secondary max-width-full w-button">
-                              Subscribe
-                            </a>
-                          </div>
+                            <div class="margin-top margin-medium">
+                              <a href="https://app.codemate.ai/app/pricing" target="_blank"
+                                class="sub-btn button is-secondary max-width-full w-button">
+                                Subscribe
+                              </a>
+                            </div>
                             <div class="save-label">
                               <div>11% off</div>
                             </div>
@@ -2437,15 +2529,12 @@ a,
 
                             <br>
 
-                            <script async
-                            src="https://js.stripe.com/v3/buy-button.js">
+                            <script async src="https://js.stripe.com/v3/buy-button.js">
                             </script>
-                          
-                          <stripe-buy-button
-                            buy-button-id="buy_btn_1O2s4SSHqHx5o73SvIkaG8XK"
-                            publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L"
-                          >
-                          </stripe-buy-button>
+
+                            <stripe-buy-button buy-button-id="buy_btn_1O2s4SSHqHx5o73SvIkaG8XK"
+                              publishable-key="pk_live_51MwhcdSHqHx5o73SQLGdLqfoB770cscdTtqmc7gRq2Nlxfdi7JzhJxw0gvaowy19hRdsnV1yLHrYuDQtxRCE8Zhm00Sr781B8L">
+                            </stripe-buy-button>
                             <div class="save-label">
                               <div>85% off</div>
                             </div>
@@ -2467,7 +2556,8 @@ a,
                     <!-- <div class="pricing25_orange-glow"></div> -->
                     <div class="heading-style-h4">For Enterprises</div>
                   </div>
-                  <div class="text-color-gray">Custom offerings like Dedicated account manager and on-premises deployment tailored as per your requirements.
+                  <div class="text-color-gray">Custom offerings like Dedicated account manager and on-premises
+                    deployment tailored as per your requirements.
 
                   </div>
                 </div>
@@ -2550,20 +2640,16 @@ a,
           </div>
 
           <div class="slide relative">
-            <img class="image-responsive w-full h-[300px] object-cover"
-              src="https://i.ibb.co/wKNVt4J/iit-kanpur.png">
+            <img class="image-responsive w-full h-[300px] object-cover" src="https://i.ibb.co/wKNVt4J/iit-kanpur.png">
           </div>
           <div class="slide relative">
-            <img class="w-full image-responsive h-[300px] object-cover" 
-              src="https://i.ibb.co/nR427qK/IITR-Logo.png">
+            <img class="w-full image-responsive h-[300px] object-cover" src="https://i.ibb.co/nR427qK/IITR-Logo.png">
           </div>
           <div class="slide relative">
-            <img class="w-full image-responsive h-[300px] object-cover"
-              src="https://i.ibb.co/mtYr1bg/meity.png">
+            <img class="w-full image-responsive h-[300px] object-cover" src="https://i.ibb.co/mtYr1bg/meity.png">
           </div>
           <div class="slide relative">
-            <img class="w-full image-responsive h-[300px] object-cover"
-              src="https://i.ibb.co/PhNtVmd/dst.png">
+            <img class="w-full image-responsive h-[300px] object-cover" src="https://i.ibb.co/PhNtVmd/dst.png">
           </div>
 
           <div class="slide relative">
@@ -2612,8 +2698,8 @@ a,
           </div>
 
           <div class="slide relative">
-              <img class="w-full h-[300px] object-cover" style="width: 100%; height: 200px; object-fit: cover;"
-                src="https://i.ibb.co/Xz5Z3bh/razorpay-rize.png">
+            <img class="w-full h-[300px] object-cover" style="width: 100%; height: 200px; object-fit: cover;"
+              src="https://i.ibb.co/Xz5Z3bh/razorpay-rize.png">
           </div>
 
           <div class="slide relative">
@@ -2794,11 +2880,14 @@ a,
                 </div>
                 <div style="width:100%;height:0px" class="faq4_answer">
                   <div class="margin-bottom margin-small">
-                    <p>Our tool currently supports 70+ programming languages including but not limited to Python, JavaScript, Java, C++, C#, PHP,
+                    <p>Our tool currently supports 70+ programming languages including but not limited to Python,
+                      JavaScript, Java, C++, C#, PHP,
                       TypeScript, Ruby, Swift, Go, Kotlin, Rust, R, MATLAB, Perl, Shell scripting, SQL, Objective-C,
                       Scala, Haskell, Dart, Elixir, Erlang, Fortran and Prolog. and many more. We're constantly adding
-                      support for new languages, so if you don't see your language working with CodeMate, please contact us and
-                      let us know. Moreover, you can also add the documentation of any new language/framework in your Knowledge base and refer it while asking questions to get up-to-date information.</p>
+                      support for new languages, so if you don't see your language working with CodeMate, please contact
+                      us and
+                      let us know. Moreover, you can also add the documentation of any new language/framework in your
+                      Knowledge base and refer it while asking questions to get up-to-date information.</p>
                   </div>
                 </div>
               </div>
@@ -2995,9 +3084,9 @@ a,
             <div class="footer3_bottom-wrapper">
               <div class="footer3_credit-text">© 2024 CodeMate. All rights reserved.</div>
               <div class="w-layout-grid footer3_legal-list">
-                            <!-- <a href="/legal/privacy-policy" class="footer3_legal-link">Privacy Policy</a> -->
-                            <a href="https://docs.codemate.ai/faqs/terms-of-service" class="footer3_legal-link">Terms of Service</a>
-                        </div>
+                <!-- <a href="/legal/privacy-policy" class="footer3_legal-link">Privacy Policy</a> -->
+                <a href="https://docs.codemate.ai/faqs/terms-of-service" class="footer3_legal-link">Terms of Service</a>
+              </div>
             </div>
           </div>
         </div>
@@ -3123,23 +3212,23 @@ a,
 
     function logJSONData() {
       fetch("https://api.codemate.ai/getLines")
-      .then((res) => res.json())
-      .then((data) => {
-        let value = data.value;
+        .then((res) => res.json())
+        .then((data) => {
+          let value = data.value;
 
-        let interval = setInterval(() => {
-          if (countValue >= value) {
-            clearInterval(interval);
-            return;
-          }
-          countValue++;
-          lineHolder.innerText = countValue;
-        }, 50);
+          let interval = setInterval(() => {
+            if (countValue >= value) {
+              clearInterval(interval);
+              return;
+            }
+            countValue++;
+            lineHolder.innerText = countValue;
+          }, 50);
 
-        // lineHolder.innerText = value;
-      }).catch((err) => {
-        console.log("fetch error:", err);
-      })
+          // lineHolder.innerText = value;
+        }).catch((err) => {
+          console.log("fetch error:", err);
+        })
     }
 
     logJSONData()
