@@ -2119,58 +2119,89 @@ a,
                     <button class="py-2 w-[100px] sm:w-[150px] text-center relative flex-1 text-base sm:text-xl font-medium  rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out" :class="isAnnual=='one-time' ? 'text-black' : 'text-white'" @click="isAnnual = 'one-time'" :aria-pressed="isAnnual">One-Time</button>
                 </div>
             </div>
-                <div class="monthly_annually_pricing flex flex-wrap gap-x-6 justify-center items-end gap-y-[5vh]" :class="isAnnual=='one-time' ? 'hidden':'' ">
-                  <div class="pro-plan flex flex-col w-[360px] sm:w-[420px] sm:h-fit rounded-lg bg-white bg-opacity-10">
-                    <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-gray-200">
+                <div class="monthly_annually_pricing flex flex-wrap gap-x-[22px] justify-center items-end gap-y-[5vh]" :class="isAnnual=='one-time' ? 'hidden':'' ">
+                  <div class="pro-plan relative overflow-hidden flex flex-col w-[360px] sm:w-[412px] sm:h-fit rounded-lg bg-white bg-opacity-10">
+                    <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-[#595959] border-dotted">
                       <div class="text-orange-400 text-3xl font-medium">Pro Plan</div>
                       <div class="text-base text-[#a2a2a2]">For Professional Coders and Programmers</div>
                     </div>
-                    <div class="price_props_getstarted py-5 px-3 flex flex-col gap-y-3">
+                    <div class="price_props_getstarted py-5 px-[32px] flex flex-col gap-y-3">
                       <div class="price flex items-baseline gap-x-1">
                         <span class="text-5xl font-semibold" x-text="isAnnual=='annual' ? '$255' : '$25'"></span>
                         <span class="font-medium text-2xl">/month</span>
                       </div>
                       <div class="includes flex flex-col text-[#a2a2a2] text-base gap-y-2 mb-6 h-[200px]">
                         <span class="text-white">Includes:</span>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-orange-500">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07164 18.3333 4.10746 18.3333 2.88708 17.1129C1.66669 15.8926 1.66669 13.9283 1.66669 9.99999C1.66669 6.07161 1.66669 4.10743 2.88708 2.88705C4.10746 1.66666 6.07164 1.66666 10 1.66666C13.9284 1.66666 15.8926 1.66666 17.1129 2.88705C18.3334 4.10743 18.3334 6.07161 18.3334 9.99999C18.3334 13.9283 18.3334 15.8926 17.1129 17.1129C15.8926 18.3333 13.9284 18.3333 10 18.3333Z" fill="#FB8500"/>
+<path d="M13.3586 7.47471C13.6026 7.71879 13.6026 8.11452 13.3586 8.35857L9.19189 12.5252C8.94781 12.7693 8.55214 12.7693 8.30804 12.5252L6.64137 10.8586C6.39729 10.6145 6.39729 10.2188 6.64137 9.97474C6.88544 9.73065 7.28118 9.73065 7.52525 9.97474L8.74998 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Debug and Refactor Code</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-orange-500">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07164 18.3333 4.10746 18.3333 2.88708 17.1129C1.66669 15.8926 1.66669 13.9283 1.66669 9.99999C1.66669 6.07161 1.66669 4.10743 2.88708 2.88705C4.10746 1.66666 6.07164 1.66666 10 1.66666C13.9284 1.66666 15.8926 1.66666 17.1129 2.88705C18.3334 4.10743 18.3334 6.07161 18.3334 9.99999C18.3334 13.9283 18.3334 15.8926 17.1129 17.1129C15.8926 18.3333 13.9284 18.3333 10 18.3333Z" fill="#FB8500"/>
+<path d="M13.3586 7.47471C13.6026 7.71879 13.6026 8.11452 13.3586 8.35857L9.19189 12.5252C8.94781 12.7693 8.55214 12.7693 8.30804 12.5252L6.64137 10.8586C6.39729 10.6145 6.39729 10.2188 6.64137 9.97474C6.88544 9.73065 7.28118 9.73065 7.52525 9.97474L8.74998 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Content Aware Suggestions</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-orange-500">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07164 18.3333 4.10746 18.3333 2.88708 17.1129C1.66669 15.8926 1.66669 13.9283 1.66669 9.99999C1.66669 6.07161 1.66669 4.10743 2.88708 2.88705C4.10746 1.66666 6.07164 1.66666 10 1.66666C13.9284 1.66666 15.8926 1.66666 17.1129 2.88705C18.3334 4.10743 18.3334 6.07161 18.3334 9.99999C18.3334 13.9283 18.3334 15.8926 17.1129 17.1129C15.8926 18.3333 13.9284 18.3333 10 18.3333Z" fill="#FB8500"/>
+<path d="M13.3586 7.47471C13.6026 7.71879 13.6026 8.11452 13.3586 8.35857L9.19189 12.5252C8.94781 12.7693 8.55214 12.7693 8.30804 12.5252L6.64137 10.8586C6.39729 10.6145 6.39729 10.2188 6.64137 9.97474C6.88544 9.73065 7.28118 9.73065 7.52525 9.97474L8.74998 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Codemate Assistant Access</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-orange-500">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07164 18.3333 4.10746 18.3333 2.88708 17.1129C1.66669 15.8926 1.66669 13.9283 1.66669 9.99999C1.66669 6.07161 1.66669 4.10743 2.88708 2.88705C4.10746 1.66666 6.07164 1.66666 10 1.66666C13.9284 1.66666 15.8926 1.66666 17.1129 2.88705C18.3334 4.10743 18.3334 6.07161 18.3334 9.99999C18.3334 13.9283 18.3334 15.8926 17.1129 17.1129C15.8926 18.3333 13.9284 18.3333 10 18.3333Z" fill="#FB8500"/>
+<path d="M13.3586 7.47471C13.6026 7.71879 13.6026 8.11452 13.3586 8.35857L9.19189 12.5252C8.94781 12.7693 8.55214 12.7693 8.30804 12.5252L6.64137 10.8586C6.39729 10.6145 6.39729 10.2188 6.64137 9.97474C6.88544 9.73065 7.28118 9.73065 7.52525 9.97474L8.74998 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Chat with any Web URL</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-orange-500">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07164 18.3333 4.10746 18.3333 2.88708 17.1129C1.66669 15.8926 1.66669 13.9283 1.66669 9.99999C1.66669 6.07161 1.66669 4.10743 2.88708 2.88705C4.10746 1.66666 6.07164 1.66666 10 1.66666C13.9284 1.66666 15.8926 1.66666 17.1129 2.88705C18.3334 4.10743 18.3334 6.07161 18.3334 9.99999C18.3334 13.9283 18.3334 15.8926 17.1129 17.1129C15.8926 18.3333 13.9284 18.3333 10 18.3333Z" fill="#FB8500"/>
+<path d="M13.3586 7.47471C13.6026 7.71879 13.6026 8.11452 13.3586 8.35857L9.19189 12.5252C8.94781 12.7693 8.55214 12.7693 8.30804 12.5252L6.64137 10.8586C6.39729 10.6145 6.39729 10.2188 6.64137 9.97474C6.88544 9.73065 7.28118 9.73065 7.52525 9.97474L8.74998 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Beta Features Access with early updates</span>
                         </div>
                       </div>
-                      <div class="get_started rounded-lg ">
+                      <div class="get_started rounded-lg z-[100000]">
                         <button class="group/button relative overflow-hidden transition-all duration-150  hover:text-black active:scale-95 text-center w-full transform-none py-3  border-2 text-xl bg-transparent !height-fit rounded-md font-semibold" style="border:2px solid white">
                           <span class="absolute bottom-0 left-0 z-0 h-0 w-full bg-white transition-all duration-500 group-hover/button:h-full" ></span>
                           <span class="relative z-10 transition-all duration-500 group-hover/button:text-black">Get Started</span>
                         </button>
                       </div>
                     </div>
+                    <svg class="absolute right-0 bottom-0" width="322" height="312" viewBox="0 0 322 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_f_15_105)">
+                      <circle cx="321.5" cy="321.5" r="157.5" fill="#FB8500" fill-opacity="0.15"/>
+                      </g>
+                      <defs>
+                      <filter id="filter0_f_15_105" x="0" y="0" width="643" height="643" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                      <feGaussianBlur stdDeviation="82" result="effect1_foregroundBlur_15_105"/>
+                      </filter>
+                      </defs>
+                      </svg> 
                   </div>
-                  <div class="teams-plan flex flex-col w-[360px] sm:w-[420px] sm:h-fit rounded-lg bg-white bg-opacity-10">
+                  <div class="teams-plan relative overflow-hidden flex flex-col w-[360px] sm:w-[412px] sm:h-fit rounded-lg bg-white bg-opacity-10">
                     <div class="top flex bg-black bg-opacity-[.45]">
                       <div class="most_recommended w-fit text-white text-xl rounded-t-lg p-3 bg-gradient-to-r from-cyan-600 to-sky-400"> Most Recommended</div>  
-                    </div>
-                    
-                    <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 rounded-tr-lg border-b-gray-200 border-b-[1px] border-t-[#48aef3] border-l-[#48aef3] border-r-[#48aef3] border-2" style="border-bottom:dotted">
+                    </div>                 
+                    <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 rounded-tr-lg !border-b-[#595959] border-b-[1px] border-t-[#48aef3] border-l-[#48aef3] border-r-[#48aef3] border-2" style="border-bottom:dotted">
                       <div class="text-[#48aef3] text-3xl font-medium">Teams Plan</div>
                       <div class="text-base text-[#a2a2a2]">For Development Teams & Enterprises</div>
                     </div>
-                    <div class="price_props_getstarted py-5 px-3 flex flex-col gap-y-3 rounded-b-lg border-b-[#48aef3] border-l-[#48aef3] border-r-[#48aef3] border-2 border-t-0">
+                    <div class="price_props_getstarted py-5 px-[32px] flex flex-col gap-y-3 rounded-b-lg border-b-[#48aef3] border-l-[#48aef3] border-r-[#48aef3] border-2 border-t-0">
                       <div class="price flex items-baseline gap-x-1">
                         <span class="text-5xl font-semibold" x-text="isAnnual=='annual' ? '$336' : '$33'"></span>
                         <span class="font-medium text-2xl">/month</span>
@@ -2178,24 +2209,40 @@ a,
                       </div>
                       <div class="includes flex flex-col text-[#a2a2a2] text-base gap-y-2 mb-6 h-[200px]">
                         <span class="text-white">Includes:</span>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#48aef3]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M9.99999 18.3333C6.07161 18.3333 4.10743 18.3333 2.88705 17.1129C1.66666 15.8926 1.66666 13.9283 1.66666 9.99999C1.66666 6.07161 1.66666 4.10743 2.88705 2.88705C4.10743 1.66666 6.07161 1.66666 9.99999 1.66666C13.9283 1.66666 15.8926 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8926 18.3333 13.9283 18.3333 9.99999 18.3333Z" fill="#48AEF3"/>
+<path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19192 12.5252C8.94784 12.7693 8.55217 12.7693 8.30807 12.5252L6.6414 10.8586C6.39732 10.6145 6.39732 10.2188 6.6414 9.97474C6.88547 9.73065 7.28121 9.73065 7.52528 9.97474L8.75001 11.1994L12.4748 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Collaborative Knowledge Base Sharing</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#48aef3]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M9.99999 18.3333C6.07161 18.3333 4.10743 18.3333 2.88705 17.1129C1.66666 15.8926 1.66666 13.9283 1.66666 9.99999C1.66666 6.07161 1.66666 4.10743 2.88705 2.88705C4.10743 1.66666 6.07161 1.66666 9.99999 1.66666C13.9283 1.66666 15.8926 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8926 18.3333 13.9283 18.3333 9.99999 18.3333Z" fill="#48AEF3"/>
+<path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19192 12.5252C8.94784 12.7693 8.55217 12.7693 8.30807 12.5252L6.6414 10.8586C6.39732 10.6145 6.39732 10.2188 6.6414 9.97474C6.88547 9.73065 7.28121 9.73065 7.52528 9.97474L8.75001 11.1994L12.4748 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Unlimited Internet Searches</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#48aef3]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M9.99999 18.3333C6.07161 18.3333 4.10743 18.3333 2.88705 17.1129C1.66666 15.8926 1.66666 13.9283 1.66666 9.99999C1.66666 6.07161 1.66666 4.10743 2.88705 2.88705C4.10743 1.66666 6.07161 1.66666 9.99999 1.66666C13.9283 1.66666 15.8926 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8926 18.3333 13.9283 18.3333 9.99999 18.3333Z" fill="#48AEF3"/>
+<path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19192 12.5252C8.94784 12.7693 8.55217 12.7693 8.30807 12.5252L6.6414 10.8586C6.39732 10.6145 6.39732 10.2188 6.6414 9.97474C6.88547 9.73065 7.28121 9.73065 7.52528 9.97474L8.75001 11.1994L12.4748 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Seat Management</span>
                         </div>
-                        <div class="flex gap-x-2 items-start">
-                          <input type="checkbox" checked class="bg-white accent-[#48aef3] mt-[5px]">
+                        <div class="flex gap-x-2 mt-[5px] items-start">
+                          <svg class="mt-[2px]" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5" d="M9.99999 18.3333C6.07161 18.3333 4.10743 18.3333 2.88705 17.1129C1.66666 15.8926 1.66666 13.9283 1.66666 9.99999C1.66666 6.07161 1.66666 4.10743 2.88705 2.88705C4.10743 1.66666 6.07161 1.66666 9.99999 1.66666C13.9283 1.66666 15.8926 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8926 18.3333 13.9283 18.3333 9.99999 18.3333Z" fill="#48AEF3"/>
+                            <path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19192 12.5252C8.94784 12.7693 8.55217 12.7693 8.30807 12.5252L6.6414 10.8586C6.39732 10.6145 6.39732 10.2188 6.6414 9.97474C6.88547 9.73065 7.28121 9.73065 7.52528 9.97474L8.75001 11.1994L12.4748 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+                            </svg>
+                            
                           <span>Review Code with Detailed PDF Report and score</span>
                         </div>
                       </div>
-                      <div class="get_started  rounded-lg ">
+                      <div class="get_started  rounded-lg z-[100000]">
                         <button class="group/button relative transition-all duration-300 ease-in-out hover:scale-[1.03]  overflow-hidden rounded-md text-center w-full transform-none py-3 bg-gradient-to-r from-sky-500 to-cyan-300 text-xl bg-transparent !height-fit font-semibold">
                           <span>Get Started</span>
                           <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]">
@@ -2204,32 +2251,57 @@ a,
                         </button>
                       </div>
                     </div>
+                    <svg class="absolute right-0 bottom-0" width="322" height="312" viewBox="0 0 322 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_f_15_177)">
+                      <circle cx="321.5" cy="321.5" r="157.5" fill="#48AEF3" fill-opacity="0.15"/>
+                      </g>
+                      <defs>
+                      <filter id="filter0_f_15_177" x="0" y="0" width="643" height="643" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                      <feGaussianBlur stdDeviation="82" result="effect1_foregroundBlur_15_177"/>
+                      </filter>
+                      </defs>
+                      </svg>
+                      
                   </div>
-                  <div class="enterprise_plan flex flex-col w-[360px] sm:w-[420px] sm:h-fit rounded-lg bg-white bg-opacity-10">
-                    <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-gray-200 border-dotted">
+                  <div class="enterprise_plan relative overflow-hidden flex flex-col w-[360px] sm:w-[412px] sm:h-fit rounded-lg bg-white bg-opacity-10">
+                    <div class="title_and_desc flex flex-col px-5 py-6 pt-8 gap-y-2 border-b-2 border-[#595959] border-dotted">
                       <div class="text-[#fcbf49] text-3xl font-medium">Enterprises</div>
                       <div class="text-base text-[#a2a2a2]">For Large Development Agencies & Enterprises</div>
                     </div>
-                    <div class="price_props_getstarted py-5 px-3 flex flex-col gap-y-3">
+                    <div class="price_props_getstarted py-5 px-[32px] flex flex-col gap-y-3">
                       <div class="price flex items-baseline gap-x-1">
                         <span class="text-5xl font-semibold">Let's Talk</span>
                       </div>
-                      <div class="includes flex flex-col text-[#a2a2a2] text-base gap-y-2 mb-6 h-[200px]">
+                      <div class="includes flex flex-col text-[#a2a2a2] text-base gap-y-2 mb-6 h-[201px]">
                         <span class="text-white">Everything in Teams, plus:</span>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#fcbf49]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07163 18.3333 4.10745 18.3333 2.88706 17.1129C1.66667 15.8926 1.66667 13.9283 1.66667 9.99999C1.66667 6.07161 1.66667 4.10743 2.88706 2.88705C4.10745 1.66666 6.07163 1.66666 10 1.66666C13.9283 1.66666 15.8926 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8926 18.3333 13.9283 18.3333 10 18.3333Z" fill="#FCBF49"/>
+<path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19191 12.5252C8.94783 12.7693 8.55216 12.7693 8.30805 12.5252L6.64138 10.8586C6.39731 10.6145 6.39731 10.2188 6.64138 9.97474C6.88546 9.73065 7.28119 9.73065 7.52527 9.97474L8.74999 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Dedicated Account Manager</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#fcbf49]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07163 18.3333 4.10745 18.3333 2.88706 17.1129C1.66667 15.8926 1.66667 13.9283 1.66667 9.99999C1.66667 6.07161 1.66667 4.10743 2.88706 2.88705C4.10745 1.66666 6.07163 1.66666 10 1.66666C13.9283 1.66666 15.8926 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8926 18.3333 13.9283 18.3333 10 18.3333Z" fill="#FCBF49"/>
+<path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19191 12.5252C8.94783 12.7693 8.55216 12.7693 8.30805 12.5252L6.64138 10.8586C6.39731 10.6145 6.39731 10.2188 6.64138 9.97474C6.88546 9.73065 7.28119 9.73065 7.52527 9.97474L8.74999 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>On-premises Deployment</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#fcbf49]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07163 18.3333 4.10745 18.3333 2.88706 17.1129C1.66667 15.8926 1.66667 13.9283 1.66667 9.99999C1.66667 6.07161 1.66667 4.10743 2.88706 2.88705C4.10745 1.66666 6.07163 1.66666 10 1.66666C13.9283 1.66666 15.8926 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8926 18.3333 13.9283 18.3333 10 18.3333Z" fill="#FCBF49"/>
+<path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19191 12.5252C8.94783 12.7693 8.55216 12.7693 8.30805 12.5252L6.64138 10.8586C6.39731 10.6145 6.39731 10.2188 6.64138 9.97474C6.88546 9.73065 7.28119 9.73065 7.52527 9.97474L8.74999 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Priority Support</span>
                         </div>
                       </div>
-                      <div class="get_started rounded-lg ">
+                      <div class="get_started rounded-lg z-[100000]">
                         <button class="group/button  relative overflow-hidden text-center w-full transform-none py-3 text-xl bg-white text-black hover:text-white font-bold !height-fit transition-all duration-150  active:scale-95 rounded-md">
                           <span class="absolute bottom-0 left-0 z-0 h-0 w-full bg-black transition-all duration-500 group-hover/button:h-full" ></span>
                           <span class="relative z-10 transition-all duration-500 group-hover/button:text-white">
@@ -2238,40 +2310,73 @@ a,
                         </button>
                       </div>
                     </div>
+                    <svg class="absolute right-0 bottom-0" width="322" height="312" viewBox="0 0 322 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_f_15_146)">
+                      <circle cx="321.5" cy="321.5" r="157.5" fill="#FCBF49" fill-opacity="0.15"/>
+                      </g>
+                      <defs>
+                      <filter id="filter0_f_15_146" x="0" y="0" width="643" height="643" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                      <feGaussianBlur stdDeviation="82" result="effect1_foregroundBlur_15_146"/>
+                      </filter>
+                      </defs>
+                      </svg>
+                      
                   </div>
                 </div>
 
-                <div class="onetime_pricing flex flex-wrap gap-x-6 justify-center items-end gap-y-[5vh]" :class="isAnnual=='one-time' ? '':'hidden' ">
-                  <div class="lt1-plan flex flex-col w-[300px] sm:h-fit rounded-lg bg-white bg-opacity-10">
-                    <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-gray-200">
-                      <div class="text-[#86f502] text-3xl font-medium">LT Plan 1</div>
+                <div x-data="{ tier: 'tier5' }" class="onetime_pricing flex flex-wrap gap-x-[22px] justify-center items-end gap-y-[5vh]" :class="isAnnual=='one-time' ? '':'hidden' ">
+                  <div class="lt1-plan relative overflow-hidden flex flex-col w-[360px] sm:w-[412px] sm:h-fit rounded-lg bg-white bg-opacity-10">
+                    <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-dotted border-[#595959]">
+                      <div class="text-[#89fc00] text-3xl font-medium">Tier Plan 1</div>
                       <div class="text-base text-[#a2a2a2]">For Students and Programming Enthusiasts</div>
                     </div>
-                    <div class="price_props_getstarted py-5 px-5 flex flex-col gap-y-5">
+                    <div class="price_props_getstarted px-[32px] py-6 flex flex-col gap-y-5">
                       <div class="price flex items-baseline gap-x-1">
-                        <span class="text-5xl font-semibold">$999</span>
-                        <span class="font-medium text-2xl">/month</span>
+                        <span class="text-5xl font-semibold">$59</span>
+                        <span class="font-medium text-2xl text-[#818181] "><del style="text-decoration-color: white;">$360</del></span>
                       </div>
                       <div class="includes flex flex-col text-[#a2a2a2] text-base gap-y-2 mb-6 h-[200px]">
-                        <span class="text-white">Includes:</span>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#86f502]">
+                        <span class="text-white mb-[4px]">Includes:</span>
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07164 18.3333 4.10746 18.3333 2.88708 17.1129C1.66669 15.8926 1.66669 13.9283 1.66669 9.99999C1.66669 6.07161 1.66669 4.10743 2.88708 2.88705C4.10746 1.66666 6.07164 1.66666 10 1.66666C13.9284 1.66666 15.8926 1.66666 17.1129 2.88705C18.3334 4.10743 18.3334 6.07161 18.3334 9.99999C18.3334 13.9283 18.3334 15.8926 17.1129 17.1129C15.8926 18.3333 13.9284 18.3333 10 18.3333Z" fill="#89FC00"/>
+<path d="M13.3586 7.47471C13.6026 7.71879 13.6026 8.11452 13.3586 8.35857L9.19189 12.5252C8.94781 12.7693 8.55214 12.7693 8.30804 12.5252L6.64137 10.8586C6.39729 10.6145 6.39729 10.2188 6.64137 9.97474C6.88544 9.73065 7.28118 9.73065 7.52525 9.97474L8.74998 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Basic ML Model</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#86f502]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07164 18.3333 4.10746 18.3333 2.88708 17.1129C1.66669 15.8926 1.66669 13.9283 1.66669 9.99999C1.66669 6.07161 1.66669 4.10743 2.88708 2.88705C4.10746 1.66666 6.07164 1.66666 10 1.66666C13.9284 1.66666 15.8926 1.66666 17.1129 2.88705C18.3334 4.10743 18.3334 6.07161 18.3334 9.99999C18.3334 13.9283 18.3334 15.8926 17.1129 17.1129C15.8926 18.3333 13.9284 18.3333 10 18.3333Z" fill="#89FC00"/>
+<path d="M13.3586 7.47471C13.6026 7.71879 13.6026 8.11452 13.3586 8.35857L9.19189 12.5252C8.94781 12.7693 8.55214 12.7693 8.30804 12.5252L6.64137 10.8586C6.39729 10.6145 6.39729 10.2188 6.64137 9.97474C6.88544 9.73065 7.28118 9.73065 7.52525 9.97474L8.74998 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>2 requests/min limit</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#86f502]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07164 18.3333 4.10746 18.3333 2.88708 17.1129C1.66669 15.8926 1.66669 13.9283 1.66669 9.99999C1.66669 6.07161 1.66669 4.10743 2.88708 2.88705C4.10746 1.66666 6.07164 1.66666 10 1.66666C13.9284 1.66666 15.8926 1.66666 17.1129 2.88705C18.3334 4.10743 18.3334 6.07161 18.3334 9.99999C18.3334 13.9283 18.3334 15.8926 17.1129 17.1129C15.8926 18.3333 13.9284 18.3333 10 18.3333Z" fill="#89FC00"/>
+<path d="M13.3586 7.47471C13.6026 7.71879 13.6026 8.11452 13.3586 8.35857L9.19189 12.5252C8.94781 12.7693 8.55214 12.7693 8.30804 12.5252L6.64137 10.8586C6.39729 10.6145 6.39729 10.2188 6.64137 9.97474C6.88544 9.73065 7.28118 9.73065 7.52525 9.97474L8.74998 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Inline chat</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#86f502]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07164 18.3333 4.10746 18.3333 2.88708 17.1129C1.66669 15.8926 1.66669 13.9283 1.66669 9.99999C1.66669 6.07161 1.66669 4.10743 2.88708 2.88705C4.10746 1.66666 6.07164 1.66666 10 1.66666C13.9284 1.66666 15.8926 1.66666 17.1129 2.88705C18.3334 4.10743 18.3334 6.07161 18.3334 9.99999C18.3334 13.9283 18.3334 15.8926 17.1129 17.1129C15.8926 18.3333 13.9284 18.3333 10 18.3333Z" fill="#89FC00"/>
+<path d="M13.3586 7.47471C13.6026 7.71879 13.6026 8.11452 13.3586 8.35857L9.19189 12.5252C8.94781 12.7693 8.55214 12.7693 8.30804 12.5252L6.64137 10.8586C6.39729 10.6145 6.39729 10.2188 6.64137 9.97474C6.88544 9.73065 7.28118 9.73065 7.52525 9.97474L8.74998 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Single Line Reference</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#86f502]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M10 18.3333C6.07164 18.3333 4.10746 18.3333 2.88708 17.1129C1.66669 15.8926 1.66669 13.9283 1.66669 9.99999C1.66669 6.07161 1.66669 4.10743 2.88708 2.88705C4.10746 1.66666 6.07164 1.66666 10 1.66666C13.9284 1.66666 15.8926 1.66666 17.1129 2.88705C18.3334 4.10743 18.3334 6.07161 18.3334 9.99999C18.3334 13.9283 18.3334 15.8926 17.1129 17.1129C15.8926 18.3333 13.9284 18.3333 10 18.3333Z" fill="#89FC00"/>
+<path d="M13.3586 7.47471C13.6026 7.71879 13.6026 8.11452 13.3586 8.35857L9.19189 12.5252C8.94781 12.7693 8.55214 12.7693 8.30804 12.5252L6.64137 10.8586C6.39729 10.6145 6.39729 10.2188 6.64137 9.97474C6.88544 9.73065 7.28118 9.73065 7.52525 9.97474L8.74998 11.1994L12.4747 7.47471C12.7188 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Access to Codemate Chat</span>
                         </div>
                       </div>
@@ -2282,33 +2387,67 @@ a,
                         </button>
                       </div>
                     </div>
+                    <svg class="absolute right-0 bottom-0" width="322" height="312" viewBox="0 0 322 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_f_88_90)">
+                      <circle cx="321.5" cy="321.5" r="157.5" fill="#89FC00" fill-opacity="0.15"/>
+                      </g>
+                      <defs>
+                      <filter id="filter0_f_88_90" x="0" y="0" width="643" height="643" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                      <feGaussianBlur stdDeviation="82" result="effect1_foregroundBlur_88_90"/>
+                      </filter>
+                      </defs>
+                      </svg>
+                      
                   </div>
-                  <div class="lt2-plan flex flex-col w-[300px] sm:h-fit rounded-lg bg-white bg-opacity-10">
-                    <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-gray-200">
-                      <div class="text-[#ff36ab] text-3xl font-medium">LT Plan 2</div>
+                  <div class="lt2-plan relative overflow-hidden flex flex-col w-[360px] sm:w-[412px] sm:h-fit rounded-lg bg-white bg-opacity-10">
+                    <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-dotted border-b-2 border-[#595959]">
+                      <div class="text-[#00cecb] text-3xl font-medium">Tier Plan 2</div>
                       <div class="text-base text-[#a2a2a2]">For Professional Coders and Enthusiasts</div>
                     </div>
-                    <div class="price_props_getstarted p-5 flex flex-col gap-y-5">
+                    <div class="price_props_getstarted px-[32px] py-6 flex flex-col gap-y-5">
                       <div class="price flex items-baseline gap-x-1">
-                        <span class="text-5xl font-semibold">$1499</span>
-                        <span class="font-medium text-2xl">/month</span>
+                        <span class="text-5xl font-semibold">$169</span>
+                        <span class="font-medium text-2xl text-[#818181]"><del style="text-decoration-color: white;">$360</del></span>
                       </div>
                       <div class="includes flex flex-col text-[#a2a2a2] text-base gap-y-2 mb-6 h-[200px]">
-                        <span class="text-white">Everything in LT Plan 1, plus:</span>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#ff36ab]">
+                        <span class="text-white mb-[4px]">Includes:</span>
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5" d="M9.99996 18.3333C6.07158 18.3333 4.1074 18.3333 2.88702 17.1129C1.66663 15.8926 1.66663 13.9283 1.66663 9.99999C1.66663 6.07161 1.66663 4.10743 2.88702 2.88705C4.1074 1.66666 6.07158 1.66666 9.99996 1.66666C13.9283 1.66666 15.8925 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8925 18.3333 13.9283 18.3333 9.99996 18.3333Z" fill="#00CECB"/>
+                            <path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19196 12.5252C8.94787 12.7693 8.55221 12.7693 8.3081 12.5252L6.64143 10.8586C6.39736 10.6145 6.39736 10.2188 6.64143 9.97474C6.88551 9.73065 7.28124 9.73065 7.52531 9.97474L8.75004 11.1994L12.4748 7.47471C12.7189 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+                            </svg>
+                            
+                            
+
                           <span>Debug and Refactor Code</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#ff36ab]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5" d="M9.99996 18.3333C6.07158 18.3333 4.1074 18.3333 2.88702 17.1129C1.66663 15.8926 1.66663 13.9283 1.66663 9.99999C1.66663 6.07161 1.66663 4.10743 2.88702 2.88705C4.1074 1.66666 6.07158 1.66666 9.99996 1.66666C13.9283 1.66666 15.8925 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8925 18.3333 13.9283 18.3333 9.99996 18.3333Z" fill="#00CECB"/>
+                            <path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19196 12.5252C8.94787 12.7693 8.55221 12.7693 8.3081 12.5252L6.64143 10.8586C6.39736 10.6145 6.39736 10.2188 6.64143 9.97474C6.88551 9.73065 7.28124 9.73065 7.52531 9.97474L8.75004 11.1994L12.4748 7.47471C12.7189 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+                            </svg>
+                            
+
                           <span>Codemate Aware Suggestions</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#ff36ab]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5" d="M9.99996 18.3333C6.07158 18.3333 4.1074 18.3333 2.88702 17.1129C1.66663 15.8926 1.66663 13.9283 1.66663 9.99999C1.66663 6.07161 1.66663 4.10743 2.88702 2.88705C4.1074 1.66666 6.07158 1.66666 9.99996 1.66666C13.9283 1.66666 15.8925 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8925 18.3333 13.9283 18.3333 9.99996 18.3333Z" fill="#00CECB"/>
+                            <path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19196 12.5252C8.94787 12.7693 8.55221 12.7693 8.3081 12.5252L6.64143 10.8586C6.39736 10.6145 6.39736 10.2188 6.64143 9.97474C6.88551 9.73065 7.28124 9.73065 7.52531 9.97474L8.75004 11.1994L12.4748 7.47471C12.7189 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+                            </svg>
+                            
+
                           <span>Codemate Assistant Access</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#ff36ab]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5" d="M9.99996 18.3333C6.07158 18.3333 4.1074 18.3333 2.88702 17.1129C1.66663 15.8926 1.66663 13.9283 1.66663 9.99999C1.66663 6.07161 1.66663 4.10743 2.88702 2.88705C4.1074 1.66666 6.07158 1.66666 9.99996 1.66666C13.9283 1.66666 15.8925 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8925 18.3333 13.9283 18.3333 9.99996 18.3333Z" fill="#00CECB"/>
+                            <path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19196 12.5252C8.94787 12.7693 8.55221 12.7693 8.3081 12.5252L6.64143 10.8586C6.39736 10.6145 6.39736 10.2188 6.64143 9.97474C6.88551 9.73065 7.28124 9.73065 7.52531 9.97474L8.75004 11.1994L12.4748 7.47471C12.7189 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+                            </svg>
+                            
+
                           <span>Chat with any web URL</span>
                         </div>
                       </div>
@@ -2319,29 +2458,59 @@ a,
                         </button>
                       </div>
                     </div>
+                    <svg class="absolute bottom-0 right-0" width="322" height="312" viewBox="0 0 322 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_f_88_132)">
+                      <circle cx="321.5" cy="321.5" r="157.5" fill="#00CECB" fill-opacity="0.15"/>
+                      </g>
+                      <defs>
+                      <filter id="filter0_f_88_132" x="0" y="0" width="643" height="643" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                      <feGaussianBlur stdDeviation="82" result="effect1_foregroundBlur_88_132"/>
+                      </filter>
+                      </defs>
+                      </svg>
+                      
                   </div>
-                  <div class="lt3-plan flex flex-col w-[300px] sm:h-fit rounded-lg bg-white bg-opacity-10">
-                    <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-gray-200">
-                      <div class="text-[#02c6c4] text-3xl font-medium">LT Plan 3</div>
-                      <div class="text-base text-[#a2a2a2]">For Development Teams & Enterprises</div>
+                  <div class="lt3-plan relative overflow-hidden flex flex-col w-[360px] sm:w-[412px] sm:h-fit rounded-lg bg-white bg-opacity-10">
+                    <div class="title_and_desc sm:h-[121.6px] flex flex-col p-5 pt-8 gap-y-2 border-dotted border-b-2 border-[#595959]">
+                      <div class="text-[#FEE440] h-full flex items-center w-full text-3xl font-medium">
+                        <select x-on:change="tier=$event.target.value" name="tiers" class="h-full px-4 rounded-md w-full bg-transparent" id="tiers">
+                          <option value="tier5" class="text-black text-lg">Tier Plan 5</option>
+                          <option value="tier4" class="text-black text-lg">Tier Plan 4</option>
+                          <option value="tier3" class="text-black text-lg">Tier Plan 3</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="price_props_getstarted p-5 flex flex-col gap-y-5">
+                    <div class="price_props_getstarted px-[32px] py-6 flex flex-col gap-y-5">
                       <div class="price flex items-baseline gap-x-1">
-                        <span class="text-5xl font-semibold">$1999</span>
-                        <span class="font-medium text-2xl">/month</span>
+                        <span class="text-5xl font-semibold" x-text="tier=='tier5' ? '$999' : tier=='tier4'?'$579':'$299'"></span>
+                        <span class="font-medium text-2xl text-[#818181]"><del  x-text="tier=='tier5' ? '$10525' : tier=='tier4'?'$9125':'$2220'" style="text-decoration-color: white;"></del></del></span>
                       </div>
                       <div class="includes flex flex-col text-[#a2a2a2] text-base gap-y-2 mb-6 h-[200px]">
-                        <span class="text-white">Everything in LT Plan 2, plus:</span>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#02c6c4]">
+                        <span class="text-white mb-[4px]">Includes:</span>
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M9.99996 18.3333C6.07158 18.3333 4.1074 18.3333 2.88702 17.1129C1.66663 15.8926 1.66663 13.9283 1.66663 9.99999C1.66663 6.07161 1.66663 4.10743 2.88702 2.88705C4.1074 1.66666 6.07158 1.66666 9.99996 1.66666C13.9283 1.66666 15.8925 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8925 18.3333 13.9283 18.3333 9.99996 18.3333Z" fill="#FEE440"/>
+<path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19196 12.5252C8.94787 12.7693 8.55221 12.7693 8.3081 12.5252L6.64143 10.8586C6.39736 10.6145 6.39736 10.2188 6.64143 9.97474C6.88551 9.73065 7.28124 9.73065 7.52531 9.97474L8.75004 11.1994L12.4748 7.47471C12.7189 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Unlimited internet searches</span>
                         </div>
-                        <div class="flex gap-x-2">
-                          <input type="checkbox" checked class="bg-white accent-[#02c6c4]">
+                        <div class="flex gap-x-2 items-center">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M9.99996 18.3333C6.07158 18.3333 4.1074 18.3333 2.88702 17.1129C1.66663 15.8926 1.66663 13.9283 1.66663 9.99999C1.66663 6.07161 1.66663 4.10743 2.88702 2.88705C4.1074 1.66666 6.07158 1.66666 9.99996 1.66666C13.9283 1.66666 15.8925 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8925 18.3333 13.9283 18.3333 9.99996 18.3333Z" fill="#FEE440"/>
+<path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19196 12.5252C8.94787 12.7693 8.55221 12.7693 8.3081 12.5252L6.64143 10.8586C6.39736 10.6145 6.39736 10.2188 6.64143 9.97474C6.88551 9.73065 7.28124 9.73065 7.52531 9.97474L8.75004 11.1994L12.4748 7.47471C12.7189 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+</svg>
+
                           <span>Seat management</span>
                         </div>
-                        <div class="flex gap-x-2 items-start">
-                          <input type="checkbox" checked class="bg-white accent-[#02c6c4] mt-[6px]">
+                        <div class="flex gap-x-2  items-start">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5" d="M9.99996 18.3333C6.07158 18.3333 4.1074 18.3333 2.88702 17.1129C1.66663 15.8926 1.66663 13.9283 1.66663 9.99999C1.66663 6.07161 1.66663 4.10743 2.88702 2.88705C4.1074 1.66666 6.07158 1.66666 9.99996 1.66666C13.9283 1.66666 15.8925 1.66666 17.1129 2.88705C18.3333 4.10743 18.3333 6.07161 18.3333 9.99999C18.3333 13.9283 18.3333 15.8926 17.1129 17.1129C15.8925 18.3333 13.9283 18.3333 9.99996 18.3333Z" fill="#FEE440"/>
+                            <path d="M13.3586 7.47471C13.6027 7.71879 13.6027 8.11452 13.3586 8.35857L9.19196 12.5252C8.94787 12.7693 8.55221 12.7693 8.3081 12.5252L6.64143 10.8586C6.39736 10.6145 6.39736 10.2188 6.64143 9.97474C6.88551 9.73065 7.28124 9.73065 7.52531 9.97474L8.75004 11.1994L12.4748 7.47471C12.7189 7.23064 13.1145 7.23064 13.3586 7.47471Z" fill="white"/>
+                            </svg>
+                            
                           <span>Review code with detailed PDF report and score</span>
                         </div>
                       </div>
@@ -2352,6 +2521,19 @@ a,
                         </button>
                       </div>
                     </div>
+                    <svg class="absolute right-0 bottom-0" width="322" height="312" viewBox="0 0 322 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_f_88_173)">
+                      <circle cx="321.5" cy="321.5" r="157.5" fill="#FEE440" fill-opacity="0.15"/>
+                      </g>
+                      <defs>
+                      <filter id="filter0_f_88_173" x="0" y="0" width="643" height="643" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                      <feGaussianBlur stdDeviation="82" result="effect1_foregroundBlur_88_173"/>
+                      </filter>
+                      </defs>
+                      </svg>
+                      
                   </div>
                   <!-- <div class="lt4-plan flex flex-col w-[300px] sm:h-fit rounded-lg bg-white bg-opacity-10">
                     <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-gray-200">
@@ -2365,7 +2547,7 @@ a,
                       </div>
                       <div class="includes flex flex-col text-[#a2a2a2] text-base gap-y-2 mb-6 h-[200px]">
                         <span class="text-white">Everything in LT Plan 3, plus:</span>
-                        <div class="flex gap-x-2">
+                        <div class="flex gap-x-2 items-center">
                           <input type="checkbox" checked class="bg-white accent-[#fee440]">
                           <span>Dedicated Account Manager</span>
                         </div>
