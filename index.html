@@ -20,6 +20,7 @@
   <meta content="Webflow" name="generator" />
   <link href="https://assets.website-files.com/63f5d36e1bfb159570f6408c/css/relume-ipsum.webflow.b50aaba2a.min.css"
     rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link href="/style.css" rel="stylesheet" type="text/css" />
   <style>
     @media (min-width: 992px) {
@@ -2118,7 +2119,7 @@ a,
                     <button class="py-2 w-[100px] sm:w-[150px] text-center relative flex-1 text-base sm:text-xl font-medium  rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out" :class="isAnnual=='one-time' ? 'text-black' : 'text-white'" @click="isAnnual = 'one-time'" :aria-pressed="isAnnual">One-Time</button>
                 </div>
             </div>
-                <div class="monthly_annually_pricing flex flex-wrap gap-x-[5vw] justify-center items-end gap-y-[5vh]" :class="isAnnual=='one-time' ? 'hidden':'' ">
+                <div class="monthly_annually_pricing flex flex-wrap gap-x-6 justify-center items-end gap-y-[5vh]" :class="isAnnual=='one-time' ? 'hidden':'' ">
                   <div class="pro-plan flex flex-col w-[360px] sm:w-[420px] sm:h-fit rounded-lg bg-white bg-opacity-10">
                     <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-gray-200">
                       <div class="text-orange-400 text-3xl font-medium">Pro Plan</div>
@@ -2152,9 +2153,10 @@ a,
                           <span>Beta Features Access with early updates</span>
                         </div>
                       </div>
-                      <div class="get_started border-2 rounded-lg ">
-                        <button class="text-center w-full transform-none py-3 !border-[#a2a2a2] border-2 text-xl bg-transparent !height-fit">
-                          Get Started
+                      <div class="get_started rounded-lg ">
+                        <button class="group/button relative overflow-hidden transition-all duration-150  hover:text-black active:scale-95 text-center w-full transform-none py-3  border-2 text-xl bg-transparent !height-fit rounded-md font-semibold" style="border:2px solid white">
+                          <span class="absolute bottom-0 left-0 z-0 h-0 w-full bg-white transition-all duration-500 group-hover/button:h-full" ></span>
+                          <span class="relative z-10 transition-all duration-500 group-hover/button:text-black">Get Started</span>
                         </button>
                       </div>
                     </div>
@@ -2194,8 +2196,11 @@ a,
                         </div>
                       </div>
                       <div class="get_started  rounded-lg ">
-                        <button class="text-center w-full transform-none py-3 bg-gradient-to-r from-sky-500 to-cyan-300 text-xl bg-transparent !height-fit">
-                          Get Started
+                        <button class="group/button relative transition-all duration-300 ease-in-out hover:scale-[1.03]  overflow-hidden rounded-md text-center w-full transform-none py-3 bg-gradient-to-r from-sky-500 to-cyan-300 text-xl bg-transparent !height-fit font-semibold">
+                          <span>Get Started</span>
+                          <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]">
+                            <div class="relative h-full w-8 bg-white/20"></div>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -2225,21 +2230,24 @@ a,
                         </div>
                       </div>
                       <div class="get_started rounded-lg ">
-                        <button class="text-center w-full transform-none py-3 text-xl bg-white text-black font-bold !height-fit">
-                          Contact Us
+                        <button class="group/button  relative overflow-hidden text-center w-full transform-none py-3 text-xl bg-white text-black hover:text-white font-bold !height-fit transition-all duration-150  active:scale-95 rounded-md">
+                          <span class="absolute bottom-0 left-0 z-0 h-0 w-full bg-black transition-all duration-500 group-hover/button:h-full" ></span>
+                          <span class="relative z-10 transition-all duration-500 group-hover/button:text-white">
+                            Contact Us
+                          </span>
                         </button>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="onetime_pricing flex flex-wrap gap-x-[5vw] justify-center items-end gap-y-[5vh]" :class="isAnnual=='one-time' ? '':'hidden' ">
+                <div class="onetime_pricing flex flex-wrap gap-x-6 justify-center items-end gap-y-[5vh]" :class="isAnnual=='one-time' ? '':'hidden' ">
                   <div class="lt1-plan flex flex-col w-[300px] sm:h-fit rounded-lg bg-white bg-opacity-10">
                     <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-gray-200">
-                      <div class="text-[#86f502] text-3xl font-medium">lT Plan1</div>
+                      <div class="text-[#86f502] text-3xl font-medium">LT Plan 1</div>
                       <div class="text-base text-[#a2a2a2]">For Students and Programming Enthusiasts</div>
                     </div>
-                    <div class="price_props_getstarted py-5 px-5 flex flex-col gap-y-3">
+                    <div class="price_props_getstarted py-5 px-5 flex flex-col gap-y-5">
                       <div class="price flex items-baseline gap-x-1">
                         <span class="text-5xl font-semibold">$999</span>
                         <span class="font-medium text-2xl">/month</span>
@@ -2268,18 +2276,19 @@ a,
                         </div>
                       </div>
                       <div class="get_started border-2 rounded-lg ">
-                        <button class="text-center w-full transform-none py-3 !border-[#a2a2a2] border-2 text-xl bg-transparent !height-fit">
-                          Get Started
+                        <button class="group/button relative overflow-hidden transition-all duration-150  hover:text-black active:scale-95 text-center w-full transform-none py-3  border-2 text-xl bg-transparent !height-fit rounded-md font-semibold" style="border:2px solid white">
+                          <span class="absolute bottom-0 left-0 z-0 h-0 w-full bg-white transition-all duration-500 group-hover/button:h-full" ></span>
+                          <span class="relative z-10 transition-all duration-500 group-hover/button:text-black">Get Started</span>
                         </button>
                       </div>
                     </div>
                   </div>
                   <div class="lt2-plan flex flex-col w-[300px] sm:h-fit rounded-lg bg-white bg-opacity-10">
                     <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-gray-200">
-                      <div class="text-[#ff36ab] text-3xl font-medium">LT Plan2</div>
+                      <div class="text-[#ff36ab] text-3xl font-medium">LT Plan 2</div>
                       <div class="text-base text-[#a2a2a2]">For Professional Coders and Enthusiasts</div>
                     </div>
-                    <div class="price_props_getstarted p-5 flex flex-col gap-y-3">
+                    <div class="price_props_getstarted p-5 flex flex-col gap-y-5">
                       <div class="price flex items-baseline gap-x-1">
                         <span class="text-5xl font-semibold">$1499</span>
                         <span class="font-medium text-2xl">/month</span>
@@ -2304,18 +2313,19 @@ a,
                         </div>
                       </div>
                       <div class="get_started border-2 rounded-lg ">
-                        <button class="text-center w-full transform-none py-3 !border-[#a2a2a2] border-2 text-xl bg-transparent !height-fit">
-                          Get Started
+                        <button class="group/button relative overflow-hidden transition-all duration-150  hover:text-black active:scale-95 text-center w-full transform-none py-3  border-2 text-xl bg-transparent !height-fit rounded-md font-semibold" style="border:2px solid white">
+                          <span class="absolute bottom-0 left-0 z-0 h-0 w-full bg-white transition-all duration-500 group-hover/button:h-full" ></span>
+                          <span class="relative z-10 transition-all duration-500 group-hover/button:text-black">Get Started</span>
                         </button>
                       </div>
                     </div>
                   </div>
                   <div class="lt3-plan flex flex-col w-[300px] sm:h-fit rounded-lg bg-white bg-opacity-10">
                     <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-gray-200">
-                      <div class="text-[#02c6c4] text-3xl font-medium">LT Plan3</div>
+                      <div class="text-[#02c6c4] text-3xl font-medium">LT Plan 3</div>
                       <div class="text-base text-[#a2a2a2]">For Development Teams & Enterprises</div>
                     </div>
-                    <div class="price_props_getstarted p-5 flex flex-col gap-y-3">
+                    <div class="price_props_getstarted p-5 flex flex-col gap-y-5">
                       <div class="price flex items-baseline gap-x-1">
                         <span class="text-5xl font-semibold">$1999</span>
                         <span class="font-medium text-2xl">/month</span>
@@ -2336,18 +2346,19 @@ a,
                         </div>
                       </div>
                       <div class="get_started border-2 rounded-lg ">
-                        <button class="text-center w-full transform-none py-3 !border-[#a2a2a2] border-2 text-xl bg-transparent !height-fit">
-                          Get Started
+                        <button class="group/button relative overflow-hidden transition-all duration-150  hover:text-black active:scale-95 text-center w-full transform-none py-3  border-2 text-xl bg-transparent !height-fit rounded-md font-semibold" style="border:2px solid white">
+                          <span class="absolute bottom-0 left-0 z-0 h-0 w-full bg-white transition-all duration-500 group-hover/button:h-full" ></span>
+                          <span class="relative z-10 transition-all duration-500 group-hover/button:text-black">Get Started</span>
                         </button>
                       </div>
                     </div>
                   </div>
-                  <div class="lt4-plan flex flex-col w-[300px] sm:h-fit rounded-lg bg-white bg-opacity-10">
+                  <!-- <div class="lt4-plan flex flex-col w-[300px] sm:h-fit rounded-lg bg-white bg-opacity-10">
                     <div class="title_and_desc flex flex-col p-5 pt-8 gap-y-2 border-b-2 border-gray-200">
-                      <div class="text-[#fee440] text-3xl font-medium">LT Plan4</div>
+                      <div class="text-[#fee440] text-3xl font-medium">LT Plan 4</div>
                       <div class="text-base text-[#a2a2a2]">For Large Development Agencies & Enterprises</div>
                     </div>
-                    <div class="price_props_getstarted p-5 flex flex-col gap-y-3">
+                    <div class="price_props_getstarted p-5 flex flex-col gap-y-5">
                       <div class="price flex items-baseline gap-x-1">
                         <span class="text-5xl font-semibold">$2499</span>
                         <span class="font-medium text-2xl">/month</span>
@@ -2368,12 +2379,13 @@ a,
                         </div>
                       </div>
                       <div class="get_started border-2 rounded-lg ">
-                        <button class="text-center w-full transform-none py-3 !border-[#a2a2a2] border-2 text-xl bg-transparent !height-fit">
-                          Get Started
+                        <button class="group/button relative overflow-hidden transition-all duration-150  hover:text-black active:scale-95 text-center w-full transform-none py-3  border-2 text-xl bg-transparent !height-fit rounded-md font-semibold" style="border:2px solid white">
+                          <span class="absolute bottom-0 left-0 z-0 h-0 w-full bg-white transition-all duration-500 group-hover/button:h-full" ></span>
+                          <span class="relative z-10 transition-all duration-500 group-hover/button:text-black">Get Started</span>
                         </button>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
 
@@ -2926,6 +2938,7 @@ a,
   </div>
   </div>
   <script src="//unpkg.com/alpinejs" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63f5d36e1bfb159570f6408c"
     type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>
