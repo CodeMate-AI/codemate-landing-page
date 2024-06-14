@@ -3375,7 +3375,7 @@ a,
     let countValue;
 
     document.addEventListener("DOMContentLoaded", (event) => {
-      fetch("https://api.codemate.ai/getLines")
+      fetch("https://backend.codemate.ai/getLines")
         .then((res) => res.json())
         .then((data) => {
           let startValue = parseInt(data.value) - 100;
@@ -3399,7 +3399,7 @@ a,
     const lineHolder = document.getElementById("totalLines");
 
     function logJSONData() {
-      fetch("https://api.codemate.ai/getLines")
+      fetch("https://backend.codemate.ai/getLines")
         .then((res) => res.json())
         .then((data) => {
           let value = data.value;
