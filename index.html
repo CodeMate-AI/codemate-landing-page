@@ -1176,45 +1176,105 @@ a,
             </div>
 
       </header>
+      <div class="padding-global text-center mb-6">
+              <p class="text-center heading-fade-2lines m-0 text-[1.rem] font-normal leading-2 letter-spacing:0.3rem"> Our Achievements Captured by Leading Media </p>
+      </div>
       <!--Add a section showing the logos of the companies we have collaborated with. It should be of the same theme as the rest of the website-->
-      <section class="section_layout239" style="background-color: azure;">
+      <!-- css style --> 
+    <style>
+      
+            .image-container {
+              background-color: azure;
+              padding: 6px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 6px;
+              min-height: 25px;
+              min-width: 60px;
+            }
+
+            .image-container img {
+              width: 40px;
+              color: grey;
+              object-fit: cover;
+            
+          }
+          
+          @media (min-width: 768px) {
+              .image-container img {
+                  width: 120px; 
+                  padding: 10px;
+                  min-height: 60px;
+              }
+          }
+
+          @media (min-width: 1024px) {
+              .image-container img {
+                  width: 140px; 
+                  min-height: 80px;
+                  padding:12px;
+              }
+          }
+
+          @media (min-width: 2560px) {
+              .image-container img {
+                  width: 140px; 
+                  min-height: 60px;
+                  padding:16px;
+              }
+          }
+
+            @media (min-width: 640px) {
+              .image-container img {
+                 min-width: 60px;
+                 min-height: 20px;
+                 padding: 4px;
+              }
+
+            
+              
+          }  */
+
+        </style>
+      <section class="section_layout239" >
         <div class="padding-global">
           <div class="container-large">
             <div class="">
               <div class="layout239_component">
-                <div class="w-layout-grid layout239_list"
+                <div class="w-full justify-evenly"
                   style="margin-bottom: .5rem; display: flex; align-items: center; ">
                   <!-- <div class="layout239_item"> <a
                       href="https://rsvp.withgoogle.com/events/startup-bootcamp-university/class-2022" target="#">
                       <img src="https://i.ibb.co/C7Zg0h2/Google-startup-badge.jpg" loading="lazy"
                         style="width:400px; color:grey" /></a>
                   </div> -->
-                  <div class="layout239_item"> <a href="https://issuu.com/inc42/docs/gen_ai_report_v4" target="#">
+                  <div class="image-container"> <a href="https://issuu.com/inc42/docs/gen_ai_report_v4" target="#">
                       <img src="https://drive.codemate.ai/inc42.png" loading="lazy"
-                        style="width:400px; color:grey" /></a>
+                        style="color:grey" /></a>
                   </div>
-                  <div class="layout239_item"><a
+                  <div class="image-container"><a
                       href="https://yourstory.com/2023/09/pitch-fest-2023-techsparks-tech30-startups-technology-ai"
                       target="#">
                       <img src="https://i.ibb.co/d5HqmKT/yourstory.png" loading="lazy"
-                        style="width:400px; color:grey" /></a>
+                        style="color:grey" /></a>
                   </div>
                   <!-- <div class="layout239_item"><a href="https://www.startupnexus.in/portfolio.html" target="#">
                       <img src="https://i.ibb.co/Bc4Kxbh/American-Center-2-removebg-preview.png" loading="lazy"
                         style="width:400px; color:grey" /></a>
                   </div> -->
-                  <div class="layout239_item"><a
+                  <div class="image-container"><a
                       href="https://www.moneycontrol.com/news/trends/features/9-interesting-generative-ai-startups-in-india-11616981.html"
                       target="#">
                       <img src="https://i.ibb.co/qJPSx2G/moneycontrol-logo-freelogovectors-net.webp" loading="lazy"
-                        style="width:400px; color:grey" /></a>
+                        style="color:grey" /></a>
                   </div>
 
-                  <div class="layout239_item"><a
+                  <div class="image-container"><a
                       href="https://nasscom.in/knowledge-center/publications/generative-ai-startup-landscape-india-2023-perspective"
                       target="#">
                       <img src="https://i.ibb.co/NFfgZJb/Nasscom-logo-svg-svg.png" loading="lazy"
-                        style="width:400px; color:grey" /></a>
+                        style="color:grey" /></a>
                   </div>
                   <!-- <div class="layout239_item">
                       <img src="https://i.ibb.co/b1zKj0v/nasscom-removebg-preview.png" loading="lazy"
@@ -3007,12 +3067,128 @@ a,
               </div>
         </div>
 
+        <!-- Infinite horizontal scroll -->
+
+    <style>
+      .scroll-container{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1.5rem;
+       
+      
+        }
+
+        .scroll-content{
+          display: flex;
+          position: relative;
+          gap: 0.5rem;
+          width:full;
+          overflow: hidden;
+          
+        }
+
+        .scroll-content div{
+          animation: scroll var(--time) linear infinite;
+          animation-delay: calc(var(--time)*-1);
+        }
+
+        .scroll div:nth-child(2) {
+          animation: scroll2 var(--time) linear infinite;
+          animation-delay: calc(var(--time)/-2);
+          }
+
+        .imgBox div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .imgBox img {
+            max-width: 700px;
+            scale: 0.7;
+            height: 200px; 
+            border-radius: 10px;
+            
+          }
+
+          @keyframes scroll2 {
+          0% {
+              transform: translateX(0);
+          }
+
+          100% {
+              transform: translateX(-200%);
+          }
+         }
+        
+
+          @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+}
+    </style>
+     
+      <div class="scroll-container">
+         <div class="scroll-content imgBox" style="--time:40s">
+              <div> 
+                <img src="https://i.ibb.co/JQ5VKhJ/kurativz.jpg ">
+                <img src="https://i.ibb.co/d5HqmKT/yourstory.png">
+                <img src="https://i.ibb.co/LN1G2TG/iiitl.jpg">
+                <img src="https://i.ibb.co/whqrw8q/ACIR.png">
+                <img src="https://i.ibb.co/C69ZXmg/Startup-India-removebg-preview.png">
+                <img src="https://i.ibb.co/wKNVt4J/iit-kanpur.png">
+                <img src="https://i.ibb.co/nR427qK/IITR-Logo.png">
+                <img src="https://i.ibb.co/mtYr1bg/meity.png">
+                <img src="https://i.ibb.co/PhNtVmd/dst.png">
+                <img src="https://i.ibb.co/DkBdjHB/EWC.jpg">
+                <img src="https://i.ibb.co/PwN9fyw/nasscom.jpg">
+                <img src="https://i.ibb.co/C7Zg0h2/Google-startup-badge.jpg">
+                <img src="https://i.ibb.co/k1b9JXF/gsea.jpg">
+                <img src="https://i.ibb.co/bgsmDhS/microsoft.png">
+                <img src="https://i.ibb.co/ThvG8Jt/Nexus-Logo-3.png">
+                <img src="https://i.ibb.co/58RJKRM/postman.png">
+                <img src="https://i.ibb.co/Xz5Z3bh/razorpay-rize.png">
+                <img src="https://i.ibb.co/xqsPBvv/SISFS-removebg-preview.png">
+                <img src="https://i.ibb.co/Bc4Kxbh/American-Center-2-removebg-preview.png">  
+               
+            </div>
+
+              <div> 
+                <img src="https://i.ibb.co/JQ5VKhJ/kurativz.jpg ">
+                <img src="https://i.ibb.co/d5HqmKT/yourstory.png">
+                <img src="https://i.ibb.co/LN1G2TG/iiitl.jpg">
+                <img src="https://i.ibb.co/whqrw8q/ACIR.png">
+                <img src="https://i.ibb.co/C69ZXmg/Startup-India-removebg-preview.png">
+                <img src="https://i.ibb.co/wKNVt4J/iit-kanpur.png">
+                <img src="https://i.ibb.co/nR427qK/IITR-Logo.png">
+                <img src="https://i.ibb.co/mtYr1bg/meity.png">
+                <img src="https://i.ibb.co/PhNtVmd/dst.png">
+                <img src="https://i.ibb.co/DkBdjHB/EWC.jpg">
+                <img src="https://i.ibb.co/PwN9fyw/nasscom.jpg">
+                <img src="https://i.ibb.co/C7Zg0h2/Google-startup-badge.jpg">
+                <img src="https://i.ibb.co/k1b9JXF/gsea.jpg">
+                <img src="https://i.ibb.co/bgsmDhS/microsoft.png">
+                <img src="https://i.ibb.co/ThvG8Jt/Nexus-Logo-3.png">
+                <img src="https://i.ibb.co/58RJKRM/postman.png">
+                <img src="https://i.ibb.co/Xz5Z3bh/razorpay-rize.png">
+                <img src="https://i.ibb.co/xqsPBvv/SISFS-removebg-preview.png">
+                <img src="https://i.ibb.co/Bc4Kxbh/American-Center-2-removebg-preview.png"> 
+             
+            </div>
+         </div>
+      </div>
 
 
 
-
-        <div class="relative w-full mx-auto flex flex-col justify-center items-center"
-          style="position: relative; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <!-- <div class="relative w-full mx-auto flex flex-col justify-center items-center"
+          style="position: relative; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"> -->
           <!-- <div class="slide relative">
                       <img class="object-contain" 
                         src="./assets/images/logo/Google startup badge.jpg">
@@ -3027,7 +3203,7 @@ a,
                         <img class="w-full h-[300px] object-cover"
                             src="./assets/images/logo/SISFS.jpg">
                     </div> -->
-          <div class="slide relative">
+          <!-- <div class="slide relative">
             <style>
               .img{
                 border: 0;
@@ -3111,7 +3287,7 @@ a,
                 max-width: 100%;"
                 src="https://i.ibb.co/C7Zg0h2/Google-startup-badge.jpg">
             </div>
-          </div>
+          </div> -->
 
           <!-- <div class="slide relative">
                         <img class="w-full object-cover" 
@@ -3119,7 +3295,7 @@ a,
                             src="https://i.ibb.co/LSBJ81z/gsea-removebg-preview.png">
                     </div> -->
 
-          <div class="slide relative">
+          <!-- <div class="slide relative">
             <div style="width:auto; max-width: 300px; height: 200px; display: inline-block; position: relative">
               <img class="w-full object-cover"
                 style="width:100%; object-fit: cover; display: absolute; top:50%; "
@@ -3157,21 +3333,21 @@ a,
               src="https://i.ibb.co/Bc4Kxbh/American-Center-2-removebg-preview.png">
           </div>
 
-          <!-- The previous button -->
-          <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+          The previous button -->
+          <!-- <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
             style="position: absolute; left: 0; top:50%; padding: 1rem; transform: translateY(-50%); cursor: pointer;"
-            onclick="moveByArrow(-1)">❮</a>
+            onclick="moveByArrow(-1)">❮</a> -->
 
           <!-- The next button -->
-          <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+          <!-- <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
             style="position: absolute; right: 0; top:50%; padding: 1rem; transform: translateY(-50%); cursor: pointer;"
-            onclick="moveByArrow(1)">❯</a>
+            onclick="moveByArrow(1)">❯</a> -->
 
-        </div>
-        <br>
+        <!-- </div>
+        <br> -->
 
         <!-- The dots -->
-        <div class="flex justify-center items-center space-x-3 mt-4 hidden">
+        <!-- <div class="flex justify-center items-center space-x-3 mt-4 hidden">
           <div class="dot w-2 h-2 rounded-full cursor-pointer" onclick="currentSlide(1)"></div>
           <div class="dot w-2 h-2 rounded-full cursor-pointer" onclick="currentSlide(2)"></div>
           <div class="dot w-2 h-2 rounded-full cursor-pointer" onclick="currentSlide(3)"></div>
@@ -3192,7 +3368,7 @@ a,
           <div class="dot w-2 h-2 rounded-full cursor-pointer" onclick="currentSlide(18)"></div>
           <div class="dot w-2 h-2 rounded-full cursor-pointer" onclick="currentSlide(19)"></div>
 
-        </div>
+        </div> -->
 
   </div>
   </div>
@@ -3755,7 +3931,7 @@ discountButton2.addEventListener('click', function() {
 });
 
   </script>
-  <script>
+  <!-- <script>
     // set the default active slide to the first one
     let shouldMove = true;
     let slideIndex = 1;
@@ -3808,7 +3984,7 @@ discountButton2.addEventListener('click', function() {
         }, 2000)
       }
     }
-  </script>
+  </script> -->
 
   <script>
     // document.addEventListener("DOMContentLoaded", function () {
