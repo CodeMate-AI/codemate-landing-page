@@ -3491,6 +3491,286 @@ a,
   </section>
 
   </section>
+
+  <!-- open source modal --> 
+
+   <!-- css style --> 
+
+   <style>
+
+    body{
+        padding: 2px;
+        background-color: #161616;
+    }
+
+    @media (max-width:640px) {
+      .blur{
+            top: 80%;
+            left: 43%;
+            width: 148px;
+            height: 148px;
+            background: radial-gradient(closest-side, #48AEF3, #2FCACE);
+            border-radius: 100%;
+            filter: blur(90px);
+          
+        }
+    }
+
+    @media (min-width:640px) and (max-width:768px) {
+       .blur
+       {
+          top: 75%;
+          left: 46%;
+          width: 200px;
+          height: 200px;
+          background: radial-gradient(closest-side, #48AEF3, #2FCACE);
+          border-radius: 100%;
+          filter: blur(80px); 
+       }
+    }
+
+    @media (max-width : 768px ){
+        .outer-div {
+            width: 260px;
+            height: 183px;
+        }
+
+        .bg-img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .ai-container{
+            width:158px;
+            height: 158px;
+           
+        }
+
+       
+    }
+
+    @media (min-width: 768px) {
+        .outer-div{
+            width: 300px;
+            height: 220px; 
+        }
+        .bg-img{
+            width:100%;
+            height:100%;        
+        }
+        .ai-container{
+            width: 200px;
+            height: 200px;
+           
+        }
+
+         .blur{
+             top: 75%;
+              left: 45%;
+              width: 250px;
+              height: 220px;
+              background: radial-gradient(circle, #48AEF3, #2FCACE);
+              border-radius: 50% / 20%;
+              filter: blur(80px); 
+        } 
+    }
+
+    @media (min-width : 1024) {
+        .outer-div{
+            width: 380px;
+            height: 253px;
+        }
+        .bg-img{
+            width: 100%;
+            height: 100%;
+        }
+        .ai-container{
+           width:250px;
+           height: 220px;
+          
+        }
+        
+    }
+
+    @media (min-width:1024px) {
+      .blur{
+          top: 50%;
+          left: 72%;
+          width: 333px;
+          height: 250px;
+          background: radial-gradient(closest-side, #48AEF3, #2FCACE);
+          border-radius: 50%;
+          filter: blur(100px);
+           
+       } 
+    }
+
+    
+    .ai-container{
+      position : absolute;
+      left:20%;
+      top:20%;
+    }
+     
+
+    .bg-img {
+      position: absolute;
+        justify-content: center;
+        align-items: center;
+        background: url('./assets/images/bg-img.png');    
+        background-repeat: no-repeat;
+        background-size: cover; 
+        opacity: 0.4;
+        z-index: -1;
+    }
+
+
+    .ai-img{
+    
+      width: 100%;
+      height: 100%;
+        
+     }
+    
+   .dual-gradient {
+    position: relative;
+    background-image:  linear-gradient(to right ,  rgba(35, 35, 35, 0.6) , rgba(35, 35, 35, 0.4) );  
+    border-width: 3px;
+    border-image-slice: 1;
+    border-style: solid;
+    border-radius: 24px;
+    border-image: linear-gradient(270deg, #161616 0%, #48AEF3 100%) 1;  
+    
+    
+          
+    }
+
+    .blur{
+    
+      position:absolute;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+
+     
+
+       
+    
+      /* from 320px  to 640px*/
+      
+      
+      /* top: 80%;
+      left: 43%;
+      width: 148px;
+      height: 148px;
+      background: radial-gradient(closest-side, #48AEF3, #2FCACE);
+      border-radius: 100%;
+      filter: blur(90px);
+      */
+
+    /* 640px to 768px */
+   
+    /* top: 75%;
+    left: 46%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(closest-side, #48AEF3, #2FCACE);
+    border-radius: 100%;
+    filter: blur(80px); */
+    
+
+    /* 768 to  1024px */ 
+    
+    /* top: 75%;
+    left: 45%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #48AEF3, #2FCACE);
+    border-radius: 50% / 20%;
+    filter: blur(80px); */
+    
+
+    /* from 1024px onwards */
+   
+    /* top: 50%;
+    left: 72%;
+    width: 333px;
+    height: 280px;
+    background: radial-gradient(closest-side, #48AEF3, #2FCACE);
+    border-radius: 50%;
+    filter: blur(100px);
+    */
+   
+
+    }
+
+    .ai-div
+    { 
+     
+      margin-right: 30px;
+    }
+
+</style>
+
+   <section class="mt-4">
+     <div class="padding-global">
+         <div class="container-large">
+             <div class="padding-section-large">
+              <div class=" flex flex-col border-[3px] dual-gradient justify-evenly mr-6 pb-8 lg:flex lg:flex-row lg:p-4"  >
+                <div class="blur"> </div>
+                <div class=" flex-col p-6 items-center justify-center "> 
+                    <div class="flex items-center ">
+                        <div class="mr-[13px] ">
+                           <img src="./assets/images/huggingface_logo-noborder 1 (1).png">
+                        </div>
+        
+                        <div class=" h-[32px] rounded-[20px] pl-[18px] pr-[18px] items-center justify-center bg-[#FFD21E1A] opacity-1 md:w-[211px] md:h-[38px]">
+                            <div class="justify-center items-center p-1 "> 
+                                <p class="font-Poppins font-medium text-[#FFD21E] text-xs md:text-lg"> 14,535+ Downloads</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div> 
+                    <div class="mt-[20px] lg:w-[472px] lg:h-[190px] ">
+                        <div class="h-[96px]">
+                            <p class="font-Poppins leading-10 text-3xl font-semibold text-white "> Explore our <span class="italic font-Poppins leading-10 text-3xl font-semibold text-[#48AEF3]"> Open-Source</span></p>
+                            <p class="font-Poppins leading-10 text-3xl font-semibold text-white ">  AI Model</p>
+                        </div>
+        
+                        <div class="mt-[30px] lg:w-[380px] lg:h-[64px] lg:mt-[20px]">
+                            <p class="font-Poppins text-sm text-[#B6B6B6] font-normal leading-5 lg:leading-8 lg:text-[20px]  "> Unlock the potential of innovation with our free & open-source AI Model. </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center w-[200px] h-[48px] rounded-[8px] mb-[30px] mt-[40px] sm:mt-[30px]" style="background:linear-gradient(to right,  #0572C0 , #2FCACE )">
+                       
+                           <p class="font-Poppins text-base font-medium leading-10 text-[#FFFFFF]"> Explore now </p>
+                       
+                    </div>
+                  </div>
+                    
+                </div>
+               
+                
+                <div class="flex items-center justify-center mb-[25px] ai-div">
+                
+                    <div class="outer-div justify-center items-center relative "> 
+                      <div class="flex justify-center items-center bg-img "> 
+                        </div>
+                        <div class="ai-container justify-center items-center">
+                            <img src="/assets/images/Untitled design 1.png" class="ai-img" >  
+                        </div>
+                   
+                               
+                </div>
+             
+            </div>
+          </div>
+
+         </div>
+
+     </div>
+   </section>
+
   <section id="faq" data-w-id="c3b0cef7-ba5a-3ea1-5965-fe7d62cfee49" class="section_faq4" style="margin-top: 5rem;">
     <div class="faq4_purpleglow"></div>
     <div class="padding-global">
