@@ -1196,55 +1196,34 @@ a,
               align-items: center;
               justify-content: center;
               border-radius: 6px;
-              width: 60px;
-              height: 40px;
+              width: 134px;
+              height: 64px;
+             
               
             }
 
-            /* .image-container img {
-              width: 40px;
-              color: grey;
-              object-fit: cover;
+            .image-container img{
+              width:110px;
+              height: 33px;
+            }
+
+            .logo-box
+            {
+               width:287px;
+               height: 144px;
+               gap: 16px;
+               column-gap: 16px;
+            }
+
             
-          } */ 
-
-
-
-          @media (min-width:640px) 
-          { 
-
-            .image-container {
-                  width: 100px;
-                  height: 50px;             
-              }
-
-              .image-container img
-              {
-                width: 80px;
-                height: 40px;
-              }
-          }
-          
-          @media (min-width: 768px) {
-              .image-container {
-                  width: 140px;
-                  height: 80px;             
-              }
-
-              .image-container img
-              {
-                width: 100px;
-                height: 40px;
-              }
-          }
-
-          
 
           @media (min-width : 1440px) {
              .logo-box
              {
                width : 1078px;
                height: 132px;
+               display: flex;
+               flex-direction: row;
              }
 
              .image-container
@@ -1276,14 +1255,14 @@ a,
           <div class="container-large">
             <div class="">
               <div class="layout239_component">
-                <div class="w-full justify-evenly logo-box"
-                  style="margin-bottom: .5rem; display: flex; align-items:center; ">
+                <div class="w-full justify-evenly logo-box flex-col"
+                  style="margin-bottom: .5rem; align-items:center; ">
                   <!-- <div class="layout239_item"> <a
                       href="https://rsvp.withgoogle.com/events/startup-bootcamp-university/class-2022" target="#">
                       <img src="https://i.ibb.co/C7Zg0h2/Google-startup-badge.jpg" loading="lazy"
                         style="width:400px; color:grey" /></a>
                   </div> -->
-                  
+                  <div class="flex gap-x-[16px]"> 
                   <div class="image-container"> <a href="https://issuu.com/inc42/docs/gen_ai_report_v4" target="#">
                       <!-- <img src="https://drive.codemate.ai/inc42.png" loading="lazy"
                         style="color:grey" /></a> -->
@@ -1307,12 +1286,14 @@ a,
                      </a>
 
                   </div>
+                </div>
                 
                   <!-- <div class="layout239_item"><a href="https://www.startupnexus.in/portfolio.html" target="#">
                       <img src="https://i.ibb.co/Bc4Kxbh/American-Center-2-removebg-preview.png" loading="lazy"
                         style="width:400px; color:grey" /></a>
                   </div> -->
                  
+                  <div class="flex mt-[16px] gap-x-[16px] min-[1440px]:mt-0"> 
                   <div class="image-container"><a
                       href="https://www.moneycontrol.com/news/trends/features/9-interesting-generative-ai-startups-in-india-11616981.html"
                       target="#">
@@ -1343,6 +1324,7 @@ a,
 
 
                   </div>
+                </div>
                
                   <!-- <div class="layout239_item">
                       <img src="https://i.ibb.co/b1zKj0v/nasscom-removebg-preview.png" loading="lazy"
@@ -3711,8 +3693,12 @@ a,
          height: 480px;
          padding: 20px;
          justify-content: center;
+         border-image: linear-gradient(270deg, #161616 0%, #48AEF3 100%) 1;  
+        
+         
       }
 
+     
          .ai-div{
             width: 380px;
             height: 253px;
@@ -3804,13 +3790,12 @@ a,
    .dual-gradient {
     position: relative;
     background-image:  linear-gradient(to right ,  rgba(35, 35, 35, 0.6) , rgba(35, 35, 35, 0.4) );  
-    border-width: 3px;
+    border-width: 2px;
     border-image-slice: 1;
     border-style: solid;
     border-radius: 24px;
     border-image: linear-gradient(270deg, #161616 0%, #48AEF3 100%) 1;  
-    
-    
+   
           
     }
 
@@ -3819,56 +3804,6 @@ a,
       position:absolute;
       transform: translate(-50%, -50%);
       z-index: -1;
-
-     
-
-       
-    
-      /* from 320px  to 640px*/
-      
-      
-      /* top: 80%;
-      left: 43%;
-      width: 148px;
-      height: 148px;
-      background: radial-gradient(closest-side, #48AEF3, #2FCACE);
-      border-radius: 100%;
-      filter: blur(90px);
-      */
-
-    /* 640px to 768px */
-   
-    /* top: 75%;
-    left: 46%;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(closest-side, #48AEF3, #2FCACE);
-    border-radius: 100%;
-    filter: blur(80px); */
-    
-
-    /* 768 to  1024px */ 
-    
-    /* top: 75%;
-    left: 45%;
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, #48AEF3, #2FCACE);
-    border-radius: 50% / 20%;
-    filter: blur(80px); */
-    
-
-    /* from 1024px onwards */
-   
-    /* top: 50%;
-    left: 72%;
-    width: 333px;
-    height: 280px;
-    background: radial-gradient(closest-side, #48AEF3, #2FCACE);
-    border-radius: 50%;
-    filter: blur(100px);
-    */
-   
 
     }
 
@@ -3883,14 +3818,14 @@ a,
               <div class=" flex flex-col border-[3px] dual-gradient justify-evenly mr-6 pb-8 lg:flex lg:flex-row  "  >
                 <div class="blur"> </div>
                 <div class=" flex-col p-6 items-center justify-center md:mx-auto"> 
-                    <div class="flex items-center p-1 md:max-w-max">
+                    <div class="flex items-center p-1 sm:justify-center lg:justify-start">
                         <div class="mr-[13px] ">
                            <img src="./assets/images/huggingface_logo-noborder 1 (1).png">
                         </div>
         
-                        <div class=" h-[32px] rounded-[20px] pl-[18px] pr-[18px] items-center justify-center bg-[#FFD21E1A] opacity-1 md:w-[211px] md:h-[38px]">
-                            <div class="justify-center items-center p-1 "> 
-                                <p class="font-Poppins font-medium text-[#FFD21E] text-xs md:text-lg"> 14,535+ Downloads</p>
+                        <div class=" w-[172px] h-[32px] rounded-[60px] pl-[18px] pr-[18px] items-center justify-center bg-[#FFD21E1A] opacity-1 lg:w-[211px] lg:h-[38px] ">
+                            <div class="justify-center items-center  "> 
+                                <p class="font-Poppins items-center font-medium text-[#FFD21E] text-xs leading-8 lg:w-[211px] lg:h-[38px] lg:text-lg lg:mt-1 "> 14,535+ Downloads</p>
                             </div>
                            
                         </div>
