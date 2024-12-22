@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMate AI</title>
+</head>
+<body>
+    <script>
+        let url = window.location.href;
+        let session_val = url.split("x-session=")[1]
+        fetch("https://backend.v3.codemate.ai/team/join/"+session_val)
+        .then((resp)=>resp.json())
+        .then(resp => {
+            if(resp.success == true){
+                document.body.innerHTML = `<h2>
+                    Congratulations, you have been added to the team!</h2>`;
+
+                setTimeout(()=>{
+                    window.location.href = "https://app.codemate.ai";
+                }, 3000);
+            }else{
+                document.body.innerHTML = `<h3>${resp.message}</h3>`;
+            }
+        })
+    </script>
+</body>
+</html>
