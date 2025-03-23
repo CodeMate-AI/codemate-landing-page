@@ -119,7 +119,7 @@
 
   <!--Intercom tag-->
 
-  <script>
+  <!-- <script>
     window.intercomSettings = {
       api_base: "https://api-iam.intercom.io",
       app_id: "d4xtqm96",
@@ -130,8 +130,39 @@
   <script>
     // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/d4xtqm96'
     (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/d4xtqm96';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-  </script>
+  </script> -->
   
+
+  <script src="https://scankart.ai/pilot.js"></script>
+
+  <script> 
+    const options = {
+      apiUrl: "https://scankart.ai/backend", 
+      token: "fFHHt0xepSHqCdUb",
+      initialMessage: "How can I help you today?",
+      defaultOpen: false,
+      socketUrl: "https://scankart.ai",
+      chatbotName: "CodeMate AI",
+      containerProps:{
+        style:{
+          width: "400px",
+          height: "600px",
+          position: "fixed",
+          bottom: "0",
+          right: "0",
+          zIndex: "9999",
+        }
+      },
+      styles: {
+        container: {  }, //optional
+        header: { }, //optional
+        chatContainer: { }, //optional
+        chatInput: { }, //optional
+      }
+    }
+    window.addEventListener("DOMContentLoaded", ()=>initAiCoPilot(options));
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMFJTFF6F5"></script>
   <script>
